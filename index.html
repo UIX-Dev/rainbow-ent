@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Entertainment — K-Culture Platform</title>
+<meta name="description" content="Where music gathers, brands grow. Rainbow Entertainment connects K-culture experiences, commerce and media. | rainbowent.live">
+<style>
+  @font-face{font-family:'GmarketSans';font-weight:300;font-display:swap;
+    src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:500;font-display:swap;
+    src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:700;font-display:swap;
+    src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');}
+
+  :root{
+    --purple:#5932ca; --purple-2:#7a5fd6; --purple-3:#9d88e4; --purple-4:#c3b6ef; --purple-5:#e7e1fa;
+    --yellow:#fcf05b; --yellow-2:#fdf486; --yellow-4:#fefbcf;
+    --gray:#dedede; --gray-3:#efefef; --gray-4:#f5f5f5; --gray-5:#fafafa;
+    --black:#222222; --ink-2:#4a4a4a; --ink-3:#6b6b6b; --ink-4:#8c8c8c;
+    --line:#e7e7e7;
+    --font:'GmarketSans','Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--black);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+
+  /* nav */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+  header.nav.scrolled{border-color:var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brandmark{display:flex;align-items:center;gap:8px;font-weight:700;font-size:20px}
+  .nav-links{display:flex;gap:20px;font-size:13.5px;font-weight:500;color:var(--ink-3);align-items:center}
+  .nav-links a:hover{color:var(--purple)}
+  .nav-cta{background:var(--purple);color:#fff !important;padding:9px 20px;border-radius:999px;font-weight:700;font-size:13px}
+  .nav-cta:hover{background:var(--purple-2)}
+  @media(max-width:900px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* language switcher */
+  .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
+  .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
+  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:5px 9px;border-radius:999px;transition:.15s}
+  .lang button.on{background:var(--purple);color:#fff}
+  .lang button:not(.on):hover{color:var(--purple)}
+
+  /* hero */
+  .hero{background:var(--purple);color:#fff;padding:170px 0 120px;position:relative;overflow:hidden}
+  .hero .eyebrow-h{font-size:12.5px;letter-spacing:.26em;font-weight:700;color:var(--yellow)}
+  .hero h1{font-size:58px;font-weight:700;letter-spacing:-.015em;line-height:1.14;margin-top:18px}
+  .hero h1 .y{color:var(--yellow)}
+  .hero .sub{font-size:18px;color:var(--purple-5);margin-top:24px;max-width:660px}
+  .hero .btns{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:700;font-size:14.5px;transition:.2s}
+  .btn.y, .btn.y *{background:var(--yellow);color:#222 !important;-webkit-text-fill-color:#222 !important}
+  .btn.y:hover{background:var(--yellow-2);transform:translateY(-2px)}
+  .btn.ghost{border:2px solid rgba(255,255,255,.5);color:#fff}
+  .btn.ghost:hover{border-color:#fff}
+  .spark{position:absolute;opacity:.15;animation:float 7s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(8deg)}}
+  @media(max-width:760px){.hero h1{font-size:36px}}
+
+  /* stats band */
+  .stats{background:var(--black);color:#fff;padding:46px 0}
+  .stats .row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+  @media(max-width:760px){.stats .row{grid-template-columns:1fr 1fr}}
+  .stats .v{font-size:38px;font-weight:700;color:var(--yellow)}
+  .stats .l{font-size:12.5px;color:#adadad;margin-top:4px}
+
+  section{padding:96px 0}
+  .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--purple);text-transform:uppercase}
+  h2.sec{font-size:34px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.28}
+  .lead{color:var(--ink-3);font-size:15.5px;max-width:760px}
+  .center{text-align:center}
+  .center .lead{margin:0 auto}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+  .about-visual{background:var(--purple-5);border-radius:24px;padding:46px;position:relative;overflow:hidden}
+  .about-visual .big{font-size:23px;font-weight:700;line-height:1.55;color:var(--purple)}
+  .about-points{margin-top:34px;display:flex;flex-direction:column;gap:18px}
+  .pt{display:flex;gap:14px;align-items:flex-start}
+  .pt .ic{flex-shrink:0;width:40px;height:40px;border-radius:12px;background:var(--purple);display:flex;align-items:center;justify-content:center}
+  .pt .ic svg{width:20px;height:20px;fill:#fff}
+  .pt b{font-size:15px}
+  .pt p{font-size:13.5px;color:var(--ink-3)}
+
+  /* business cards */
+  .biz-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+  @media(max-width:1000px){.biz-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.biz-grid{grid-template-columns:1fr}}
+  .biz{border:1px solid var(--line);border-radius:20px;padding:30px 24px;transition:.25s;position:relative;overflow:hidden;background:#fff}
+  .biz:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(89,50,202,.13);border-color:var(--purple-4)}
+  .biz .icn{width:52px;height:52px;border-radius:16px;background:var(--purple-5);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .biz .icn svg{width:26px;height:26px;fill:var(--purple)}
+  .biz h3{font-size:17px;font-weight:700}
+  .biz .en{font-size:10.5px;letter-spacing:.14em;color:var(--ink-4);text-transform:uppercase;margin-bottom:12px}
+  .biz p{font-size:13px;color:var(--ink-3)}
+  .biz .no{position:absolute;top:18px;right:22px;font-size:13px;font-weight:700;color:var(--purple-4)}
+
+  /* flywheel */
+  .fly{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px}
+  @media(max-width:860px){.fly{grid-template-columns:1fr;gap:10px}}
+  .fly .step{background:var(--gray-5);border:1px solid var(--line);padding:26px 22px;position:relative}
+  .fly .step:first-child{border-radius:18px 0 0 18px}
+  .fly .step:last-child{border-radius:0 18px 18px 0}
+  @media(max-width:860px){.fly .step{border-radius:14px !important}}
+  .fly .k{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--purple)}
+  .fly .t{font-weight:700;font-size:16.5px;margin:6px 0 8px}
+  .fly p{font-size:13px;color:var(--ink-3)}
+  .fly .step:after{content:"▶";position:absolute;right:-10px;top:50%;transform:translateY(-50%);color:var(--purple);z-index:2;font-size:14px}
+  .fly .step:last-child:after{display:none}
+  @media(max-width:860px){.fly .step:after{display:none}}
+  .loop-note{text-align:center;margin-top:22px;font-size:13px;color:var(--purple);font-weight:700}
+
+  /* journey */
+  .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  @media(max-width:860px){.journey{grid-template-columns:1fr}}
+  .jr{border-radius:20px;padding:30px 26px}
+  .jr.a{background:var(--purple);color:#fff}
+  .jr.b{background:var(--yellow);color:#222}
+  .jr.c{background:var(--black);color:#fff}
+  .jr .yr{font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.75}
+  .jr h3{font-size:19px;font-weight:700;margin:6px 0 10px}
+  .jr p{font-size:13.5px;opacity:.85}
+
+  /* global */
+  .glob{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  @media(max-width:860px){.glob{grid-template-columns:1fr}}
+  .gl{border:1px solid var(--line);border-radius:20px;padding:28px;text-align:center}
+  .gl .flag{font-size:34px}
+  .gl h3{font-size:17px;font-weight:700;margin:10px 0 6px}
+  .gl p{font-size:13px;color:var(--ink-3)}
+  .gl .st{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--purple-5);color:var(--purple)}
+  .gl .st.now{background:var(--yellow);color:#222}
+
+  /* values strip */
+  .values{background:var(--purple);color:#fff;padding:72px 0}
+  .values .row{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+  @media(max-width:760px){.values .row{grid-template-columns:1fr}}
+  .values h3{font-size:17px;font-weight:700;margin-top:12px}
+  .values p{font-size:13px;color:var(--purple-4);margin-top:6px}
+
+  /* contact */
+  .contact{background:var(--black);color:#fff;text-align:center;padding:110px 0}
+  .contact h2{font-size:36px;font-weight:700;line-height:1.32}
+  @media(max-width:760px){.contact h2{font-size:25px}}
+  .contact .y{color:var(--yellow)}
+  .contact p{color:#adadad;font-size:15px;margin-top:18px}
+  .contact .btns{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--black);color:#8c8c8c;padding:40px 0;font-size:12.5px;border-top:1px solid #333}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}
+
+  /* reveal animation */
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .rv.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <div class="brandmark">Rainbow <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#5932ca"/></svg> <span style="font-weight:300;color:var(--ink-3)">Entertainment</span></div>
+  <nav class="nav-links">
+    <a href="#about">About</a><a href="#business">Business</a><a href="#platform">Platform</a>
+    <a href="#journey">Journey</a><a href="#global">Global</a>
+    <a href="#contact" class="nav-cta" data-i18n="nav_cta">Partnership 문의</a>
+    <div class="lang" id="langSw">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.6 15.6 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11zM12 4.1c.9 1.2 1.9 3.4 2.4 6.9H9.6c.5-3.5 1.5-5.7 2.4-6.9zM4.1 13h3.4c.2 2 .6 3.9 1.2 5.5A8 8 0 0 1 4.1 13zm3.4-2H4.1a8 8 0 0 1 4.6-5.5A15.6 15.6 0 0 0 7.5 11zm4.5 8.9c-.9-1.2-1.9-3.4-2.4-6.9h4.8c-.5 3.5-1.5 5.7-2.4 6.9zm3.3-1.4c.6-1.6 1-3.5 1.2-5.5h3.4a8 8 0 0 1-4.6 5.5z"/></svg>
+      <button data-lang="vi" type="button">VI</button><button data-lang="en" type="button">EN</button><button data-lang="ko" type="button" class="on">KO</button>
+    </div>
+  </nav>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="spark" style="top:90px;right:6%;width:220px;height:220px" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fff"/></svg>
+  <svg class="spark" style="bottom:-40px;left:4%;width:150px;height:150px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <svg class="spark" style="top:40%;right:30%;width:60px;height:60px;animation-delay:4s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <div class="wrap">
+    <div class="eyebrow-h">RAINBOW ENTERTAINMENT</div>
+    <h1><span data-i18n="hero_h1">노래가 모이는 공간에서,<br><span class="y">브랜드가 확장되는 플랫폼</span>으로</span><svg style="vertical-align:-2px;margin-left:10px" width="38" height="38" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg></h1>
+    <p class="sub" data-i18n="hero_sub">Rainbow는 베트남 최초의 한국형 코인노래방을 출발점으로, K컬처 경험을 설계하고 고객 트래픽을 콘텐츠와 커머스로 연결하는 <b style="color:#fff">K-Culture Platform</b>입니다.</p>
+    <div class="btns">
+      <a class="btn y" href="#business" style="color:#222"><span style="color:#222" data-i18n="btn_biz">사업 소개 보기</span></a>
+      <a class="btn ghost" href="#contact" data-i18n="btn_partner">파트너십 문의</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats"><div class="wrap row">
+  <div class="rv"><div class="v" data-n="6">0</div><div class="l" data-i18n="stat1">베트남 주요 쇼핑몰 지점</div></div>
+  <div class="rv"><div class="v" data-n="1500">0</div><div class="l" data-i18n="stat2">일평균 Gen Z 방문객 (명)</div></div>
+  <div class="rv"><div class="v" data-n="70">0</div><div class="l" data-i18n="stat3">여성 고객 비중 (%)</div></div>
+  <div class="rv"><div class="v" data-n="4">0</div><div class="l" data-i18n="stat4">사업 영역 — 노래방·뷰티·페스티벌·미디어</div></div>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap about-grid">
+  <div class="rv">
+    <div class="eyebrow">About Us</div>
+    <h2 class="sec" data-i18n="about_h2">우리는 노래방을<br>운영하는 회사가 아닙니다</h2>
+    <p class="lead" data-i18n="about_lead">Rainbow의 핵심 자산은 매장이 아니라 매장을 찾는 고객입니다. 베트남 주요 쇼핑몰 안에서 매일 1,500명의 Gen Z가 노래하고, 찍고, 올리고, 체험합니다. Rainbow Entertainment는 이 오프라인 접점을 기반으로 K팝 · K뷰티 · K페스티벌 · 미디어 콘텐츠를 연결하는 브랜드입니다.</p>
+    <div class="about-points">
+      <div class="pt"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg></div>
+        <div><b data-i18n="pt1_t">검증된 Gen Z 팬 베이스</b><p data-i18n="pt1_p">콘텐츠 소비·생산 습관을 가진 실질적 팬덤 — 단순 이용객이 아닌 브랜드 확산의 주체</p></div></div>
+      <div class="pt"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5 9a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"/></svg></div>
+        <div><b data-i18n="pt2_t">건전하고 깨끗한 K노래문화</b><p data-i18n="pt2_p">술·담배·사행성 요소 없는 클린 콘텐츠 원칙 — 가족 단위까지 확장되는 신뢰 브랜드</p></div></div>
+      <div class="pt"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 14h3v6H4zm5-4h3v10H9zm5-5h3v15h-3zm5 8h3v7h-3z"/></svg></div>
+        <div><b data-i18n="pt3_t">플랫폼형 수익 구조</b><p data-i18n="pt3_p">같은 트래픽 위에 커머스·스폰서십·광고·콘텐츠 수익을 결합하는 확장 모델</p></div></div>
+    </div>
+  </div>
+  <div class="about-visual rv">
+    <svg style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;opacity:.4" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#5932ca"/></svg>
+    <div class="big" data-i18n="quote">"Rainbow는 노래방을 확장하는 회사가 아닙니다.<br><br>노래방을 거점으로 K컬처 경험을 설계하고, 고객 트래픽을 콘텐츠와 커머스로 연결하는 브랜드입니다."</div>
+    <div style="margin-top:22px;font-size:12px;letter-spacing:.14em;font-weight:700;color:var(--purple-2)">FROM NORAEBANG BUSINESS<br>TO K-CULTURE PLATFORM</div>
+  </div>
+</div></section>
+
+<!-- BUSINESS -->
+<section id="business" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Our Business</div>
+    <h2 class="sec" data-i18n="biz_h2">4개의 사업, 하나의 플랫폼</h2>
+    <p class="lead" data-i18n="biz_lead">노래방 · 뷰티 · K페스티벌 · 미디어 — 네 개의 사업은 독립된 프로젝트가 아니라 하나의 선순환 생태계로 작동합니다.</p>
+  </div>
+  <div class="biz-grid">
+    <div class="biz rv"><span class="no">01</span>
+      <div class="icn"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5 9a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"/></svg></div>
+      <h3 data-i18n="biz1_t">레인보우 노래방</h3><div class="en">Rainbow Noraebang</div>
+      <p data-i18n="biz1_p">베트남 주요 쇼핑몰(Van Hanh Mall · Aeon · Vincom) 직영 지점과 해외 라이센스 모델. 트렌디한 인테리어와 IT 기술이 결합된 한국형 코인노래방으로, 모든 사업의 오프라인 거점입니다.</p>
+    </div>
+    <div class="biz rv"><span class="no">02</span>
+      <div class="icn"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-8.5C.9 9.2 2.9 6 6 6c1.9 0 3.4 1 4.5 2.4l1.5 1.9 1.5-1.9C14.6 7 16.1 6 18 6c3.1 0 5.1 3.2 3.5 6.5C19.5 16.4 12 21 12 21z"/></svg></div>
+      <h3 data-i18n="biz2_t">레인보우 뷰티</h3><div class="en">Rainbow Beauty</div>
+      <p data-i18n="biz2_p">K뷰티 제조 전문성과 Rainbow의 팬 커머스 인프라가 만난 Enter Commerce™. 매장 팝업존 체험에서 틱톡숍·라이브 커머스까지, 팬덤을 반복 구매로 전환합니다.</p>
+    </div>
+    <div class="biz rv"><span class="no">03</span>
+      <div class="icn"><svg viewBox="0 0 24 24"><path d="M12 1l2.6 6.6L21 8.2l-5 4.4 1.6 6.9L12 15.9l-5.6 3.6L8 12.6 3 8.2l6.4-.6z"/></svg></div>
+      <h3 data-i18n="biz3_t">레인보우 K페스티벌</h3><div class="en">Rainbow K-Festival</div>
+      <p data-i18n="biz3_p">Kpop vs Vpop Vocal Battle, 쇼핑몰 메인홀 대형 행사, 글로벌 오디션. K컬처 이벤트로 브랜드를 증폭시키고 스폰서·파트너와 함께 성장합니다.</p>
+    </div>
+    <div class="biz rv"><span class="no">04</span>
+      <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
+      <h3 data-i18n="biz4_t">레인보우 미디어</h3><div class="en">Rainbow Media</div>
+      <p data-i18n="biz4_p">매일 업데이트되는 일반인 노래 콘텐츠 플랫폼과 KTV 스크린 광고 네트워크. 고객이 만든 콘텐츠가 다시 고객을 부르는 미디어 엔진입니다.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- PLATFORM / FLYWHEEL -->
+<section id="platform"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="sec" data-i18n="fly_h2">Rainbow 선순환 플랫폼</h2>
+    <p class="lead" data-i18n="fly_lead">콘텐츠가 집객을 만들고, 집객이 커머스를 만들고, 커머스가 다시 콘텐츠가 됩니다.</p>
+  </div>
+  <div class="fly rv">
+    <div class="step"><div class="k">MEDIA</div><div class="t" data-i18n="fly1_t">콘텐츠 생산</div><p data-i18n="fly1_p">고객의 노래 영상이 매일 숏폼 콘텐츠로 — 페스티벌과 뷰티 이벤트가 소재를 공급합니다.</p></div>
+    <div class="step"><div class="k">NORAEBANG</div><div class="t" data-i18n="fly2_t">집객 · 트래픽</div><p data-i18n="fly2_p">바이럴 콘텐츠가 지점 방문으로 이어지고, Gen Z 트래픽이 모든 사업의 모수가 됩니다.</p></div>
+    <div class="step"><div class="k">BEAUTY</div><div class="t" data-i18n="fly3_t">커머스 전환</div><p data-i18n="fly3_p">매장 팝업존 체험이 틱톡숍 · 라이브 커머스 구매로 — 노래방 고객이 뷰티 고객이 됩니다.</p></div>
+    <div class="step"><div class="k">K-FESTIVAL</div><div class="t" data-i18n="fly4_t">브랜드 증폭</div><p data-i18n="fly4_p">대형 이벤트가 스폰서 수익과 언론 노출을 만들고, 다시 바이럴 콘텐츠로 환류합니다.</p></div>
+  </div>
+  <div class="loop-note rv" data-i18n="fly_loop">↻ 그리고 다시 콘텐츠로 — Entertainment × Commerce × Community</div>
+</div></section>
+
+<!-- JOURNEY -->
+<section id="journey" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Our Journey</div>
+    <h2 class="sec" data-i18n="jr_h2">검증에서 확장으로</h2>
+  </div>
+  <div class="journey">
+    <div class="jr a rv"><div class="yr">2019 — 2025</div><h3 data-i18n="jr1_t">시작과 검증</h3><p data-i18n="jr1_p">베트남 최초 한국형 코인노래방 런칭. 호치민 Van Hanh Mall 1호점을 시작으로 주요 쇼핑몰 지점 확장, Gen Z 팬 베이스와 클린 노래문화 브랜드 확립.</p></div>
+    <div class="jr b rv"><div class="yr">2026</div><h3 data-i18n="jr2_t">플랫폼 전환</h3><p data-i18n="jr2_p">Rainbow Entertainment 출범. K뷰티 Enter Commerce™ 런칭, K페스티벌 정례화, TikTok 콘텐츠 플랫폼 가동 — 노래방에서 K컬처 플랫폼으로.</p></div>
+    <div class="jr c rv"><div class="yr">2027 — 2028</div><h3 data-i18n="jr3_t">글로벌 확장</h3><p data-i18n="jr3_p">두바이 진출과 해외 라이센스 모델 가동, 동남아 커머스 확장, 자체 브랜드와 IP 자산화 — 동남아를 선도하는 K컬처 생태계로.</p></div>
+  </div>
+</div></section>
+
+<!-- GLOBAL -->
+<section id="global"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Global Network</div>
+    <h2 class="sec" data-i18n="gl_h2">베트남에서 검증하고, 세계로 확장합니다</h2>
+  </div>
+  <div class="glob">
+    <div class="gl rv"><div class="flag">🇻🇳</div><h3>Vietnam</h3><p data-i18n="gl1_p">호치민 · 하노이 주요 쇼핑몰 직영 지점 운영. K컬처 플랫폼 모델의 검증 무대이자 본거지.</p><span class="st now" data-i18n="gl1_s">운영 중</span></div>
+    <div class="gl rv"><div class="flag">🇦🇪</div><h3>Dubai</h3><p data-i18n="gl2_p">베트남 성공 사례를 포트폴리오로 중동 시장 진출. 쇼핑몰 기반 K엔터테인먼트 플랫폼.</p><span class="st" data-i18n="gl2_s">진출 추진</span></div>
+    <div class="gl rv"><div class="flag">🌏</div><h3>Southeast Asia</h3><p data-i18n="gl3_p">태국 · 인도네시아 · 말레이시아 · 필리핀 — 라이센스 모델과 디지털 커머스로 확장.</p><span class="st" data-i18n="gl3_s">확장 예정</span></div>
+  </div>
+</div></section>
+
+<!-- VALUES -->
+<div class="values"><div class="wrap">
+  <div class="row">
+    <div class="rv"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg><h3>Culture</h3><p data-i18n="v1_p">K컬처 경험을 설계하는 공간과 콘텐츠</p></div>
+    <div class="rv"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg><h3>Commerce</h3><p data-i18n="v2_p">팬덤을 구매로 연결하는 Enter Commerce™</p></div>
+    <div class="rv"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg><h3>Community</h3><p data-i18n="v3_p">고객이 주인공이 되는 Gen Z 커뮤니티</p></div>
+  </div>
+</div></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <h2>Music brings us closer —<br><span class="y">Rainbow connects culture, commerce and community.</span></h2>
+    <p data-i18n="ct_p">쇼핑몰 입점 · 해외 라이센스 · K브랜드 콜라보 · 스폰서십 · 투자 파트너십을 기다립니다.</p>
+    <div class="btns">
+      <button class="btn y" id="copyMail" type="button" style="border:none;cursor:pointer;font-family:var(--font);color:#222"><span style="color:#222" data-i18n="ct_btn">파트너십 문의하기</span></button>
+      <a class="btn ghost" href="#about" data-i18n="ct_back">회사 소개 다시 보기</a>
+    </div>
+    <div style="margin-top:20px;font-size:14px;color:#adadad">EMAIL · <b style="color:var(--yellow)" id="mailAddr">contact@rainbowent.live</b> &nbsp;·&nbsp; WEB · <b style="color:var(--yellow)">rainbowent.live</b></div>
+  </div>
+</section>
+
+<footer><div class="wrap foot-in">
+  <div class="foot-brand">Rainbow <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> Entertainment</div>
+  <div>㈜빛나는별 · NGOI SAO SANG VINA · Clean &amp; Healthy Singing Culture from Korea</div>
+  <div>© 2026 Rainbow Entertainment · rainbowent.live</div>
+</div></footer>
+
+<script>
+/* ───────── i18n : 완전 분리된 3개 언어 사전 ───────── */
+const I18N={
+ko:{
+  nav_cta:'Partnership 문의',
+  hero_h1:'노래가 모이는 공간에서,<br><span class="y">브랜드가 확장되는 플랫폼</span>으로',
+  hero_sub:'Rainbow는 베트남 최초의 한국형 코인노래방을 출발점으로, K컬처 경험을 설계하고 고객 트래픽을 콘텐츠와 커머스로 연결하는 <b style="color:#fff">K-Culture Platform</b>입니다.',
+  btn_biz:'사업 소개 보기', btn_partner:'파트너십 문의',
+  stat1:'베트남 주요 쇼핑몰 지점', stat2:'일평균 Gen Z 방문객 (명)', stat3:'여성 고객 비중 (%)', stat4:'사업 영역 — 노래방·뷰티·페스티벌·미디어',
+  about_h2:'우리는 노래방을<br>운영하는 회사가 아닙니다',
+  about_lead:'Rainbow의 핵심 자산은 매장이 아니라 매장을 찾는 고객입니다. 베트남 주요 쇼핑몰 안에서 매일 1,500명의 Gen Z가 노래하고, 찍고, 올리고, 체험합니다. Rainbow Entertainment는 이 오프라인 접점을 기반으로 K팝 · K뷰티 · K페스티벌 · 미디어 콘텐츠를 연결하는 브랜드입니다.',
+  pt1_t:'검증된 Gen Z 팬 베이스', pt1_p:'콘텐츠 소비·생산 습관을 가진 실질적 팬덤 — 단순 이용객이 아닌 브랜드 확산의 주체',
+  pt2_t:'건전하고 깨끗한 K노래문화', pt2_p:'술·담배·사행성 요소 없는 클린 콘텐츠 원칙 — 가족 단위까지 확장되는 신뢰 브랜드',
+  pt3_t:'플랫폼형 수익 구조', pt3_p:'같은 트래픽 위에 커머스·스폰서십·광고·콘텐츠 수익을 결합하는 확장 모델',
+  quote:'"Rainbow는 노래방을 확장하는 회사가 아닙니다.<br><br>노래방을 거점으로 K컬처 경험을 설계하고, 고객 트래픽을 콘텐츠와 커머스로 연결하는 브랜드입니다."',
+  biz_h2:'4개의 사업, 하나의 플랫폼',
+  biz_lead:'노래방 · 뷰티 · K페스티벌 · 미디어 — 네 개의 사업은 독립된 프로젝트가 아니라 하나의 선순환 생태계로 작동합니다.',
+  biz1_t:'레인보우 노래방', biz1_p:'베트남 주요 쇼핑몰(Van Hanh Mall · Aeon · Vincom) 직영 지점과 해외 라이센스 모델. 트렌디한 인테리어와 IT 기술이 결합된 한국형 코인노래방으로, 모든 사업의 오프라인 거점입니다.',
+  biz2_t:'레인보우 뷰티', biz2_p:'K뷰티 제조 전문성과 Rainbow의 팬 커머스 인프라가 만난 Enter Commerce™. 매장 팝업존 체험에서 틱톡숍·라이브 커머스까지, 팬덤을 반복 구매로 전환합니다.',
+  biz3_t:'레인보우 K페스티벌', biz3_p:'Kpop vs Vpop Vocal Battle, 쇼핑몰 메인홀 대형 행사, 글로벌 오디션. K컬처 이벤트로 브랜드를 증폭시키고 스폰서·파트너와 함께 성장합니다.',
+  biz4_t:'레인보우 미디어', biz4_p:'매일 업데이트되는 일반인 노래 콘텐츠 플랫폼과 KTV 스크린 광고 네트워크. 고객이 만든 콘텐츠가 다시 고객을 부르는 미디어 엔진입니다.',
+  fly_h2:'Rainbow 선순환 플랫폼', fly_lead:'콘텐츠가 집객을 만들고, 집객이 커머스를 만들고, 커머스가 다시 콘텐츠가 됩니다.',
+  fly1_t:'콘텐츠 생산', fly1_p:'고객의 노래 영상이 매일 숏폼 콘텐츠로 — 페스티벌과 뷰티 이벤트가 소재를 공급합니다.',
+  fly2_t:'집객 · 트래픽', fly2_p:'바이럴 콘텐츠가 지점 방문으로 이어지고, Gen Z 트래픽이 모든 사업의 모수가 됩니다.',
+  fly3_t:'커머스 전환', fly3_p:'매장 팝업존 체험이 틱톡숍 · 라이브 커머스 구매로 — 노래방 고객이 뷰티 고객이 됩니다.',
+  fly4_t:'브랜드 증폭', fly4_p:'대형 이벤트가 스폰서 수익과 언론 노출을 만들고, 다시 바이럴 콘텐츠로 환류합니다.',
+  fly_loop:'↻ 그리고 다시 콘텐츠로 — Entertainment × Commerce × Community',
+  jr_h2:'검증에서 확장으로',
+  jr1_t:'시작과 검증', jr1_p:'베트남 최초 한국형 코인노래방 런칭. 호치민 Van Hanh Mall 1호점을 시작으로 주요 쇼핑몰 지점 확장, Gen Z 팬 베이스와 클린 노래문화 브랜드 확립.',
+  jr2_t:'플랫폼 전환', jr2_p:'Rainbow Entertainment 출범. K뷰티 Enter Commerce™ 런칭, K페스티벌 정례화, TikTok 콘텐츠 플랫폼 가동 — 노래방에서 K컬처 플랫폼으로.',
+  jr3_t:'글로벌 확장', jr3_p:'두바이 진출과 해외 라이센스 모델 가동, 동남아 커머스 확장, 자체 브랜드와 IP 자산화 — 동남아를 선도하는 K컬처 생태계로.',
+  gl_h2:'베트남에서 검증하고, 세계로 확장합니다',
+  gl1_p:'호치민 · 하노이 주요 쇼핑몰 직영 지점 운영. K컬처 플랫폼 모델의 검증 무대이자 본거지.', gl1_s:'운영 중',
+  gl2_p:'베트남 성공 사례를 포트폴리오로 중동 시장 진출. 쇼핑몰 기반 K엔터테인먼트 플랫폼.', gl2_s:'진출 추진',
+  gl3_p:'태국 · 인도네시아 · 말레이시아 · 필리핀 — 라이센스 모델과 디지털 커머스로 확장.', gl3_s:'확장 예정',
+  v1_p:'K컬처 경험을 설계하는 공간과 콘텐츠', v2_p:'팬덤을 구매로 연결하는 Enter Commerce™', v3_p:'고객이 주인공이 되는 Gen Z 커뮤니티',
+  ct_p:'쇼핑몰 입점 · 해외 라이센스 · K브랜드 콜라보 · 스폰서십 · 투자 파트너십을 기다립니다.',
+  ct_btn:'파트너십 문의하기', ct_back:'회사 소개 다시 보기', copied:'이메일 복사됨 ✓'
+},
+en:{
+  nav_cta:'Partnership',
+  hero_h1:'Where music gathers,<br>a <span class="y">platform where brands expand</span>',
+  hero_sub:'Starting from Vietnam\'s first Korean-style coin karaoke, Rainbow designs K-culture experiences and connects customer traffic to content and commerce — a <b style="color:#fff">K-Culture Platform</b>.',
+  btn_biz:'Our Business', btn_partner:'Partnership',
+  stat1:'Stores in major Vietnamese malls', stat2:'Daily Gen Z visitors', stat3:'Female customers (%)', stat4:'Business areas — Karaoke·Beauty·Festival·Media',
+  about_h2:'We are not<br>a karaoke operator',
+  about_lead:'Rainbow\'s core asset is not the stores — it\'s the customers who fill them. Every day, 1,500 Gen Z visitors sing, film, post and experience inside Vietnam\'s major shopping malls. Rainbow Entertainment connects K-pop, K-beauty, K-festivals and media content on top of this offline touchpoint.',
+  pt1_t:'A proven Gen Z fan base', pt1_p:'A real fandom with content consumption and creation habits — not just visitors, but the engine of brand growth',
+  pt2_t:'Clean & healthy K-singing culture', pt2_p:'No alcohol, tobacco or gambling — a trusted brand that extends to families',
+  pt3_t:'Platform-type revenue structure', pt3_p:'Commerce, sponsorship, advertising and content revenue stacked on the same traffic',
+  quote:'"Rainbow is not a company that expands karaoke rooms.<br><br>We design K-culture experiences around our venues and connect customer traffic to content and commerce."',
+  biz_h2:'Four businesses, one platform',
+  biz_lead:'Karaoke · Beauty · K-Festival · Media — four businesses operating as one virtuous ecosystem, not separate projects.',
+  biz1_t:'Rainbow Noraebang', biz1_p:'Direct stores in Vietnam\'s major malls (Van Hanh Mall · Aeon · Vincom) plus an overseas license model. Korean-style coin karaoke combining trendy interiors with IT — the offline base of every business.',
+  biz2_t:'Rainbow Beauty', biz2_p:'Enter Commerce™ — K-beauty manufacturing expertise meets Rainbow\'s fan-commerce infrastructure. From in-store pop-up experiences to TikTok Shop and live commerce, we turn fandom into repeat purchases.',
+  biz3_t:'Rainbow K-Festival', biz3_p:'Kpop vs Vpop Vocal Battle, large mall main-hall events and global auditions. K-culture events that amplify the brand and grow with sponsors and partners.',
+  biz4_t:'Rainbow Media', biz4_p:'A daily-updated singing content platform and a KTV screen advertising network. A media engine where customer-made content brings in new customers.',
+  fly_h2:'The Rainbow flywheel', fly_lead:'Content drives footfall, footfall drives commerce, and commerce becomes content again.',
+  fly1_t:'Content creation', fly1_p:'Customers\' singing videos become daily short-form content — festivals and beauty events supply the material.',
+  fly2_t:'Footfall · Traffic', fly2_p:'Viral content turns into store visits, and Gen Z traffic becomes the base for every business.',
+  fly3_t:'Commerce conversion', fly3_p:'In-store pop-up experiences convert to TikTok Shop and live-commerce purchases — karaoke guests become beauty customers.',
+  fly4_t:'Brand amplification', fly4_p:'Large events create sponsorship revenue and press exposure, flowing back into viral content.',
+  fly_loop:'↻ And back to content — Entertainment × Commerce × Community',
+  jr_h2:'From validation to expansion',
+  jr1_t:'Launch & validation', jr1_p:'Vietnam\'s first Korean-style coin karaoke. From store No.1 in Van Hanh Mall, Ho Chi Minh City, to major malls nationwide — building a Gen Z fan base and a clean singing-culture brand.',
+  jr2_t:'Platform transition', jr2_p:'Rainbow Entertainment launches. K-beauty Enter Commerce™, regular K-festivals and the TikTok content platform — from karaoke to a K-culture platform.',
+  jr3_t:'Global expansion', jr3_p:'Dubai entry and the overseas license model, Southeast Asian commerce expansion, own brands and IP — toward the leading K-culture ecosystem in Southeast Asia.',
+  gl_h2:'Proven in Vietnam, expanding worldwide',
+  gl1_p:'Direct stores in major malls in Ho Chi Minh City and Hanoi. The proving ground and home base of the K-culture platform model.', gl1_s:'Operating',
+  gl2_p:'Entering the Middle East with the Vietnam success story as our portfolio. A mall-based K-entertainment platform.', gl2_s:'In progress',
+  gl3_p:'Thailand · Indonesia · Malaysia · Philippines — expanding through the license model and digital commerce.', gl3_s:'Planned',
+  v1_p:'Spaces and content that design K-culture experiences', v2_p:'Enter Commerce™ that turns fandom into purchases', v3_p:'A Gen Z community where customers are the stars',
+  ct_p:'Mall leasing · overseas licensing · K-brand collaborations · sponsorship · investment partnerships — let\'s talk.',
+  ct_btn:'Contact us', ct_back:'Back to About', copied:'Email copied ✓'
+},
+vi:{
+  nav_cta:'Liên hệ hợp tác',
+  hero_h1:'Nơi âm nhạc hội tụ,<br><span class="y">nền tảng đưa thương hiệu vươn xa</span>',
+  hero_sub:'Khởi đầu từ mô hình karaoke xu kiểu Hàn đầu tiên tại Việt Nam, Rainbow thiết kế trải nghiệm K-culture và kết nối dòng khách hàng với nội dung và thương mại — một <b style="color:#fff">K-Culture Platform</b>.',
+  btn_biz:'Lĩnh vực kinh doanh', btn_partner:'Liên hệ hợp tác',
+  stat1:'Chi nhánh tại các TTTM lớn Việt Nam', stat2:'Khách Gen Z mỗi ngày', stat3:'Tỷ lệ khách nữ (%)', stat4:'Lĩnh vực — Karaoke·Beauty·Festival·Media',
+  about_h2:'Chúng tôi không chỉ là<br>một công ty karaoke',
+  about_lead:'Tài sản cốt lõi của Rainbow không phải là cửa hàng mà là khách hàng. Mỗi ngày, 1.500 bạn trẻ Gen Z hát, quay video, đăng bài và trải nghiệm trong các trung tâm thương mại lớn tại Việt Nam. Rainbow Entertainment kết nối K-pop, K-beauty, K-festival và nội dung truyền thông trên điểm chạm offline này.',
+  pt1_t:'Cộng đồng fan Gen Z đã được kiểm chứng', pt1_p:'Một fandom thực thụ với thói quen tiêu thụ và sáng tạo nội dung — không chỉ là khách hàng, mà là động lực lan tỏa thương hiệu',
+  pt2_t:'Văn hóa hát lành mạnh kiểu Hàn', pt2_p:'Không rượu bia, thuốc lá hay cờ bạc — thương hiệu đáng tin cậy cho cả gia đình',
+  pt3_t:'Mô hình doanh thu nền tảng', pt3_p:'Thương mại, tài trợ, quảng cáo và nội dung cùng khai thác trên một dòng khách hàng',
+  quote:'"Rainbow không phải là công ty mở rộng phòng karaoke.<br><br>Chúng tôi thiết kế trải nghiệm K-culture từ các địa điểm của mình và kết nối dòng khách hàng với nội dung và thương mại."',
+  biz_h2:'Bốn lĩnh vực, một nền tảng',
+  biz_lead:'Karaoke · Beauty · K-Festival · Media — bốn lĩnh vực vận hành như một hệ sinh thái tuần hoàn, không phải các dự án riêng lẻ.',
+  biz1_t:'Rainbow Noraebang', biz1_p:'Chi nhánh trực tiếp tại các TTTM lớn (Van Hanh Mall · Aeon · Vincom) và mô hình nhượng quyền quốc tế. Karaoke xu kiểu Hàn kết hợp nội thất thời thượng với công nghệ — điểm tựa offline của mọi lĩnh vực.',
+  biz2_t:'Rainbow Beauty', biz2_p:'Enter Commerce™ — chuyên môn sản xuất K-beauty kết hợp hạ tầng fan-commerce của Rainbow. Từ pop-up trải nghiệm tại cửa hàng đến TikTok Shop và live commerce, biến fandom thành khách mua lặp lại.',
+  biz3_t:'Rainbow K-Festival', biz3_p:'Kpop vs Vpop Vocal Battle, sự kiện lớn tại sảnh chính TTTM, audition toàn cầu. Sự kiện K-culture khuếch đại thương hiệu, cùng phát triển với nhà tài trợ và đối tác.',
+  biz4_t:'Rainbow Media', biz4_p:'Nền tảng nội dung ca hát cập nhật mỗi ngày và mạng lưới quảng cáo màn hình KTV. Cỗ máy truyền thông nơi nội dung do khách hàng tạo ra lại thu hút khách hàng mới.',
+  fly_h2:'Vòng quay tăng trưởng Rainbow', fly_lead:'Nội dung tạo lượng khách, lượng khách tạo thương mại, và thương mại lại trở thành nội dung.',
+  fly1_t:'Sản xuất nội dung', fly1_p:'Video ca hát của khách trở thành nội dung ngắn mỗi ngày — festival và sự kiện beauty cung cấp chất liệu.',
+  fly2_t:'Thu hút khách', fly2_p:'Nội dung viral dẫn đến lượt ghé cửa hàng, và dòng khách Gen Z là nền tảng của mọi lĩnh vực.',
+  fly3_t:'Chuyển đổi thương mại', fly3_p:'Trải nghiệm pop-up tại cửa hàng chuyển thành đơn hàng TikTok Shop · live commerce — khách karaoke trở thành khách beauty.',
+  fly4_t:'Khuếch đại thương hiệu', fly4_p:'Sự kiện lớn tạo doanh thu tài trợ và độ phủ truyền thông, rồi quay lại thành nội dung viral.',
+  fly_loop:'↻ Và trở lại thành nội dung — Entertainment × Commerce × Community',
+  jr_h2:'Từ kiểm chứng đến mở rộng',
+  jr1_t:'Khởi đầu & kiểm chứng', jr1_p:'Ra mắt karaoke xu kiểu Hàn đầu tiên tại Việt Nam. Từ chi nhánh số 1 tại Van Hanh Mall, TP.HCM đến các TTTM lớn — xây dựng cộng đồng fan Gen Z và thương hiệu văn hóa hát lành mạnh.',
+  jr2_t:'Chuyển mình thành nền tảng', jr2_p:'Rainbow Entertainment ra đời. K-beauty Enter Commerce™, K-festival định kỳ và nền tảng nội dung TikTok — từ karaoke đến nền tảng K-culture.',
+  jr3_t:'Mở rộng toàn cầu', jr3_p:'Tiến vào Dubai với mô hình nhượng quyền quốc tế, mở rộng thương mại Đông Nam Á, xây dựng thương hiệu riêng và tài sản IP — hướng tới hệ sinh thái K-culture dẫn đầu Đông Nam Á.',
+  gl_h2:'Kiểm chứng tại Việt Nam, vươn ra thế giới',
+  gl1_p:'Chi nhánh trực tiếp tại các TTTM lớn ở TP.HCM và Hà Nội. Sân khấu kiểm chứng và đại bản doanh của mô hình nền tảng K-culture.', gl1_s:'Đang hoạt động',
+  gl2_p:'Tiến vào Trung Đông với hồ sơ thành công tại Việt Nam. Nền tảng K-entertainment đặt tại trung tâm thương mại.', gl2_s:'Đang xúc tiến',
+  gl3_p:'Thái Lan · Indonesia · Malaysia · Philippines — mở rộng qua mô hình nhượng quyền và thương mại số.', gl3_s:'Sắp mở rộng',
+  v1_p:'Không gian và nội dung kiến tạo trải nghiệm K-culture', v2_p:'Enter Commerce™ biến fandom thành đơn hàng', v3_p:'Cộng đồng Gen Z nơi khách hàng là ngôi sao',
+  ct_p:'Hợp tác mặt bằng TTTM · nhượng quyền quốc tế · collab K-brand · tài trợ · đầu tư — hãy liên hệ với chúng tôi.',
+  ct_btn:'Liên hệ hợp tác', ct_back:'Xem giới thiệu', copied:'Đã sao chép ✓'
+}};
+
+let CUR='ko';
+function setLang(l){
+  if(!I18N[l])return;
+  CUR=l;
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const v=I18N[l][el.dataset.i18n];
+    if(v!=null)el.innerHTML=v;
+  });
+  document.querySelectorAll('#langSw button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  try{localStorage.setItem('rb_lang',l);}catch(e){}
+}
+document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+// 초기 언어: 저장값 → 브라우저 언어 → 한국어
+(function(){
+  let l='ko';
+  try{l=localStorage.getItem('rb_lang')||'';}catch(e){}
+  if(!l){const n=(navigator.language||'').toLowerCase();l=n.startsWith('vi')?'vi':n.startsWith('en')?'en':n.startsWith('ko')?'ko':'vi';}
+  if(l!=='ko')setLang(l);
+})();
+
+// nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// count-up stats
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;io2.unobserve(e.target);
+  const el=e.target,n=+el.dataset.n,t0=performance.now();
+  (function tick(t){const p=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(tick);})(t0);
+}),{threshold:.5});
+document.querySelectorAll('.stats .v').forEach(el=>io2.observe(el));
+// copy email
+const cm=document.getElementById('copyMail');
+if(cm)cm.addEventListener('click',()=>{
+  const addr=document.getElementById('mailAddr').textContent;
+  const sp=cm.querySelector('span')||cm;
+  const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].ct_btn,1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}
+});
+</script>
+</body>
+</html>
