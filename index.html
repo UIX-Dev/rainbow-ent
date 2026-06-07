@@ -102,6 +102,20 @@
   .biz p{font-size:13px;color:var(--ink-3)}
   .biz .no{position:absolute;top:18px;right:22px;font-size:13px;font-weight:700;color:var(--purple-4)}
 
+  /* stores */
+  .store-meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .store-meta .chip{font-size:12.5px;font-weight:700;color:var(--purple);background:var(--purple-5);padding:9px 16px 7px;border-radius:999px;line-height:1.15}
+  .stores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  @media(max-width:860px){.stores-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.stores-grid{grid-template-columns:1fr}}
+  .store{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;transition:.25s;position:relative;overflow:hidden}
+  .store:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(89,50,202,.10);border-color:var(--purple-4)}
+  .store .area{font-size:25px;font-weight:700;color:var(--purple);line-height:1}
+  .store .area span{font-size:12.5px;font-weight:500;color:var(--ink-4);margin-left:2px}
+  .store .nm{font-size:16px;font-weight:700;margin-top:14px}
+  .store .lc{font-size:13px;color:var(--ink-3);margin-top:4px}
+  .store .flag-tag{position:absolute;top:16px;right:16px;font-size:9.5px;font-weight:700;letter-spacing:.12em;color:var(--purple);background:var(--purple-5);padding:5px 10px 3px;border-radius:999px}
+
   /* flywheel */
   .fly{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px}
   @media(max-width:860px){.fly{grid-template-columns:1fr;gap:10px}}
@@ -168,7 +182,7 @@
 <header class="nav" id="nav"><div class="wrap nav-in">
   <div class="brandmark">Rainbow <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#5932ca"/></svg> <span style="font-weight:300;color:var(--ink-3)">Entertainment</span></div>
   <nav class="nav-links">
-    <a href="#about">About</a><a href="#business">Business</a><a href="#platform">Platform</a>
+    <a href="#about">About</a><a href="#business">Business</a><a href="#stores">Stores</a><a href="#platform">Platform</a>
     <a href="#journey">Journey</a><a href="#global">Global</a>
     <a href="#contact" class="nav-cta" data-i18n="nav_cta">Partnership 문의</a>
     <div class="lang" id="langSw">
@@ -251,6 +265,52 @@
       <div class="icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div>
       <h3 data-i18n="biz4_t">레인보우 미디어</h3><div class="en">Rainbow Media</div>
       <p data-i18n="biz4_p">매일 업데이트되는 일반인 노래 콘텐츠 플랫폼과 KTV 스크린 광고 네트워크. 고객이 만든 콘텐츠가 다시 고객을 부르는 미디어 엔진입니다.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- STORES -->
+<section id="stores"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Our Stores</div>
+    <h2 class="sec" data-i18n="st_h2">컨셉이 아니라, 직접 운영하는 공간입니다</h2>
+    <p class="lead" data-i18n="st_lead">Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.</p>
+    <div class="store-meta">
+      <span class="chip" data-i18n="st_m1">직영 매장 6곳</span>
+      <span class="chip" data-i18n="st_m2">3개 도시</span>
+      <span class="chip" data-i18n="st_m3">운영 면적 약 1,200m²</span>
+    </div>
+  </div>
+  <div class="stores-grid">
+    <div class="store rv"><span class="flag-tag">FLAGSHIP</span>
+      <div class="area">330<span>m²</span></div>
+      <div class="nm">Van Hanh Mall</div>
+      <div class="lc" data-i18n="store1_loc">호치민 · 10군</div>
+    </div>
+    <div class="store rv">
+      <div class="area">265<span>m²</span></div>
+      <div class="nm">Aeon Mall Binh Tan</div>
+      <div class="lc" data-i18n="store2_loc">호치민</div>
+    </div>
+    <div class="store rv">
+      <div class="area">165<span>m²</span></div>
+      <div class="nm">Aeon Mall Tan Phu</div>
+      <div class="lc" data-i18n="store3_loc">호치민</div>
+    </div>
+    <div class="store rv">
+      <div class="area">165<span>m²</span></div>
+      <div class="nm">Aeon Mall Ha Dong</div>
+      <div class="lc" data-i18n="store4_loc">하노이</div>
+    </div>
+    <div class="store rv">
+      <div class="area">132<span>m²</span></div>
+      <div class="nm">Riverside · Block C</div>
+      <div class="lc" data-i18n="store5_loc">호치민 · 7군</div>
+    </div>
+    <div class="store rv">
+      <div class="area">132<span>m²</span></div>
+      <div class="nm">Go! Quy Nhon</div>
+      <div class="lc" data-i18n="store6_loc">뀌년 · Go! Mall</div>
     </div>
   </div>
 </div></section>
@@ -362,7 +422,11 @@ ko:{
   gl3_p:'태국 · 인도네시아 · 말레이시아 · 필리핀 — 라이센스 모델과 디지털 커머스로 확장.', gl3_s:'확장 예정',
   v1_p:'K컬처 경험을 설계하는 공간과 콘텐츠', v2_p:'팬덤을 구매로 연결하는 Enter Commerce™', v3_p:'고객이 주인공이 되는 Gen Z 커뮤니티',
   ct_p:'쇼핑몰 입점 · 해외 라이센스 · K브랜드 콜라보 · 스폰서십 · 투자 파트너십을 기다립니다.',
-  ct_btn:'파트너십 문의하기', ct_back:'회사 소개 다시 보기', copied:'이메일 복사됨 ✓'
+  ct_btn:'파트너십 문의하기', ct_back:'회사 소개 다시 보기', copied:'이메일 복사됨 ✓',
+  st_h2:'컨셉이 아니라, 직접 운영하는 공간입니다',
+  st_lead:'Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.',
+  st_m1:'직영 매장 6곳', st_m2:'3개 도시', st_m3:'운영 면적 약 1,200m²',
+  store1_loc:'호치민 · 10군', store2_loc:'호치민', store3_loc:'호치민', store4_loc:'하노이', store5_loc:'호치민 · 7군', store6_loc:'뀌년 · Go! Mall'
 },
 en:{
   nav_cta:'Partnership',
@@ -398,7 +462,11 @@ en:{
   gl3_p:'Thailand · Indonesia · Malaysia · Philippines — expanding through the license model and digital commerce.', gl3_s:'Planned',
   v1_p:'Spaces and content that design K-culture experiences', v2_p:'Enter Commerce™ that turns fandom into purchases', v3_p:'A Gen Z community where customers are the stars',
   ct_p:'Mall leasing · overseas licensing · K-brand collaborations · sponsorship · investment partnerships — let\'s talk.',
-  ct_btn:'Contact us', ct_back:'Back to About', copied:'Email copied ✓'
+  ct_btn:'Contact us', ct_back:'Back to About', copied:'Email copied ✓',
+  st_h2:'Not a concept — spaces we actually run',
+  st_lead:'Rainbow plans, designs and operates its own spaces. Our spacious, well-crafted stores inside Vietnam\'s major malls are stages built for pop-up zones, brand events and live commerce.',
+  st_m1:'6 direct stores', st_m2:'3 cities', st_m3:'~1,200m² operated',
+  store1_loc:'Ho Chi Minh City · District 10', store2_loc:'Ho Chi Minh City', store3_loc:'Ho Chi Minh City', store4_loc:'Hanoi', store5_loc:'Ho Chi Minh City · District 7', store6_loc:'Quy Nhon · Go! Mall'
 },
 vi:{
   nav_cta:'Liên hệ hợp tác',
@@ -434,7 +502,11 @@ vi:{
   gl3_p:'Thái Lan · Indonesia · Malaysia · Philippines — mở rộng qua mô hình nhượng quyền và thương mại số.', gl3_s:'Sắp mở rộng',
   v1_p:'Không gian và nội dung kiến tạo trải nghiệm K-culture', v2_p:'Enter Commerce™ biến fandom thành đơn hàng', v3_p:'Cộng đồng Gen Z nơi khách hàng là ngôi sao',
   ct_p:'Hợp tác mặt bằng TTTM · nhượng quyền quốc tế · collab K-brand · tài trợ · đầu tư — hãy liên hệ với chúng tôi.',
-  ct_btn:'Liên hệ hợp tác', ct_back:'Xem giới thiệu', copied:'Đã sao chép ✓'
+  ct_btn:'Liên hệ hợp tác', ct_back:'Xem giới thiệu', copied:'Đã sao chép ✓',
+  st_h2:'Không chỉ là ý tưởng — không gian chúng tôi thực sự vận hành',
+  st_lead:'Rainbow tự lên kế hoạch, thiết kế và vận hành. Những cửa hàng trực tiếp rộng rãi, được thiết kế chỉn chu trong các TTTM lớn ở Việt Nam là sân khấu lý tưởng cho pop-up, sự kiện thương hiệu và live commerce.',
+  st_m1:'6 cửa hàng trực tiếp', st_m2:'3 thành phố', st_m3:'~1.200m² vận hành',
+  store1_loc:'TP.HCM · Quận 10', store2_loc:'TP.HCM', store3_loc:'TP.HCM', store4_loc:'Hà Nội', store5_loc:'TP.HCM · Quận 7', store6_loc:'Quy Nhơn · Go! Mall'
 }};
 
 let CUR='ko';
