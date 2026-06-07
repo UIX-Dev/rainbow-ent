@@ -35,14 +35,14 @@
   .brandmark{display:flex;align-items:center;gap:8px;font-weight:700;font-size:20px}
   .nav-links{display:flex;gap:20px;font-size:13.5px;font-weight:500;color:var(--ink-3);align-items:center}
   .nav-links a:hover{color:var(--purple)}
-  .nav-cta{background:var(--purple);color:#fff !important;padding:9px 20px;border-radius:999px;font-weight:700;font-size:13px}
+  .nav-cta{background:var(--purple);color:#fff !important;padding:11px 20px 7px;border-radius:999px;font-weight:700;font-size:13px;line-height:1.15;display:inline-flex;align-items:center}
   .nav-cta:hover{background:var(--purple-2)}
   @media(max-width:900px){.nav-links a:not(.nav-cta){display:none}}
 
   /* language switcher */
   .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
   .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
-  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:5px 9px;border-radius:999px;transition:.15s}
+  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:6px 9px 4px;border-radius:999px;transition:.15s;line-height:1.15}
   .lang button.on{background:var(--purple);color:#fff}
   .lang button:not(.on):hover{color:var(--purple)}
 
@@ -52,8 +52,9 @@
   .hero h1{font-size:58px;font-weight:700;letter-spacing:-.015em;line-height:1.14;margin-top:18px}
   .hero h1 .y{color:var(--yellow)}
   .hero .sub{font-size:18px;color:var(--purple-5);margin-top:24px;max-width:660px}
-  .hero .btns{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;padding:14px 30px;border-radius:999px;font-weight:700;font-size:14.5px;transition:.2s}
+  .hero .btns{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  /* GmarketSans는 글리프가 위로 떠 보이는 폰트라 위/아래 패딩을 비대칭(+2px)으로 보정 */
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 30px 12px;border-radius:999px;font-weight:700;font-size:14.5px;line-height:1.15;transition:.2s;text-align:center}
   .btn.y, .btn.y *{background:var(--yellow);color:#222 !important;-webkit-text-fill-color:#222 !important}
   .btn.y:hover{background:var(--yellow-2);transform:translateY(-2px)}
   .btn.ghost{border:2px solid rgba(255,255,255,.5);color:#fff}
@@ -134,7 +135,7 @@
   .gl .flag{font-size:34px}
   .gl h3{font-size:17px;font-weight:700;margin:10px 0 6px}
   .gl p{font-size:13px;color:var(--ink-3)}
-  .gl .st{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--purple-5);color:var(--purple)}
+  .gl .st{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;padding:5px 12px 3px;border-radius:999px;background:var(--purple-5);color:var(--purple);line-height:1.15}
   .gl .st.now{background:var(--yellow);color:#222}
 
   /* values strip */
@@ -448,6 +449,35 @@ function setLang(l){
   try{localStorage.setItem('rb_lang',l);}catch(e){}
 }
 document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+/* ── 레이아웃 쉬프트 방지: 블록 요소만 3개 언어 중 가장 큰 '높이'로 고정.
+      버튼·뱃지는 텍스트 길이에 맞게 자연스럽게 늘었다 줄었다 함 ── */
+const SKIP_KEYS=new Set(['nav_cta','btn_biz','btn_partner','ct_btn','ct_back','gl1_s','gl2_s','gl3_s']);
+function lockSizes(){
+  const props=['font-family','font-size','font-weight','line-height','letter-spacing','padding','box-sizing','text-align','text-transform','word-break','border'];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key=el.dataset.i18n;
+    el.style.minHeight='';el.style.minWidth='';
+    if(SKIP_KEYS.has(key))return; // 버튼류는 크기 고정 안 함
+    const cs=getComputedStyle(el);
+    const m=document.createElement(el.tagName);
+    m.style.position='absolute';m.style.visibility='hidden';m.style.left='-9999px';m.style.top='0';
+    props.forEach(p=>m.style.setProperty(p,cs.getPropertyValue(p)));
+    m.style.display='block';m.style.width=el.clientWidth+'px';
+    document.body.appendChild(m);
+    let maxH=0;
+    ['ko','en','vi'].forEach(l=>{
+      const v=I18N[l]&&I18N[l][key];
+      if(v!=null){m.innerHTML=v;maxH=Math.max(maxH,m.offsetHeight);}
+    });
+    document.body.removeChild(m);
+    if(maxH>0)el.style.minHeight=maxH+'px';
+  });
+}
+let _rsT;
+addEventListener('resize',()=>{clearTimeout(_rsT);_rsT=setTimeout(lockSizes,250);});
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>setTimeout(lockSizes,50));}
+setTimeout(lockSizes,300);
 // 초기 언어: 저장값 → 브라우저 언어 → 한국어
 (function(){
   let l='ko';
