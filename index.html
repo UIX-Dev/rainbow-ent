@@ -108,13 +108,19 @@
   .stores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
   @media(max-width:860px){.stores-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.stores-grid{grid-template-columns:1fr}}
-  .store{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;transition:.25s;position:relative;overflow:hidden}
+  .store{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff;transition:.25s;position:relative;overflow:hidden}
   .store:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(89,50,202,.10);border-color:var(--purple-4)}
-  .store .area{font-size:25px;font-weight:700;color:var(--purple);line-height:1}
+  .store .shead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .store .no{font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--purple-4)}
+  .store .sst{font-size:10px;font-weight:700;padding:4px 10px 2px;border-radius:999px;line-height:1.15;background:#e7f7ee;color:#159a4a}
+  .store .sst.closed{background:var(--gray-3);color:var(--ink-4)}
+  .store .area{font-size:26px;font-weight:700;color:var(--purple);line-height:1}
   .store .area span{font-size:12.5px;font-weight:500;color:var(--ink-4);margin-left:2px}
-  .store .nm{font-size:16px;font-weight:700;margin-top:14px}
-  .store .lc{font-size:13px;color:var(--ink-3);margin-top:4px}
-  .store .flag-tag{position:absolute;top:16px;right:16px;font-size:9.5px;font-weight:700;letter-spacing:.12em;color:var(--purple);background:var(--purple-5);padding:5px 10px 3px;border-radius:999px}
+  .store .nm{font-size:15.5px;font-weight:700;margin-top:12px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .store .fl{font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--purple);background:var(--purple-5);padding:3px 8px 1px;border-radius:999px}
+  .store .lc{font-size:12.5px;color:var(--ink-3);margin-top:5px}
+  .store.closed{opacity:.62}
+  .store.closed .area{color:var(--ink-4)}
 
   /* photo wall (masonry — keeps each photo's natural ratio) */
   .wall{column-count:3;column-gap:14px;margin-top:42px}
@@ -290,41 +296,53 @@
     <h2 class="sec" data-i18n="st_h2">컨셉이 아니라, 직접 운영하는 공간입니다</h2>
     <p class="lead" data-i18n="st_lead">Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.</p>
     <div class="store-meta">
-      <span class="chip" data-i18n="st_m1">직영 매장 6곳</span>
+      <span class="chip" data-i18n="st_m1">6개 운영 중</span>
       <span class="chip" data-i18n="st_m2">3개 도시</span>
-      <span class="chip" data-i18n="st_m3">운영 면적 약 1,200m²</span>
+      <span class="chip" data-i18n="st_m3">누적 7개 오픈</span>
     </div>
   </div>
   <div class="stores-grid">
-    <div class="store rv"><span class="flag-tag">FLAGSHIP</span>
+    <div class="store rv">
+      <div class="shead"><span class="no">STORE 01</span><span class="sst" data-i18n="s_open">운영 중</span></div>
       <div class="area">330<span>m²</span></div>
-      <div class="nm">Van Hanh Mall</div>
+      <div class="nm">Van Hanh Mall <span class="fl">FLAGSHIP</span></div>
       <div class="lc" data-i18n="store1_loc">호치민 · 10군</div>
     </div>
+    <div class="store closed rv">
+      <div class="shead"><span class="no">STORE 02</span><span class="sst closed" data-i18n="s_closed">폐점</span></div>
+      <div class="area">495<span>m²</span></div>
+      <div class="nm">Vincom Plaza Thu Duc</div>
+      <div class="lc" data-i18n="store2_loc">호치민 · 투득</div>
+    </div>
     <div class="store rv">
+      <div class="shead"><span class="no">STORE 03</span><span class="sst" data-i18n="s_open">운영 중</span></div>
       <div class="area">265<span>m²</span></div>
       <div class="nm">Aeon Mall Binh Tan</div>
-      <div class="lc" data-i18n="store2_loc">호치민</div>
+      <div class="lc" data-i18n="store3_loc">호치민 · 빈떤</div>
     </div>
     <div class="store rv">
-      <div class="area">165<span>m²</span></div>
-      <div class="nm">Aeon Mall Tan Phu</div>
-      <div class="lc" data-i18n="store3_loc">호치민</div>
-    </div>
-    <div class="store rv">
-      <div class="area">165<span>m²</span></div>
-      <div class="nm">Aeon Mall Ha Dong</div>
-      <div class="lc" data-i18n="store4_loc">하노이</div>
-    </div>
-    <div class="store rv">
+      <div class="shead"><span class="no">STORE 04</span><span class="sst" data-i18n="s_open">운영 중</span></div>
       <div class="area">132<span>m²</span></div>
       <div class="nm">Riverside · Block C</div>
-      <div class="lc" data-i18n="store5_loc">호치민 · 7군</div>
+      <div class="lc" data-i18n="store4_loc">호치민 · 7군</div>
     </div>
     <div class="store rv">
+      <div class="shead"><span class="no">STORE 05</span><span class="sst" data-i18n="s_open">운영 중</span></div>
+      <div class="area">165<span>m²</span></div>
+      <div class="nm">Aeon Mall Ha Dong</div>
+      <div class="lc" data-i18n="store5_loc">하노이 · 하동</div>
+    </div>
+    <div class="store rv">
+      <div class="shead"><span class="no">STORE 06</span><span class="sst" data-i18n="s_open">운영 중</span></div>
+      <div class="area">165<span>m²</span></div>
+      <div class="nm">Aeon Mall Tan Phu</div>
+      <div class="lc" data-i18n="store6_loc">호치민 · 떤푸</div>
+    </div>
+    <div class="store rv">
+      <div class="shead"><span class="no">STORE 07</span><span class="sst" data-i18n="s_open">운영 중</span></div>
       <div class="area">132<span>m²</span></div>
       <div class="nm">Go! Quy Nhon</div>
-      <div class="lc" data-i18n="store6_loc">뀌년 · Go! Mall</div>
+      <div class="lc" data-i18n="store7_loc">뀌년</div>
     </div>
   </div>
   <div class="wall rv">
@@ -467,8 +485,8 @@ ko:{
   ct_btn:'파트너십 문의하기', ct_back:'회사 소개 다시 보기', copied:'이메일 복사됨 ✓',
   st_h2:'컨셉이 아니라, 직접 운영하는 공간입니다',
   st_lead:'Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.',
-  st_m1:'직영 매장 6곳', st_m2:'3개 도시', st_m3:'운영 면적 약 1,200m²',
-  store1_loc:'호치민 · 10군', store2_loc:'호치민', store3_loc:'호치민', store4_loc:'하노이', store5_loc:'호치민 · 7군', store6_loc:'뀌년 · Go! Mall',
+  st_m1:'6개 운영 중', st_m2:'3개 도시', st_m3:'누적 7개 오픈', s_open:'운영 중', s_closed:'폐점',
+  store1_loc:'호치민 · 10군', store2_loc:'호치민 · 투득', store3_loc:'호치민 · 빈떤', store4_loc:'호치민 · 7군', store5_loc:'하노이 · 하동', store6_loc:'호치민 · 떤푸', store7_loc:'뀌년',
   lv_h2:'기획부터 운영, 그리고 무대까지',
   lv_lead:'매장을 직접 설계하고 운영하며, 그 공간에서 K-페스티벌과 브랜드 행사를 엽니다. 컨셉이 아니라 매일 돌아가는 현장입니다.'
 },
@@ -509,8 +527,8 @@ en:{
   ct_btn:'Contact us', ct_back:'Back to About', copied:'Email copied ✓',
   st_h2:'Not a concept — spaces we actually run',
   st_lead:'Rainbow plans, designs and operates its own spaces. Our spacious, well-crafted stores inside Vietnam\'s major malls are stages built for pop-up zones, brand events and live commerce.',
-  st_m1:'6 direct stores', st_m2:'3 cities', st_m3:'~1,200m² operated',
-  store1_loc:'Ho Chi Minh City · District 10', store2_loc:'Ho Chi Minh City', store3_loc:'Ho Chi Minh City', store4_loc:'Hanoi', store5_loc:'Ho Chi Minh City · District 7', store6_loc:'Quy Nhon · Go! Mall',
+  st_m1:'6 operating', st_m2:'3 cities', st_m3:'7 opened to date', s_open:'Operating', s_closed:'Closed',
+  store1_loc:'District 10 · HCMC', store2_loc:'Thu Duc · HCMC', store3_loc:'Binh Tan · HCMC', store4_loc:'District 7 · HCMC', store5_loc:'Ha Dong · Hanoi', store6_loc:'Tan Phu · HCMC', store7_loc:'Quy Nhon',
   lv_h2:'From design to operation — and the stage',
   lv_lead:'We design and operate our own venues, then host K-festivals and brand events inside them. Not a concept — a place that runs every single day.'
 },
@@ -551,8 +569,8 @@ vi:{
   ct_btn:'Liên hệ hợp tác', ct_back:'Xem giới thiệu', copied:'Đã sao chép ✓',
   st_h2:'Không chỉ là ý tưởng — không gian chúng tôi thực sự vận hành',
   st_lead:'Rainbow tự lên kế hoạch, thiết kế và vận hành. Những cửa hàng trực tiếp rộng rãi, được thiết kế chỉn chu trong các TTTM lớn ở Việt Nam là sân khấu lý tưởng cho pop-up, sự kiện thương hiệu và live commerce.',
-  st_m1:'6 cửa hàng trực tiếp', st_m2:'3 thành phố', st_m3:'~1.200m² vận hành',
-  store1_loc:'TP.HCM · Quận 10', store2_loc:'TP.HCM', store3_loc:'TP.HCM', store4_loc:'Hà Nội', store5_loc:'TP.HCM · Quận 7', store6_loc:'Quy Nhơn · Go! Mall',
+  st_m1:'6 đang hoạt động', st_m2:'3 thành phố', st_m3:'7 đã khai trương', s_open:'Đang hoạt động', s_closed:'Đã đóng',
+  store1_loc:'Quận 10 · TP.HCM', store2_loc:'Thủ Đức · TP.HCM', store3_loc:'Bình Tân · TP.HCM', store4_loc:'Quận 7 · TP.HCM', store5_loc:'Hà Đông · Hà Nội', store6_loc:'Tân Phú · TP.HCM', store7_loc:'Quy Nhơn',
   lv_h2:'Từ thiết kế, vận hành đến sân khấu',
   lv_lead:'Chúng tôi tự thiết kế và vận hành cửa hàng, rồi tổ chức K-festival và sự kiện thương hiệu ngay tại đó. Không phải ý tưởng — mà là hiện trường vận hành mỗi ngày.'
 }};
