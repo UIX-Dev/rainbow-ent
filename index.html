@@ -116,6 +116,20 @@
   .store .lc{font-size:13px;color:var(--ink-3);margin-top:4px}
   .store .flag-tag{position:absolute;top:16px;right:16px;font-size:9.5px;font-weight:700;letter-spacing:.12em;color:var(--purple);background:var(--purple-5);padding:5px 10px 3px;border-radius:999px}
 
+  /* photo wall (masonry — keeps each photo's natural ratio) */
+  .wall{column-count:3;column-gap:14px;margin-top:42px}
+  @media(max-width:860px){.wall{column-count:2;column-gap:12px}}
+  @media(max-width:520px){.wall{column-count:1}}
+  .wall figure{margin:0 0 14px;border-radius:16px;overflow:hidden;break-inside:avoid;position:relative;line-height:0;border:1px solid var(--line)}
+  .wall img{width:100%;display:block;transition:transform .5s ease}
+  .wall figure:hover img{transform:scale(1.05)}
+  .wall .cap{position:absolute;left:0;right:0;bottom:0;padding:18px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:12px;font-weight:700;line-height:1.3}
+
+  /* brand film */
+  .film{max-width:900px;margin:44px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 22px 55px rgba(89,50,202,.18);background:#000}
+  .film .ratio{padding:75% 0 0 0;position:relative}
+  .film iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
   /* flywheel */
   .fly{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px}
   @media(max-width:860px){.fly{grid-template-columns:1fr;gap:10px}}
@@ -180,7 +194,7 @@
 <body>
 
 <header class="nav" id="nav"><div class="wrap nav-in">
-  <div class="brandmark">Rainbow <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#5932ca"/></svg> <span style="font-weight:300;color:var(--ink-3)">Entertainment</span></div>
+  <div class="brandmark"><img src="assets/rainbow-logo.png" alt="Rainbow" style="height:28px;width:auto;display:block"> <span style="font-weight:300;color:var(--ink-3);font-size:15px">Entertainment</span></div>
   <nav class="nav-links">
     <a href="#about">About</a><a href="#business">Business</a><a href="#stores">Stores</a><a href="#platform">Platform</a>
     <a href="#journey">Journey</a><a href="#global">Global</a>
@@ -313,6 +327,34 @@
       <div class="lc" data-i18n="store6_loc">뀌년 · Go! Mall</div>
     </div>
   </div>
+  <div class="wall rv">
+    <figure><img loading="lazy" src="assets/space-entrance-neon.jpg" alt="Rainbow store entrance"></figure>
+    <figure><img loading="lazy" src="assets/space-rooms-premium-01.jpg" alt="Premium karaoke rooms"></figure>
+    <figure><img loading="lazy" src="assets/space-room-tropical.jpg" alt="Themed karaoke room interior"></figure>
+    <figure><img loading="lazy" src="assets/space-corridor-01.jpg" alt="Rainbow store corridor"></figure>
+    <figure><img loading="lazy" src="assets/space-brand-wall.jpg" alt="Rainbow brand wall"></figure>
+    <figure><img loading="lazy" src="assets/store-front-opening.jpg" alt="Rainbow mall storefront"></figure>
+  </div>
+</div></section>
+
+<!-- ON THE GROUND / FILM + EVENTS -->
+<section id="live" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">On The Ground</div>
+    <h2 class="sec" data-i18n="lv_h2">기획부터 운영, 그리고 무대까지</h2>
+    <p class="lead" data-i18n="lv_lead">매장을 직접 설계하고 운영하며, 그 공간에서 K-페스티벌과 브랜드 행사를 엽니다. 컨셉이 아니라 매일 돌아가는 현장입니다.</p>
+  </div>
+  <div class="film rv">
+    <div class="ratio"><iframe src="https://player.vimeo.com/video/1203035688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Rainbow Entertainment"></iframe></div>
+  </div>
+  <div class="wall rv">
+    <figure><img loading="lazy" src="assets/event-vk-vocal-showcase.jpg" alt="V&amp;K Vocal Showcase"><figcaption class="cap">V&amp;K Vocal Showcase · Aeon Mall Ha Dong</figcaption></figure>
+    <figure><img loading="lazy" src="assets/event-festival-01.jpg" alt="Mall main-hall K-festival"><figcaption class="cap">K-Festival · Mall Main Hall</figcaption></figure>
+    <figure><img loading="lazy" src="assets/event-grand-opening.jpg" alt="Rainbow store grand opening"><figcaption class="cap">Grand Opening</figcaption></figure>
+    <figure><img loading="lazy" src="assets/event-festival-02.jpg" alt="K-festival audience"></figure>
+    <figure><img loading="lazy" src="assets/event-press-conference.jpg" alt="Press conference"><figcaption class="cap">Press Conference · 2026</figcaption></figure>
+    <figure><img loading="lazy" src="assets/event-festival-03.jpg" alt="K-festival crowd"></figure>
+  </div>
 </div></section>
 
 <!-- PLATFORM / FLYWHEEL -->
@@ -426,7 +468,9 @@ ko:{
   st_h2:'컨셉이 아니라, 직접 운영하는 공간입니다',
   st_lead:'Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.',
   st_m1:'직영 매장 6곳', st_m2:'3개 도시', st_m3:'운영 면적 약 1,200m²',
-  store1_loc:'호치민 · 10군', store2_loc:'호치민', store3_loc:'호치민', store4_loc:'하노이', store5_loc:'호치민 · 7군', store6_loc:'뀌년 · Go! Mall'
+  store1_loc:'호치민 · 10군', store2_loc:'호치민', store3_loc:'호치민', store4_loc:'하노이', store5_loc:'호치민 · 7군', store6_loc:'뀌년 · Go! Mall',
+  lv_h2:'기획부터 운영, 그리고 무대까지',
+  lv_lead:'매장을 직접 설계하고 운영하며, 그 공간에서 K-페스티벌과 브랜드 행사를 엽니다. 컨셉이 아니라 매일 돌아가는 현장입니다.'
 },
 en:{
   nav_cta:'Partnership',
@@ -466,7 +510,9 @@ en:{
   st_h2:'Not a concept — spaces we actually run',
   st_lead:'Rainbow plans, designs and operates its own spaces. Our spacious, well-crafted stores inside Vietnam\'s major malls are stages built for pop-up zones, brand events and live commerce.',
   st_m1:'6 direct stores', st_m2:'3 cities', st_m3:'~1,200m² operated',
-  store1_loc:'Ho Chi Minh City · District 10', store2_loc:'Ho Chi Minh City', store3_loc:'Ho Chi Minh City', store4_loc:'Hanoi', store5_loc:'Ho Chi Minh City · District 7', store6_loc:'Quy Nhon · Go! Mall'
+  store1_loc:'Ho Chi Minh City · District 10', store2_loc:'Ho Chi Minh City', store3_loc:'Ho Chi Minh City', store4_loc:'Hanoi', store5_loc:'Ho Chi Minh City · District 7', store6_loc:'Quy Nhon · Go! Mall',
+  lv_h2:'From design to operation — and the stage',
+  lv_lead:'We design and operate our own venues, then host K-festivals and brand events inside them. Not a concept — a place that runs every single day.'
 },
 vi:{
   nav_cta:'Liên hệ hợp tác',
@@ -506,7 +552,9 @@ vi:{
   st_h2:'Không chỉ là ý tưởng — không gian chúng tôi thực sự vận hành',
   st_lead:'Rainbow tự lên kế hoạch, thiết kế và vận hành. Những cửa hàng trực tiếp rộng rãi, được thiết kế chỉn chu trong các TTTM lớn ở Việt Nam là sân khấu lý tưởng cho pop-up, sự kiện thương hiệu và live commerce.',
   st_m1:'6 cửa hàng trực tiếp', st_m2:'3 thành phố', st_m3:'~1.200m² vận hành',
-  store1_loc:'TP.HCM · Quận 10', store2_loc:'TP.HCM', store3_loc:'TP.HCM', store4_loc:'Hà Nội', store5_loc:'TP.HCM · Quận 7', store6_loc:'Quy Nhơn · Go! Mall'
+  store1_loc:'TP.HCM · Quận 10', store2_loc:'TP.HCM', store3_loc:'TP.HCM', store4_loc:'Hà Nội', store5_loc:'TP.HCM · Quận 7', store6_loc:'Quy Nhơn · Go! Mall',
+  lv_h2:'Từ thiết kế, vận hành đến sân khấu',
+  lv_lead:'Chúng tôi tự thiết kế và vận hành cửa hàng, rồi tổ chức K-festival và sự kiện thương hiệu ngay tại đó. Không phải ý tưởng — mà là hiện trường vận hành mỗi ngày.'
 }};
 
 let CUR='ko';
