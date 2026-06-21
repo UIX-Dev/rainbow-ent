@@ -29,14 +29,23 @@
 
   header.nav{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
   header.nav.scrolled{border-color:var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brandmark{display:flex;align-items:center;gap:8px}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brandmark{display:flex;align-items:center;gap:8px;flex-shrink:0}
   .brandmark img{height:26px;width:auto;display:block;position:relative;top:-3px}
   .brandmark span{font-weight:300;color:var(--ink-3);font-size:14px}
+  .nav-right{display:flex;align-items:center;gap:14px}
   .nav-cta{background:var(--purple);color:#fff;padding:10px 18px 8px;border-radius:999px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;line-height:1}
   .nav-cta:hover{background:var(--purple-2)}
   .back{font-size:13px;font-weight:500;color:var(--ink-3)}
   .back:hover{color:var(--purple)}
+  @media(max-width:680px){.back{display:none}}
+  /* language switcher */
+  .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
+  .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
+  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:6px 9px 4px;border-radius:999px;transition:.15s;line-height:1.15}
+  .lang button.on{background:var(--purple);color:#fff}
+  .lang button:not(.on):hover{color:var(--purple)}
+  @media(max-width:680px){.nav-cta{display:none}}
 
   .hero{background:var(--purple);color:#fff;padding:150px 0 110px;position:relative;overflow:hidden}
   .hero .eyebrow{font-size:12.5px;letter-spacing:.24em;font-weight:700;color:var(--yellow)}
@@ -62,7 +71,6 @@
   .lead{color:var(--ink-3);font-size:15.5px;max-width:760px}
   .center{text-align:center}.center .lead{margin:0 auto}
 
-  /* signature band */
   .signature{background:var(--purple);color:#fff;position:relative;overflow:hidden}
   .signature .eyebrow{color:var(--yellow)}
   .signature h2{font-size:34px;font-weight:700;line-height:1.28;margin:12px 0 16px}
@@ -75,7 +83,6 @@
   .sig-points b:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);flex-shrink:0}
   .sig-points span{display:block;font-size:13px;color:var(--purple-4);margin-top:8px;line-height:1.55}
 
-  /* usp */
   .usp{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px}
   @media(max-width:760px){.usp{grid-template-columns:1fr}}
   .usp .u{border:1px solid var(--line);border-radius:20px;padding:30px 28px;transition:.25s;background:#fff}
@@ -84,7 +91,6 @@
   .usp .u h3{font-size:19px;font-weight:700;margin:14px 0 8px}
   .usp .u p{font-size:13.5px;color:var(--ink-3)}
 
-  /* care grid */
   .care{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
   @media(max-width:760px){.care{grid-template-columns:1fr 1fr}}
   @media(max-width:480px){.care{grid-template-columns:1fr}}
@@ -94,7 +100,6 @@
   .care .c b{display:block;font-size:15.5px;font-weight:700;margin:8px 0 5px}
   .care .c p{font-size:13px;color:var(--ink-4)}
 
-  /* trainers */
   .tr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
   @media(max-width:860px){.tr{grid-template-columns:1fr}}
   .trainer{border:1px solid var(--line);border-radius:20px;padding:30px 26px;background:#fff;transition:.25s}
@@ -104,7 +109,6 @@
   .trainer .en{font-size:11.5px;letter-spacing:.1em;color:var(--ink-4);text-transform:uppercase;margin-bottom:14px}
   .trainer p{font-size:13px;color:var(--ink-3);line-height:1.6}
 
-  /* schedule */
   .sch{margin-top:48px;display:flex;flex-direction:column;gap:12px}
   .day{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start;border:1px solid var(--line);border-radius:16px;padding:22px 24px;background:#fff;transition:.2s}
   .day:hover{border-color:var(--purple-4)}
@@ -116,12 +120,11 @@
   .day li:before{content:"·";position:absolute;left:3px;color:var(--purple-3);font-weight:700}
   @media(max-width:600px){.day{grid-template-columns:1fr;gap:8px}}
 
-  /* pricing */
   .pricing{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px;align-items:stretch}
   @media(max-width:860px){.pricing{grid-template-columns:1fr}}
   .pk{border-radius:24px;padding:38px 34px;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
   .pk.vvip{background:var(--purple);color:#fff;border-color:transparent;position:relative;overflow:hidden}
-  .pk .badge{display:inline-flex;align-self:flex-start;align-items:center;font-size:11px;font-weight:700;letter-spacing:.08em;padding:6px 12px 4px;border-radius:999px;line-height:1;background:var(--purple-5);color:var(--purple)}
+  .pk .badge{display:inline-flex;align-self:flex-start;align-items:center;font-size:11px;font-weight:700;letter-spacing:.04em;padding:6px 12px 4px;border-radius:999px;line-height:1;background:var(--purple-5);color:var(--purple)}
   .pk.vvip .badge{background:var(--yellow);color:#222}
   .pk h3{font-size:20px;font-weight:700;margin:16px 0 4px}
   .pk .amt{font-size:38px;font-weight:700;line-height:1;margin:6px 0 2px}
@@ -139,7 +142,6 @@
   .common{margin-top:22px;border:1px dashed var(--purple-4);background:var(--purple-5);border-radius:18px;padding:22px 26px;font-size:13.5px;color:var(--ink-3);text-align:center;line-height:1.7}
   .common b{color:var(--purple)}
 
-  /* apply */
   .apply{background:var(--black);color:#fff}
   .apply h2.sec{color:#fff}.apply .lead{color:#adadad}
   .form{max-width:680px;margin:42px auto 0;background:#fff;color:var(--black);border-radius:24px;padding:38px}
@@ -175,9 +177,13 @@
 
 <header class="nav" id="nav"><div class="wrap nav-in">
   <a class="brandmark" href="index.html"><img src="assets/rainbow-logo.png" alt="Rainbow"> <span>K-POP Camp</span></a>
-  <div style="display:flex;align-items:center;gap:18px">
-    <a class="back" href="index.html">← 메인으로</a>
-    <a class="nav-cta" href="#apply">지금 접수하기</a>
+  <div class="nav-right">
+    <a class="back" href="index.html" data-i18n="k_back">← 메인으로</a>
+    <a class="nav-cta" href="#apply" data-i18n="k_cta">지금 접수하기</a>
+    <div class="lang" id="langSw">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.6 15.6 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11zM12 4.1c.9 1.2 1.9 3.4 2.4 6.9H9.6c.5-3.5 1.5-5.7 2.4-6.9zM4.1 13h3.4c.2 2 .6 3.9 1.2 5.5A8 8 0 0 1 4.1 13zm3.4-2H4.1a8 8 0 0 1 4.6-5.5A15.6 15.6 0 0 0 7.5 11zm4.5 8.9c-.9-1.2-1.9-3.4-2.4-6.9h4.8c-.5 3.5-1.5 5.7-2.4 6.9zm3.3-1.4c.6-1.6 1-3.5 1.2-5.5h3.4a8 8 0 0 1-4.6 5.5z"/></svg>
+      <button data-lang="vi" type="button">VI</button><button data-lang="en" type="button">EN</button><button data-lang="ko" type="button" class="on">KO</button>
+    </div>
   </div>
 </div></header>
 
@@ -187,33 +193,33 @@
   <svg class="spark" style="bottom:-30px;left:5%;width:130px;height:130px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
   <div class="wrap">
     <div class="eyebrow">K-POP INTENSIVE PRODUCTION CAMP · SEOUL</div>
-    <h1>단 일주일, 당신의 인생이<br><span class="y">K-POP 아티스트로 다시 태어납니다</span></h1>
-    <p class="sub">대한민국 메이저 기획사가 검증한 <b style="color:#fff">TOP 1% 마스터 군단</b>과 함께하는, 오직 당신만을 위한 프리미엄 스타 메이킹 프로덕션. 실제 K-POP 아티스트의 데뷔 프로세스와 100% 동일한 하이엔드 과정으로 '완벽한 오디션·데뷔 포트폴리오'를 완성합니다.</p>
+    <h1 data-i18n="k_h1">단 일주일, 당신의 인생이<br><span class="y">K-POP 아티스트로 다시 태어납니다</span></h1>
+    <p class="sub" data-i18n="k_sub">대한민국 메이저 기획사가 검증한 <b style="color:#fff">TOP 1% 마스터 군단</b>과 함께하는, 오직 당신만을 위한 프리미엄 스타 메이킹 프로덕션. 실제 K-POP 아티스트의 데뷔 프로세스와 100% 동일한 하이엔드 과정으로 '완벽한 오디션·데뷔 포트폴리오'를 완성합니다.</p>
     <div class="meta">
-      <span class="hi">🎬 전담 콘텐츠 스태프 1:1</span>
-      <span>🗓️ 6박 7일</span>
-      <span>📍 서울 · 청담</span>
-      <span>🤝 현역 매니저 전 일정 동행</span>
-      <span>🎯 1년 기획사 매칭</span>
+      <span class="hi" data-i18n="k_m1">🎬 전담 콘텐츠 스태프 1:1</span>
+      <span data-i18n="k_m2">🗓️ 6박 7일</span>
+      <span data-i18n="k_m3">📍 서울 · 청담</span>
+      <span data-i18n="k_m4">🤝 현역 매니저 전 일정 동행</span>
+      <span data-i18n="k_m5">🎯 1년 기획사 매칭</span>
     </div>
     <div class="btns">
-      <a class="btn y" href="#apply">지금 접수하기</a>
-      <a class="btn ghost" href="#pricing">패키지 보기</a>
+      <a class="btn y" href="#apply" data-i18n="k_btn1">지금 접수하기</a>
+      <a class="btn ghost" href="#pricing" data-i18n="k_btn2">패키지 보기</a>
     </div>
   </div>
 </section>
 
-<!-- SIGNATURE : personal content crew -->
+<!-- SIGNATURE -->
 <section class="signature">
   <svg class="spark" style="top:-10px;right:5%;width:160px;height:160px;animation-delay:1s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
   <div class="wrap rv">
     <div class="eyebrow">★ Signature Service</div>
-    <h2>당신만 따라다니는 <span class="y">전담 콘텐츠 크루</span></h2>
-    <p>전 일정 동안 <b style="color:#fff">전담 스태프</b>가 트레이닝·녹음·화보·무대 뒤 모든 순간을 촬영합니다. 매일 숏폼·릴스용으로 편집해 공유 — SNS에 바로 올리는 <b style="color:#fff">'나만의 데뷔 브이로그'</b>와, 오디션에 바로 쓰는 하이엔드 포트폴리오를 완성해 드립니다.</p>
+    <h2 data-i18n="k_sg_h2">당신만 따라다니는 <span class="y">전담 콘텐츠 크루</span></h2>
+    <p data-i18n="k_sg_p">전 일정 동안 <b style="color:#fff">전담 스태프</b>가 트레이닝·녹음·화보·무대 뒤 모든 순간을 촬영합니다. 매일 숏폼·릴스용으로 편집해 공유 — SNS에 바로 올리는 <b style="color:#fff">'나만의 데뷔 브이로그'</b>와, 오디션에 바로 쓰는 하이엔드 포트폴리오를 완성해 드립니다.</p>
     <div class="sig-points">
-      <div><b>매일 촬영분 공유</b><span>그날 찍은 사진·영상을 당일 정리해 전달</span></div>
-      <div><b>숏폼 즉시 업로드용</b><span>TikTok · Reels · Shorts 세로 편집본 제공</span></div>
-      <div><b>오피셜 결과물 일체</b><span>퍼포먼스 비디오 · 화보 · 음원까지 데이터 전체</span></div>
+      <div><b data-i18n="k_sg1b">매일 촬영분 공유</b><span data-i18n="k_sg1s">그날 찍은 사진·영상을 당일 정리해 전달</span></div>
+      <div><b data-i18n="k_sg2b">숏폼 즉시 업로드용</b><span data-i18n="k_sg2s">TikTok · Reels · Shorts 세로 편집본 제공</span></div>
+      <div><b data-i18n="k_sg3b">오피셜 결과물 일체</b><span data-i18n="k_sg3s">퍼포먼스 비디오 · 화보 · 음원까지 데이터 전체</span></div>
     </div>
   </div>
 </section>
@@ -222,15 +228,15 @@
 <section id="why"><div class="wrap">
   <div class="center rv">
     <div class="eyebrow">What We Do in 7 Days</div>
-    <h2 class="sec">7일간의 기적, 우리가 창조할 것들</h2>
-    <p class="lead">지루한 단순 관광이나 학원형 단체 수업은 없습니다. 실제 K-POP 아티스트의 데뷔 프로세스와 100% 동일한 하이엔드 프로덕션을 통과합니다.</p>
+    <h2 class="sec" data-i18n="k_u_h2">7일간의 기적, 우리가 창조할 것들</h2>
+    <p class="lead" data-i18n="k_u_lead">지루한 단순 관광이나 학원형 단체 수업은 없습니다. 실제 K-POP 아티스트의 데뷔 프로세스와 100% 동일한 하이엔드 프로덕션을 통과합니다.</p>
   </div>
   <div class="usp">
-    <div class="u rv"><div class="em">🎯</div><h3>전문 강사진 인텐시브 트레이닝</h3><p>숨겨진 음역대를 찾아내는 보컬 세션과, 카메라 앵글을 압도하는 댄스 마스터 클래스로 실전 기본기를 빌드업합니다.</p></div>
-    <div class="u rv"><div class="em">🎙️</div><h3>K-POP 최고 유명 녹음실 레코딩</h3><p>대한민국 레전드 아티스트의 히트곡이 탄생한 권위 있는 스튜디오에서 진행되는 나의 단독 음원 녹음.</p></div>
-    <div class="u rv"><div class="em">📸</div><h3>탑스타 전담 포토그래퍼 화보</h3><p>주요 기획사 앨범 자켓을 책임지는 거장의 디렉팅 아래, 고해상도 오디션 프로필을 확보합니다.</p></div>
-    <div class="u rv"><div class="em">🎬</div><h3>오피셜 퍼포먼스 비디오 제작</h3><p>전문 방송 영상·조명 크루가 투입되어, 당신의 매력을 극대화할 공식 안무 MV와 숏폼 콘텐츠를 촬영합니다.</p></div>
-    <div class="u rv" style="grid-column:1/-1"><div class="em">👑</div><h3>1:1 마스터 컨설팅 &amp; 매칭</h3><p>총괄 프로듀서와의 개별 상담으로 본인의 강점을 정밀 분석하고, 향후 글로벌 무대 진출을 위한 솔루션과 기획사 매칭 로드맵을 수립합니다.</p></div>
+    <div class="u rv"><div class="em">🎯</div><h3 data-i18n="k_u1t">전문 강사진 인텐시브 트레이닝</h3><p data-i18n="k_u1p">숨겨진 음역대를 찾아내는 보컬 세션과, 카메라 앵글을 압도하는 댄스 마스터 클래스로 실전 기본기를 빌드업합니다.</p></div>
+    <div class="u rv"><div class="em">🎙️</div><h3 data-i18n="k_u2t">K-POP 최고 유명 녹음실 레코딩</h3><p data-i18n="k_u2p">대한민국 레전드 아티스트의 히트곡이 탄생한 권위 있는 스튜디오에서 진행되는 나의 단독 음원 녹음.</p></div>
+    <div class="u rv"><div class="em">📸</div><h3 data-i18n="k_u3t">탑스타 전담 포토그래퍼 화보</h3><p data-i18n="k_u3p">주요 기획사 앨범 자켓을 책임지는 거장의 디렉팅 아래, 고해상도 오디션 프로필을 확보합니다.</p></div>
+    <div class="u rv"><div class="em">🎬</div><h3 data-i18n="k_u4t">오피셜 퍼포먼스 비디오 제작</h3><p data-i18n="k_u4p">전문 방송 영상·조명 크루가 투입되어, 당신의 매력을 극대화할 공식 안무 MV와 숏폼 콘텐츠를 촬영합니다.</p></div>
+    <div class="u rv" style="grid-column:1/-1"><div class="em">👑</div><h3 data-i18n="k_u5t">1:1 마스터 컨설팅 &amp; 매칭</h3><p data-i18n="k_u5p">총괄 프로듀서와의 개별 상담으로 본인의 강점을 정밀 분석하고, 향후 글로벌 무대 진출을 위한 솔루션과 기획사 매칭 로드맵을 수립합니다.</p></div>
   </div>
 </div></section>
 
@@ -238,16 +244,16 @@
 <section style="background:var(--gray-5)"><div class="wrap">
   <div class="center rv">
     <div class="eyebrow">VIP Exclusive Benefits</div>
-    <h2 class="sec">연예인급 올인원 6대 혜택</h2>
-    <p class="lead">지원자는 오직 '여권과 왕복 항공권'만 지참하십시오. 한국 땅을 밟는 순간부터 떠나는 순간까지, 대한민국 최고 수준의 매니지먼트 시스템이 당신을 에스코트합니다.</p>
+    <h2 class="sec" data-i18n="k_b_h2">연예인급 올인원 6대 혜택</h2>
+    <p class="lead" data-i18n="k_b_lead">지원자는 오직 '여권과 왕복 항공권'만 지참하십시오. 한국 땅을 밟는 순간부터 떠나는 순간까지, 대한민국 최고 수준의 매니지먼트 시스템이 당신을 에스코트합니다.</p>
   </div>
   <div class="care">
-    <div class="c rv"><div class="n">BENEFIT 01</div><b>✨ 현역 매니저 전 일정 동행</b><p>유명 엔터사 출신 현역 매니저가 전 일정 현장 총괄·에스코트, 완벽한 신변 보호와 아티스트 케어.</p></div>
-    <div class="c rv"><div class="n">BENEFIT 02</div><b>💄 청담동 탑스타 전담 샵</b><p>탑스타들이 매일 다니는 청담동 최고 권위의 샵에서 전담 디자이너 헤어·메이크업 풀 스타일링.</p></div>
-    <div class="c rv"><div class="n">BENEFIT 03</div><b>🚙 카니발 의전 &amp; 최고급 호텔</b><p>공항 픽업·샌딩부터 전 일정 신형 카니발 전용 차량 의전, 프라이버시 보장 호텔 객실 지원.</p></div>
-    <div class="c rv"><div class="n">BENEFIT 04</div><b>🥗 아이돌 식단 &amp; 미용 케어</b><p>최상의 피지컬·비주얼 밸런스를 위한 맞춤 식단과 미용 테라피 케어 상시 제공.</p></div>
-    <div class="c rv"><div class="n">BENEFIT 05</div><b>🤝 1년간 기획사 연결 주선</b><p>수료 후 1년간 김형민 총괄 프로듀서 네트워크로 주요 기획사 오디션 연계·매칭 지속 주선.</p></div>
-    <div class="c rv"><div class="n">BENEFIT 06</div><b>👑 VVIP 기획사 미팅 100% 보장</b><p>1인 VVIP 신청자 한정, 주요 엔터 A&amp;R 디렉터와 1:1 비공개 미팅·단독 오디션 확정 제공. (그룹은 오피셜 견학)</p></div>
+    <div class="c rv"><div class="n">BENEFIT 01</div><b data-i18n="k_b1b">✨ 현역 매니저 전 일정 동행</b><p data-i18n="k_b1p">유명 엔터사 출신 현역 매니저가 전 일정 현장 총괄·에스코트, 완벽한 신변 보호와 아티스트 케어.</p></div>
+    <div class="c rv"><div class="n">BENEFIT 02</div><b data-i18n="k_b2b">💄 청담동 탑스타 전담 샵</b><p data-i18n="k_b2p">탑스타들이 매일 다니는 청담동 최고 권위의 샵에서 전담 디자이너 헤어·메이크업 풀 스타일링.</p></div>
+    <div class="c rv"><div class="n">BENEFIT 03</div><b data-i18n="k_b3b">🚙 카니발 의전 &amp; 최고급 호텔</b><p data-i18n="k_b3p">공항 픽업·샌딩부터 전 일정 신형 카니발 전용 차량 의전, 프라이버시 보장 호텔 객실 지원.</p></div>
+    <div class="c rv"><div class="n">BENEFIT 04</div><b data-i18n="k_b4b">🥗 아이돌 식단 &amp; 미용 케어</b><p data-i18n="k_b4p">최상의 피지컬·비주얼 밸런스를 위한 맞춤 식단과 미용 테라피 케어 상시 제공.</p></div>
+    <div class="c rv"><div class="n">BENEFIT 05</div><b data-i18n="k_b5b">🤝 1년간 기획사 연결 주선</b><p data-i18n="k_b5p">수료 후 1년간 김형민 총괄 프로듀서 네트워크로 주요 기획사 오디션 연계·매칭 지속 주선.</p></div>
+    <div class="c rv"><div class="n">BENEFIT 06</div><b data-i18n="k_b6b">👑 VVIP 기획사 미팅 100% 보장</b><p data-i18n="k_b6p">1인 VVIP 신청자 한정, 주요 엔터 A&amp;R 디렉터와 1:1 비공개 미팅·단독 오디션 확정 제공. (그룹은 오피셜 견학)</p></div>
   </div>
 </div></section>
 
@@ -255,24 +261,24 @@
 <section id="trainers"><div class="wrap">
   <div class="center rv">
     <div class="eyebrow">Master Producers · TOP 1%</div>
-    <h2 class="sec">대한민국 TOP 1% 마스터 군단</h2>
-    <p class="lead">글로벌 차트를 움직이는 거장들이 오직 당신만을 위해 1:1 밀착 디렉팅합니다. 이 라인업은 본 캠프에서만 독점적으로 만날 수 있습니다.</p>
+    <h2 class="sec" data-i18n="k_t_h2">대한민국 TOP 1% 마스터 군단</h2>
+    <p class="lead" data-i18n="k_t_lead">글로벌 차트를 움직이는 거장들이 오직 당신만을 위해 1:1 밀착 디렉팅합니다. 이 라인업은 본 캠프에서만 독점적으로 만날 수 있습니다.</p>
   </div>
   <div class="tr">
     <div class="trainer rv">
-      <div class="role">총괄 프로듀서 · A&amp;R</div>
+      <div class="role" data-i18n="k_t1r">총괄 프로듀서 · A&amp;R</div>
       <h3>김형민</h3><div class="en">KIM HYUNGMIN</div>
-      <p>K-POP 글로벌 차트의 주역. <b>XG · KARA · VIVIZ · SURAN · 쥬얼리 · 스텔라</b> 등 글로벌 탑티어 아티스트 앨범 총괄 프로듀싱·A&amp;R 리드. 당신의 잠재력을 메이저 기획사가 원하는 형태로 정밀 튜닝하고, 향후 1년간 한국 기획사 연계를 직접 주선합니다.</p>
+      <p data-i18n="k_t1p">K-POP 글로벌 차트의 주역. <b>XG · KARA · VIVIZ · SURAN · 쥬얼리 · 스텔라</b> 등 글로벌 탑티어 아티스트 앨범 총괄 프로듀싱·A&amp;R 리드. 당신의 잠재력을 메이저 기획사가 원하는 형태로 정밀 튜닝하고, 향후 1년간 한국 기획사 연계를 직접 주선합니다.</p>
     </div>
     <div class="trainer rv">
-      <div class="role">퍼포먼스 디렉터</div>
+      <div class="role" data-i18n="k_t2r">퍼포먼스 디렉터</div>
       <h3>이시원</h3><div class="en">LEE SIWON</div>
-      <p>대한민국 양대 산맥 기획사가 검증한 전설적 트레이너. <b>SM 엔터테인먼트</b> 전담 댄스 트레이너·디렉터(6년), <b>YG 엔터테인먼트</b> 전담(3년) 역임. 단 일주일 만에 무대 위 시선을 압도하는 파워풀한 퍼포먼스를 실전 메이킹합니다.</p>
+      <p data-i18n="k_t2p">대한민국 양대 산맥 기획사가 검증한 전설적 트레이너. <b>SM 엔터테인먼트</b> 전담 댄스 트레이너·디렉터(6년), <b>YG 엔터테인먼트</b> 전담(3년) 역임. 단 일주일 만에 무대 위 시선을 압도하는 파워풀한 퍼포먼스를 실전 메이킹합니다.</p>
     </div>
     <div class="trainer rv">
-      <div class="role">보컬 마스터 코치</div>
+      <div class="role" data-i18n="k_t3r">보컬 마스터 코치</div>
       <h3>홍남화</h3><div class="en">HONG NAMHWA</div>
-      <p><b>ENHYPEN</b> 정원·제이크, <b>ZEROBASEONE</b> 매튜·규빈·태래, <b>ILLIT</b>, <b>UNIS</b> 오윤아 전속 보컬 트레이닝. Mnet 「R U NEXT」·「걸스플래닛999」 공식 보컬 코치, 「너의 목소리가 보여 4」 트와이스 편 최종 우승. 서바이벌 타겟형 디렉팅으로 시그니처 톤을 찾아냅니다.</p>
+      <p data-i18n="k_t3p"><b>ENHYPEN</b> 정원·제이크, <b>ZEROBASEONE</b> 매튜·규빈·태래, <b>ILLIT</b>, <b>UNIS</b> 오윤아 전속 보컬 트레이닝. Mnet 「R U NEXT」·「걸스플래닛999」 공식 보컬 코치, 「너의 목소리가 보여 4」 트와이스 편 최종 우승. 서바이벌 타겟형 디렉팅으로 시그니처 톤을 찾아냅니다.</p>
     </div>
   </div>
 </div></section>
@@ -281,17 +287,17 @@
 <section style="background:var(--gray-5)"><div class="wrap">
   <div class="center rv">
     <div class="eyebrow">6 Nights · 7 Days</div>
-    <h2 class="sec">6박 7일 표준 일정</h2>
-    <p class="lead">현역 매니저 전담 마크 하에 진행됩니다. * 세부 일정은 참가 인원·레벨에 따라 조정됩니다.</p>
+    <h2 class="sec" data-i18n="k_s_h2">6박 7일 표준 일정</h2>
+    <p class="lead" data-i18n="k_s_lead">현역 매니저 전담 마크 하에 진행됩니다. * 세부 일정은 참가 인원·레벨에 따라 조정됩니다.</p>
   </div>
   <div class="sch">
-    <div class="day rv"><div class="d">DAY 1<small>Arrival &amp; Identity</small></div><div><h4>입국 의전 · 레벨 테스트</h4><ul><li>인천공항 카니발 전용 차량 의전 픽업 및 지정 호텔 체크인 서포트</li><li>매니저 동행 오리엔테이션 및 1:1 보컬·댄스 사전 레벨 정밀 테스트</li></ul></div></div>
-    <div class="day rv"><div class="d">DAY 2<small>Intensive Training I</small></div><div><h4>보컬 코칭 · 댄스 클래스</h4><ul><li>오전 — 개인별 음역대 분석 및 시그니처 톤 발성 교정</li><li>오후 — 안무 카피 및 기본 동선 빌드업 (연예인 식단 케어 시작)</li></ul></div></div>
-    <div class="day rv"><div class="d">DAY 3<small>Intensive Training II</small></div><div><h4>레코딩 디렉팅 · 댄스 마스터</h4><ul><li>오전 — 스튜디오 세션 전 최종 보컬 디렉팅 및 디테일 리허설</li><li>오후 — 퍼포먼스 비디오용 세부 구성 및 카메라 앵글 점검</li></ul></div></div>
-    <div class="day rv"><div class="d">DAY 4<small>Official Production</small></div><div><h4>청담동 샵 · 녹음 · 화보</h4><ul><li>연예인 전담 청담동 샵 방문 (헤어·메이크업 풀 세팅)</li><li>최고 유명 레코딩 스튜디오 음원 녹음 &amp; 탑스타 전담 포토그래퍼 화보 촬영 동시 가동</li></ul></div></div>
-    <div class="day rv"><div class="d">DAY 5<small>Visual Performance</small></div><div><h4>퍼포먼스 비디오 · 기획사 미팅</h4><ul><li>콘셉트 의상 스타일링, 전문 영상 크루 오피셜 퍼포먼스 비디오 및 숏폼 촬영</li><li>VVIP — 메이저 기획사 비공개 미팅 / 그룹 — 메이저 기획사 공식 견학</li></ul></div></div>
-    <div class="day rv"><div class="d">DAY 6<small>Master Solution</small></div><div><h4>1:1 솔루션 · 쇼케이스</h4><ul><li>총괄 프로듀서 1:1 상담 및 향후 1년 기획사 연계 로드맵 설계</li><li>자체 미니 쇼케이스 개최 및 송별 파티</li></ul></div></div>
-    <div class="day rv"><div class="d">DAY 7<small>Departure Escort</small></div><div><h4>출국 의전 · 결과물 프리뷰</h4><ul><li>전용 카니발 차량 공항 센딩 의전 및 매니저 최종 배웅</li><li>보정본 프로필 / 1차 편집 릴리즈 데이터 프리뷰 안내</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 1<small>Arrival &amp; Identity</small></div><div><h4 data-i18n="k_d1t">입국 의전 · 레벨 테스트</h4><ul><li data-i18n="k_d1a">인천공항 카니발 전용 차량 의전 픽업 및 지정 호텔 체크인 서포트</li><li data-i18n="k_d1b">매니저 동행 오리엔테이션 및 1:1 보컬·댄스 사전 레벨 정밀 테스트</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 2<small>Intensive Training I</small></div><div><h4 data-i18n="k_d2t">보컬 코칭 · 댄스 클래스</h4><ul><li data-i18n="k_d2a">오전 — 개인별 음역대 분석 및 시그니처 톤 발성 교정</li><li data-i18n="k_d2b">오후 — 안무 카피 및 기본 동선 빌드업 (연예인 식단 케어 시작)</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 3<small>Intensive Training II</small></div><div><h4 data-i18n="k_d3t">레코딩 디렉팅 · 댄스 마스터</h4><ul><li data-i18n="k_d3a">오전 — 스튜디오 세션 전 최종 보컬 디렉팅 및 디테일 리허설</li><li data-i18n="k_d3b">오후 — 퍼포먼스 비디오용 세부 구성 및 카메라 앵글 점검</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 4<small>Official Production</small></div><div><h4 data-i18n="k_d4t">청담동 샵 · 녹음 · 화보</h4><ul><li data-i18n="k_d4a">연예인 전담 청담동 샵 방문 (헤어·메이크업 풀 세팅)</li><li data-i18n="k_d4b">최고 유명 레코딩 스튜디오 음원 녹음 &amp; 탑스타 전담 포토그래퍼 화보 촬영 동시 가동</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 5<small>Visual Performance</small></div><div><h4 data-i18n="k_d5t">퍼포먼스 비디오 · 기획사 미팅</h4><ul><li data-i18n="k_d5a">콘셉트 의상 스타일링, 전문 영상 크루 오피셜 퍼포먼스 비디오 및 숏폼 촬영</li><li data-i18n="k_d5b">VVIP — 메이저 기획사 비공개 미팅 / 그룹 — 메이저 기획사 공식 견학</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 6<small>Master Solution</small></div><div><h4 data-i18n="k_d6t">1:1 솔루션 · 쇼케이스</h4><ul><li data-i18n="k_d6a">총괄 프로듀서 1:1 상담 및 향후 1년 기획사 연계 로드맵 설계</li><li data-i18n="k_d6b">자체 미니 쇼케이스 개최 및 송별 파티</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 7<small>Departure Escort</small></div><div><h4 data-i18n="k_d7t">출국 의전 · 결과물 프리뷰</h4><ul><li data-i18n="k_d7a">전용 카니발 차량 공항 센딩 의전 및 매니저 최종 배웅</li><li data-i18n="k_d7b">보정본 프로필 / 1차 편집 릴리즈 데이터 프리뷰 안내</li></ul></div></div>
   </div>
 </div></section>
 
@@ -299,66 +305,63 @@
 <section id="pricing"><div class="wrap">
   <div class="center rv">
     <div class="eyebrow">Packages</div>
-    <h2 class="sec">패키지 안내</h2>
-    <p class="lead">목표와 일정에 맞춰 두 가지 라인업으로 운영합니다.</p>
+    <h2 class="sec" data-i18n="k_p_h2">패키지 안내</h2>
+    <p class="lead" data-i18n="k_p_lead">목표와 일정에 맞춰 두 가지 라인업으로 운영합니다.</p>
   </div>
   <div class="pricing">
     <div class="pk vvip rv">
-      <span class="badge">VVIP PRIVATE · 상시 출발</span>
-      <h3>1인 단독 VVIP 프라이빗</h3>
-      <div class="amt">₩20,000,000 <small>/ 1인</small></div>
-      <div class="when">상시 출발 · 전 과정 1:1 독점 진행</div>
+      <span class="badge" data-i18n="k_pv_badge">VVIP PRIVATE · 상시 출발</span>
+      <h3 data-i18n="k_pv_t">1인 단독 VVIP 프라이빗</h3>
+      <div class="amt">₩20,000,000 <small data-i18n="k_per">/ 1인</small></div>
+      <div class="when" data-i18n="k_pv_when">상시 출발 · 전 과정 1:1 독점 진행</div>
       <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>메이저 기획사 비공개 미팅 &amp; 오디션 <b>100% 보장</b></li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>전 일정 완전 맞춤 · 1:1 독점 디렉팅</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>연예인급 6대 케어 + 하이엔드 포트폴리오 일체</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pv1">메이저 기획사 비공개 미팅 &amp; 오디션 <b>100% 보장</b></span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pv2">전 일정 완전 맞춤 · 1:1 독점 디렉팅</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pv3">연예인급 6대 케어 + 하이엔드 포트폴리오 일체</span></li>
       </ul>
-      <a class="btn" href="#apply">VVIP 접수하기</a>
+      <a class="btn" href="#apply" data-i18n="k_pv_btn">VVIP 접수하기</a>
     </div>
     <div class="pk rv">
-      <span class="badge">GROUP · 5인 출발</span>
-      <h3>5인 프리미엄 그룹</h3>
-      <div class="amt">₩5,000,000 <small>/ 1인</small></div>
-      <div class="when">5인 모집 시 출발</div>
+      <span class="badge" data-i18n="k_pg_badge">GROUP · 5인 출발</span>
+      <h3 data-i18n="k_pg_t">5인 프리미엄 그룹</h3>
+      <div class="amt">₩5,000,000 <small data-i18n="k_per">/ 1인</small></div>
+      <div class="when" data-i18n="k_pg_when">5인 모집 시 출발</div>
       <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>메이저 기획사 오피셜 견학 프로그램</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>거장 마스터 군단 그룹 트레이닝</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>연예인급 6대 케어 + 오피셜 결과물 제공</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pg1">메이저 기획사 오피셜 견학 프로그램</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pg2">거장 마스터 군단 그룹 트레이닝</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pg3">연예인급 6대 케어 + 오피셜 결과물 제공</span></li>
       </ul>
-      <a class="btn" href="#apply">그룹 접수하기</a>
+      <a class="btn" href="#apply" data-i18n="k_pg_btn">그룹 접수하기</a>
     </div>
   </div>
-  <div class="common rv">
-    <b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br>
-    <span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.</span>
-  </div>
+  <div class="common rv" data-i18n="k_common"><b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br><span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.</span></div>
 </div></section>
 
 <!-- APPLY -->
 <section class="apply" id="apply"><div class="wrap">
   <div class="center rv">
     <div class="eyebrow" style="color:var(--yellow)">Apply Now</div>
-    <h2 class="sec">접수하기</h2>
-    <p class="lead">기본 프로필을 등록해 주시면, 담당 <b style="color:#fff">코디네이터가 직접 연락</b>드려 일정과 세부 사항을 안내합니다.</p>
+    <h2 class="sec" data-i18n="k_a_h2">접수하기</h2>
+    <p class="lead" data-i18n="k_a_lead">기본 프로필을 등록해 주시면, 담당 <b style="color:#fff">코디네이터가 직접 연락</b>드려 일정과 세부 사항을 안내합니다.</p>
   </div>
   <form class="form rv" id="applyForm">
     <div class="grid2">
-      <div class="field"><label>이름 <span class="req">*</span></label><input name="이름" required placeholder="Full name"></div>
-      <div class="field"><label>연락처 <span class="req">*</span></label><input name="연락처" required placeholder="전화 · WhatsApp · Zalo"></div>
-      <div class="field"><label>이메일 <span class="req">*</span></label><input name="이메일" type="email" required placeholder="you@email.com"></div>
-      <div class="field"><label>희망 패키지</label><select name="희망패키지"><option value="">선택</option><option>1인 VVIP 프라이빗</option><option>5인 프리미엄 그룹</option><option>상담 후 결정</option></select></div>
-      <div class="field"><label>생년월일 / 나이</label><input name="생년월일" placeholder="2005-01-01 또는 만 19세"></div>
-      <div class="field"><label>지원 분야</label><select name="지원분야"><option value="">선택</option><option>보컬</option><option>댄스</option><option>랩</option><option>종합(보컬+댄스)</option></select></div>
-      <div class="field full"><label>거주 국가 · 도시</label><input name="거주지" placeholder="예: Vietnam, Ho Chi Minh"></div>
-      <div class="field full"><label>한마디 (자기소개 · 각오 · 문의)</label><textarea name="메시지" placeholder="간단한 자기소개나 궁금한 점을 적어주세요."></textarea></div>
+      <div class="field"><label><span data-i18n="k_f_name">이름</span> <span class="req">*</span></label><input name="이름" required placeholder="Full name"></div>
+      <div class="field"><label><span data-i18n="k_f_contact">연락처</span> <span class="req">*</span></label><input name="연락처" required placeholder="전화 · WhatsApp · Zalo" data-i18n-ph="k_ph_contact"></div>
+      <div class="field"><label><span data-i18n="k_f_email">이메일</span> <span class="req">*</span></label><input name="이메일" type="email" required placeholder="you@email.com"></div>
+      <div class="field"><label data-i18n="k_f_pkg">희망 패키지</label><select name="희망패키지"><option value="" data-i18n="k_opt_sel">선택</option><option value="1인 VVIP 프라이빗" data-i18n="k_opt_vvip">1인 VVIP 프라이빗</option><option value="5인 프리미엄 그룹" data-i18n="k_opt_grp">5인 프리미엄 그룹</option><option value="상담 후 결정" data-i18n="k_opt_later">상담 후 결정</option></select></div>
+      <div class="field"><label data-i18n="k_f_dob">생년월일 / 나이</label><input name="생년월일" placeholder="2005-01-01 / 19" data-i18n-ph="k_ph_dob"></div>
+      <div class="field"><label data-i18n="k_f_field">지원 분야</label><select name="지원분야"><option value="" data-i18n="k_opt_sel">선택</option><option value="보컬" data-i18n="k_opt_vocal">보컬</option><option value="댄스" data-i18n="k_opt_dance">댄스</option><option value="랩" data-i18n="k_opt_rap">랩</option><option value="종합(보컬+댄스)" data-i18n="k_opt_all">종합(보컬+댄스)</option></select></div>
+      <div class="field full"><label data-i18n="k_f_loc">거주 국가 · 도시</label><input name="거주지" placeholder="예: Vietnam, Ho Chi Minh" data-i18n-ph="k_ph_loc"></div>
+      <div class="field full"><label data-i18n="k_f_msg">한마디 (자기소개 · 각오 · 문의)</label><textarea name="메시지" placeholder="간단한 자기소개나 궁금한 점을 적어주세요." data-i18n-ph="k_ph_msg"></textarea></div>
     </div>
-    <button type="submit" class="btn">접수하기</button>
-    <div class="priv">접수 시 입력하신 정보는 프로그램 안내·상담 목적에만 사용됩니다.<br>제출 후 담당 코디네이터가 영업일 기준 2~3일 내 연락드립니다.</div>
+    <button type="submit" class="btn" data-i18n="k_f_submit">접수하기</button>
+    <div class="priv" data-i18n="k_f_priv">접수 시 입력하신 정보는 프로그램 안내·상담 목적에만 사용됩니다.<br>제출 후 담당 코디네이터가 영업일 기준 2~3일 내 연락드립니다.</div>
   </form>
   <div class="form ok" id="okPanel">
     <div class="chk"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></div>
-    <h3>접수가 완료되었습니다 🎉</h3>
-    <p>담당 코디네이터가 곧 연락드립니다.<br>입력하신 연락처를 확인해 주세요.</p>
+    <h3 data-i18n="k_ok_t">접수가 완료되었습니다 🎉</h3>
+    <p data-i18n="k_ok_p">담당 코디네이터가 곧 연락드립니다.<br>입력하신 연락처를 확인해 주세요.</p>
   </div>
 </div></section>
 
@@ -367,45 +370,221 @@
 <footer><div class="wrap">
   <div class="foot-in">
     <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-POP Camp</div>
-    <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+    <div>㈜빛나는별 · NGOI SAO SANG VINA<br><a href="https://www.kkal.live/" target="_blank" rel="noopener" style="color:var(--purple-4)">한국 깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
     <div>© 2026 Rainbow Entertainment · <a href="index.html" style="color:#adadad">rainbowent.live</a></div>
   </div>
-  <div class="disc">기획·운영: Rainbow Entertainment · 프로그램 총괄 프로듀싱 협업. 표기된 일정·금액·혜택은 운영 상황에 따라 변경될 수 있습니다.</div>
+  <div class="disc" data-i18n="k_disc">기획·운영: Rainbow Entertainment · 프로그램 총괄 프로듀싱 협업. 표기된 일정·금액·혜택은 운영 상황에 따라 변경될 수 있습니다.</div>
 </div></footer>
 
 <script>
-  const nav=document.getElementById('nav');
-  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
-  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* ───────── i18n (KO/EN/VI) ───────── */
+const I18N={
+ko:{
+  k_back:'← 메인으로', k_cta:'지금 접수하기',
+  k_h1:'단 일주일, 당신의 인생이<br><span class="y">K-POP 아티스트로 다시 태어납니다</span>',
+  k_sub:'대한민국 메이저 기획사가 검증한 <b style="color:#fff">TOP 1% 마스터 군단</b>과 함께하는, 오직 당신만을 위한 프리미엄 스타 메이킹 프로덕션. 실제 K-POP 아티스트의 데뷔 프로세스와 100% 동일한 하이엔드 과정으로 \'완벽한 오디션·데뷔 포트폴리오\'를 완성합니다.',
+  k_m1:'🎬 전담 콘텐츠 스태프 1:1', k_m2:'🗓️ 6박 7일', k_m3:'📍 서울 · 청담', k_m4:'🤝 현역 매니저 전 일정 동행', k_m5:'🎯 1년 기획사 매칭',
+  k_btn1:'지금 접수하기', k_btn2:'패키지 보기',
+  k_sg_h2:'당신만 따라다니는 <span class="y">전담 콘텐츠 크루</span>',
+  k_sg_p:'전 일정 동안 <b style="color:#fff">전담 스태프</b>가 트레이닝·녹음·화보·무대 뒤 모든 순간을 촬영합니다. 매일 숏폼·릴스용으로 편집해 공유 — SNS에 바로 올리는 <b style="color:#fff">\'나만의 데뷔 브이로그\'</b>와, 오디션에 바로 쓰는 하이엔드 포트폴리오를 완성해 드립니다.',
+  k_sg1b:'매일 촬영분 공유', k_sg1s:'그날 찍은 사진·영상을 당일 정리해 전달',
+  k_sg2b:'숏폼 즉시 업로드용', k_sg2s:'TikTok · Reels · Shorts 세로 편집본 제공',
+  k_sg3b:'오피셜 결과물 일체', k_sg3s:'퍼포먼스 비디오 · 화보 · 음원까지 데이터 전체',
+  k_u_h2:'7일간의 기적, 우리가 창조할 것들',
+  k_u_lead:'지루한 단순 관광이나 학원형 단체 수업은 없습니다. 실제 K-POP 아티스트의 데뷔 프로세스와 100% 동일한 하이엔드 프로덕션을 통과합니다.',
+  k_u1t:'전문 강사진 인텐시브 트레이닝', k_u1p:'숨겨진 음역대를 찾아내는 보컬 세션과, 카메라 앵글을 압도하는 댄스 마스터 클래스로 실전 기본기를 빌드업합니다.',
+  k_u2t:'K-POP 최고 유명 녹음실 레코딩', k_u2p:'대한민국 레전드 아티스트의 히트곡이 탄생한 권위 있는 스튜디오에서 진행되는 나의 단독 음원 녹음.',
+  k_u3t:'탑스타 전담 포토그래퍼 화보', k_u3p:'주요 기획사 앨범 자켓을 책임지는 거장의 디렉팅 아래, 고해상도 오디션 프로필을 확보합니다.',
+  k_u4t:'오피셜 퍼포먼스 비디오 제작', k_u4p:'전문 방송 영상·조명 크루가 투입되어, 당신의 매력을 극대화할 공식 안무 MV와 숏폼 콘텐츠를 촬영합니다.',
+  k_u5t:'1:1 마스터 컨설팅 & 매칭', k_u5p:'총괄 프로듀서와의 개별 상담으로 본인의 강점을 정밀 분석하고, 향후 글로벌 무대 진출을 위한 솔루션과 기획사 매칭 로드맵을 수립합니다.',
+  k_b_h2:'연예인급 올인원 6대 혜택',
+  k_b_lead:'지원자는 오직 \'여권과 왕복 항공권\'만 지참하십시오. 한국 땅을 밟는 순간부터 떠나는 순간까지, 대한민국 최고 수준의 매니지먼트 시스템이 당신을 에스코트합니다.',
+  k_b1b:'✨ 현역 매니저 전 일정 동행', k_b1p:'유명 엔터사 출신 현역 매니저가 전 일정 현장 총괄·에스코트, 완벽한 신변 보호와 아티스트 케어.',
+  k_b2b:'💄 청담동 탑스타 전담 샵', k_b2p:'탑스타들이 매일 다니는 청담동 최고 권위의 샵에서 전담 디자이너 헤어·메이크업 풀 스타일링.',
+  k_b3b:'🚙 카니발 의전 & 최고급 호텔', k_b3p:'공항 픽업·샌딩부터 전 일정 신형 카니발 전용 차량 의전, 프라이버시 보장 호텔 객실 지원.',
+  k_b4b:'🥗 아이돌 식단 & 미용 케어', k_b4p:'최상의 피지컬·비주얼 밸런스를 위한 맞춤 식단과 미용 테라피 케어 상시 제공.',
+  k_b5b:'🤝 1년간 기획사 연결 주선', k_b5p:'수료 후 1년간 김형민 총괄 프로듀서 네트워크로 주요 기획사 오디션 연계·매칭 지속 주선.',
+  k_b6b:'👑 VVIP 기획사 미팅 100% 보장', k_b6p:'1인 VVIP 신청자 한정, 주요 엔터 A&R 디렉터와 1:1 비공개 미팅·단독 오디션 확정 제공. (그룹은 오피셜 견학)',
+  k_t_h2:'대한민국 TOP 1% 마스터 군단',
+  k_t_lead:'글로벌 차트를 움직이는 거장들이 오직 당신만을 위해 1:1 밀착 디렉팅합니다. 이 라인업은 본 캠프에서만 독점적으로 만날 수 있습니다.',
+  k_t1r:'총괄 프로듀서 · A&R', k_t1p:'K-POP 글로벌 차트의 주역. <b>XG · KARA · VIVIZ · SURAN · 쥬얼리 · 스텔라</b> 등 글로벌 탑티어 아티스트 앨범 총괄 프로듀싱·A&R 리드. 당신의 잠재력을 메이저 기획사가 원하는 형태로 정밀 튜닝하고, 향후 1년간 한국 기획사 연계를 직접 주선합니다.',
+  k_t2r:'퍼포먼스 디렉터', k_t2p:'대한민국 양대 산맥 기획사가 검증한 전설적 트레이너. <b>SM 엔터테인먼트</b> 전담 댄스 트레이너·디렉터(6년), <b>YG 엔터테인먼트</b> 전담(3년) 역임. 단 일주일 만에 무대 위 시선을 압도하는 파워풀한 퍼포먼스를 실전 메이킹합니다.',
+  k_t3r:'보컬 마스터 코치', k_t3p:'<b>ENHYPEN</b> 정원·제이크, <b>ZEROBASEONE</b> 매튜·규빈·태래, <b>ILLIT</b>, <b>UNIS</b> 오윤아 전속 보컬 트레이닝. Mnet 「R U NEXT」·「걸스플래닛999」 공식 보컬 코치, 「너의 목소리가 보여 4」 트와이스 편 최종 우승. 서바이벌 타겟형 디렉팅으로 시그니처 톤을 찾아냅니다.',
+  k_s_h2:'6박 7일 표준 일정', k_s_lead:'현역 매니저 전담 마크 하에 진행됩니다. * 세부 일정은 참가 인원·레벨에 따라 조정됩니다.',
+  k_d1t:'입국 의전 · 레벨 테스트', k_d1a:'인천공항 카니발 전용 차량 의전 픽업 및 지정 호텔 체크인 서포트', k_d1b:'매니저 동행 오리엔테이션 및 1:1 보컬·댄스 사전 레벨 정밀 테스트',
+  k_d2t:'보컬 코칭 · 댄스 클래스', k_d2a:'오전 — 개인별 음역대 분석 및 시그니처 톤 발성 교정', k_d2b:'오후 — 안무 카피 및 기본 동선 빌드업 (연예인 식단 케어 시작)',
+  k_d3t:'레코딩 디렉팅 · 댄스 마스터', k_d3a:'오전 — 스튜디오 세션 전 최종 보컬 디렉팅 및 디테일 리허설', k_d3b:'오후 — 퍼포먼스 비디오용 세부 구성 및 카메라 앵글 점검',
+  k_d4t:'청담동 샵 · 녹음 · 화보', k_d4a:'연예인 전담 청담동 샵 방문 (헤어·메이크업 풀 세팅)', k_d4b:'최고 유명 레코딩 스튜디오 음원 녹음 & 탑스타 전담 포토그래퍼 화보 촬영 동시 가동',
+  k_d5t:'퍼포먼스 비디오 · 기획사 미팅', k_d5a:'콘셉트 의상 스타일링, 전문 영상 크루 오피셜 퍼포먼스 비디오 및 숏폼 촬영', k_d5b:'VVIP — 메이저 기획사 비공개 미팅 / 그룹 — 메이저 기획사 공식 견학',
+  k_d6t:'1:1 솔루션 · 쇼케이스', k_d6a:'총괄 프로듀서 1:1 상담 및 향후 1년 기획사 연계 로드맵 설계', k_d6b:'자체 미니 쇼케이스 개최 및 송별 파티',
+  k_d7t:'출국 의전 · 결과물 프리뷰', k_d7a:'전용 카니발 차량 공항 센딩 의전 및 매니저 최종 배웅', k_d7b:'보정본 프로필 / 1차 편집 릴리즈 데이터 프리뷰 안내',
+  k_p_h2:'패키지 안내', k_p_lead:'목표와 일정에 맞춰 두 가지 라인업으로 운영합니다.', k_per:'/ 1인',
+  k_pv_badge:'VVIP PRIVATE · 상시 출발', k_pv_t:'1인 단독 VVIP 프라이빗', k_pv_when:'상시 출발 · 전 과정 1:1 독점 진행',
+  k_pv1:'메이저 기획사 비공개 미팅 & 오디션 <b>100% 보장</b>', k_pv2:'전 일정 완전 맞춤 · 1:1 독점 디렉팅', k_pv3:'연예인급 6대 케어 + 하이엔드 포트폴리오 일체', k_pv_btn:'VVIP 접수하기',
+  k_pg_badge:'GROUP · 5인 출발', k_pg_t:'5인 프리미엄 그룹', k_pg_when:'5인 모집 시 출발',
+  k_pg1:'메이저 기획사 오피셜 견학 프로그램', k_pg2:'거장 마스터 군단 그룹 트레이닝', k_pg3:'연예인급 6대 케어 + 오피셜 결과물 제공', k_pg_btn:'그룹 접수하기',
+  k_common:'<b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br><span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.</span>',
+  k_a_h2:'접수하기', k_a_lead:'기본 프로필을 등록해 주시면, 담당 <b style="color:#fff">코디네이터가 직접 연락</b>드려 일정과 세부 사항을 안내합니다.',
+  k_f_name:'이름', k_f_contact:'연락처', k_f_email:'이메일', k_f_pkg:'희망 패키지', k_f_dob:'생년월일 / 나이', k_f_field:'지원 분야', k_f_loc:'거주 국가 · 도시', k_f_msg:'한마디 (자기소개 · 각오 · 문의)',
+  k_ph_contact:'전화 · WhatsApp · Zalo', k_ph_dob:'2005-01-01 또는 만 19세', k_ph_loc:'예: Vietnam, Ho Chi Minh', k_ph_msg:'간단한 자기소개나 궁금한 점을 적어주세요.',
+  k_opt_sel:'선택', k_opt_vvip:'1인 VVIP 프라이빗', k_opt_grp:'5인 프리미엄 그룹', k_opt_later:'상담 후 결정', k_opt_vocal:'보컬', k_opt_dance:'댄스', k_opt_rap:'랩', k_opt_all:'종합(보컬+댄스)',
+  k_f_submit:'접수하기', k_f_priv:'접수 시 입력하신 정보는 프로그램 안내·상담 목적에만 사용됩니다.<br>제출 후 담당 코디네이터가 영업일 기준 2~3일 내 연락드립니다.',
+  k_ok_t:'접수가 완료되었습니다 🎉', k_ok_p:'담당 코디네이터가 곧 연락드립니다.<br>입력하신 연락처를 확인해 주세요.',
+  k_disc:'기획·운영: Rainbow Entertainment · 프로그램 총괄 프로듀싱 협업. 표기된 일정·금액·혜택은 운영 상황에 따라 변경될 수 있습니다.'
+},
+en:{
+  k_back:'← Home', k_cta:'Apply Now',
+  k_h1:'In just one week,<br><span class="y">you are reborn as a K-POP artist</span>',
+  k_sub:'A premium star-making production made just for you, with a <b style="color:#fff">top 1% master team</b> proven at Korea\'s major agencies. Build a complete audition & debut portfolio through a high-end process identical to a real K-POP artist\'s debut.',
+  k_m1:'🎬 1:1 personal content staff', k_m2:'🗓️ 7 days / 6 nights', k_m3:'📍 Seoul · Cheongdam', k_m4:'🤝 Active manager throughout', k_m5:'🎯 1-year agency matching',
+  k_btn1:'Apply Now', k_btn2:'View packages',
+  k_sg_h2:'A <span class="y">personal content crew</span> just for you',
+  k_sg_p:'Throughout the program a <b style="color:#fff">dedicated staffer</b> films every moment — training, recording, photoshoots, backstage. Edited daily into short-form / Reels content to share — your own <b style="color:#fff">debut vlog</b> ready for social media, plus a high-end portfolio ready for auditions.',
+  k_sg1b:'Daily footage shared', k_sg1s:'Same-day photos & video, delivered that day',
+  k_sg2b:'Ready for short-form', k_sg2s:'Vertical edits for TikTok · Reels · Shorts',
+  k_sg3b:'All official deliverables', k_sg3s:'Performance video, photos, audio — all the data',
+  k_u_h2:'7 days of magic — what we create',
+  k_u_lead:'No boring tourism or classroom-style group lessons. You go through a high-end production identical to a real K-POP artist\'s debut.',
+  k_u1t:'Intensive training with pro coaches', k_u1p:'Vocal sessions that uncover your hidden range, and dance master classes that command the camera — building real fundamentals.',
+  k_u2t:'Recording at Korea\'s top studio', k_u2p:'Your own solo recording at the prestigious studio where legendary Korean hits were born.',
+  k_u3t:'Top-star photographer shoot', k_u3p:'Get a high-resolution audition profile, directed by the master behind major agencies\' album jackets.',
+  k_u4t:'Official performance video', k_u4p:'A pro broadcast video & lighting crew films an official choreography MV and short-form content that maximizes your charm.',
+  k_u5t:'1:1 master consulting & matching', k_u5p:'A 1:1 session with the head producer analyzes your strengths and builds a solution & agency-matching roadmap for the global stage.',
+  k_b_h2:'6 celebrity-level all-in-one benefits',
+  k_b_lead:'Bring only your passport and round-trip ticket. From the moment you land in Korea until you leave, Korea\'s top management system escorts you.',
+  k_b1b:'✨ Active manager throughout', k_b1p:'An active manager from a famous agency oversees and escorts the entire schedule, with full security and artist-level care.',
+  k_b2b:'💄 Cheongdam top-star salon', k_b2p:'Full hair & makeup styling by dedicated designers at Cheongdam\'s most prestigious salon, used daily by top stars.',
+  k_b3b:'🚙 Carnival escort & premium hotel', k_b3p:'New Carnival vehicle escort from airport pickup/drop-off throughout, plus private, comfortable hotel rooms.',
+  k_b4b:'🥗 Idol diet & beauty care', k_b4p:'Customized diet and beauty therapy, always on hand for the best physical and visual balance.',
+  k_b5b:'🤝 1-year agency introductions', k_b5p:'For one year after completion, ongoing audition introductions & matching with major agencies via producer Kim Hyungmin\'s network.',
+  k_b6b:'👑 VVIP agency meeting guaranteed', k_b6p:'For solo VVIP applicants only: a guaranteed 1:1 private meeting & solo audition with a major agency A&R director. (Group: official tour.)',
+  k_t_h2:'Korea\'s top 1% master team',
+  k_t_lead:'Masters who move the global charts direct you 1:1, just for you. This lineup is exclusive to this camp.',
+  k_t1r:'Executive Producer · A&R', k_t1p:'A driving force on the global K-POP charts. Executive producing & A&R lead for top-tier artists incl. <b>XG · KARA · VIVIZ · SURAN · Jewelry · Stellar</b>. Precisely tunes your potential into what major agencies want, and personally arranges Korean agency connections for one year.',
+  k_t2r:'Performance Director', k_t2p:'A legendary trainer proven at Korea\'s two biggest agencies. Former dedicated dance trainer & director at <b>SM Entertainment</b> (6 yrs) and <b>YG Entertainment</b> (3 yrs). Builds powerful, commanding stage performance in just one week.',
+  k_t3r:'Vocal Master Coach', k_t3p:'Exclusive vocal trainer for <b>ENHYPEN</b> Jungwon·Jake, <b>ZEROBASEONE</b> Matthew·Gyuvin·Taerae, <b>ILLIT</b>, <b>UNIS</b> Oh Yunah. Official vocal coach on Mnet 「R U NEXT」 & 「Girls Planet 999」, winner on 「I Can See Your Voice 4」 (TWICE ep). Survival-targeted directing to find your signature tone.',
+  k_s_h2:'6 nights / 7 days itinerary', k_s_lead:'Conducted under a dedicated active manager. * Details adjust by group size and level.',
+  k_d1t:'Arrival escort · level test', k_d1a:'VIP Carnival pickup at Incheon Airport and hotel check-in support', k_d1b:'Manager-accompanied orientation and a 1:1 vocal · dance level test',
+  k_d2t:'Vocal coaching · dance class', k_d2a:'AM — vocal range analysis and signature-tone correction', k_d2b:'PM — choreography copy & movement build-up (idol diet care begins)',
+  k_d3t:'Recording directing · dance master', k_d3a:'AM — final vocal directing & detailed rehearsal before the studio', k_d3b:'PM — composition & camera-angle check for the performance video',
+  k_d4t:'Cheongdam salon · recording · photoshoot', k_d4a:'Visit the celebrity Cheongdam salon (full hair & makeup)', k_d4b:'Recording at a top studio & a top-star photographer photoshoot, run in parallel',
+  k_d5t:'Performance video · agency meeting', k_d5a:'Concept styling; official performance video & short-form filmed by a pro crew', k_d5b:'VVIP — private major-agency meeting / Group — official agency tour',
+  k_d6t:'1:1 solution · showcase', k_d6a:'1:1 consult with the head producer & a 1-year agency roadmap', k_d6b:'In-house mini showcase and farewell party',
+  k_d7t:'Departure escort · deliverable preview', k_d7a:'Carnival airport send-off and a final farewell by the manager', k_d7b:'Preview of the retouched profile / first-cut release data',
+  k_p_h2:'Packages', k_p_lead:'Two lineups to fit your goals and schedule.', k_per:'/ person',
+  k_pv_badge:'VVIP PRIVATE · departs anytime', k_pv_t:'Solo VVIP Private', k_pv_when:'Departs anytime · fully 1:1 exclusive',
+  k_pv1:'Major-agency private meeting & audition <b>100% guaranteed</b>', k_pv2:'Fully customized schedule · 1:1 exclusive directing', k_pv3:'6 celebrity-level care + full high-end portfolio', k_pv_btn:'Apply for VVIP',
+  k_pg_badge:'GROUP · departs with 5', k_pg_t:'5-person Premium Group', k_pg_when:'Departs once 5 are gathered',
+  k_pg1:'Official major-agency tour program', k_pg2:'Group training with the master team', k_pg3:'6 celebrity-level care + official deliverables', k_pg_btn:'Apply for Group',
+  k_common:'<b>Included in both</b> · active manager throughout · 6 celebrity-level care · guaranteed 1-year agency introductions after completion<br><span style="color:var(--ink-4)">✈️ International airfare not included · In Korea we run only the K-POP program. * Prices are per package and may vary by options.</span>',
+  k_a_h2:'Apply', k_a_lead:'Submit your basic profile and our <b style="color:#fff">coordinator will contact you directly</b> with the schedule and details.',
+  k_f_name:'Name', k_f_contact:'Contact', k_f_email:'Email', k_f_pkg:'Preferred package', k_f_dob:'Date of birth / age', k_f_field:'Field', k_f_loc:'Country · city', k_f_msg:'Message (intro · goals · questions)',
+  k_ph_contact:'Phone · WhatsApp · Zalo', k_ph_dob:'2005-01-01 or age 19', k_ph_loc:'e.g. Vietnam, Ho Chi Minh', k_ph_msg:'Tell us briefly about yourself or any questions.',
+  k_opt_sel:'Select', k_opt_vvip:'Solo VVIP Private', k_opt_grp:'5-person Premium Group', k_opt_later:'Decide after consultation', k_opt_vocal:'Vocal', k_opt_dance:'Dance', k_opt_rap:'Rap', k_opt_all:'All-round (vocal + dance)',
+  k_f_submit:'Submit', k_f_priv:'Your information is used only for program guidance & consultation.<br>A coordinator will contact you within 2–3 business days.',
+  k_ok_t:'Application received 🎉', k_ok_p:'Our coordinator will contact you shortly.<br>Please keep an eye on your phone / email.',
+  k_disc:'Planned & operated by Rainbow Entertainment · in production partnership. Schedule, prices and benefits may change with operations.'
+},
+vi:{
+  k_back:'← Trang chủ', k_cta:'Đăng ký ngay',
+  k_h1:'Chỉ trong một tuần,<br><span class="y">bạn tái sinh thành nghệ sĩ K-POP</span>',
+  k_sub:'Một quy trình tạo sao cao cấp dành riêng cho bạn, cùng <b style="color:#fff">đội ngũ master top 1%</b> đã được kiểm chứng tại các công ty lớn của Hàn Quốc. Hoàn thiện hồ sơ audition & debut qua quy trình cao cấp giống 100% lộ trình debut của nghệ sĩ K-POP thật.',
+  k_m1:'🎬 Nhân sự nội dung riêng 1:1', k_m2:'🗓️ 7 ngày 6 đêm', k_m3:'📍 Seoul · Cheongdam', k_m4:'🤝 Quản lý đồng hành toàn bộ', k_m5:'🎯 Kết nối công ty 1 năm',
+  k_btn1:'Đăng ký ngay', k_btn2:'Xem gói',
+  k_sg_h2:'<span class="y">Ê-kíp nội dung riêng</span> chỉ theo bạn',
+  k_sg_p:'Trong suốt chương trình, một <b style="color:#fff">nhân sự chuyên trách</b> quay lại mọi khoảnh khắc — tập luyện, thu âm, chụp hình, hậu trường. Biên tập mỗi ngày thành nội dung short-form / Reels để chia sẻ — <b style="color:#fff">vlog debut của riêng bạn</b> đăng ngay lên mạng xã hội, cùng hồ sơ cao cấp sẵn sàng cho audition.',
+  k_sg1b:'Chia sẻ cảnh quay mỗi ngày', k_sg1s:'Ảnh & video trong ngày được gửi ngay hôm đó',
+  k_sg2b:'Sẵn sàng cho short-form', k_sg2s:'Bản chỉnh dọc cho TikTok · Reels · Shorts',
+  k_sg3b:'Toàn bộ thành phẩm chính thức', k_sg3s:'Video trình diễn, ảnh, âm thanh — toàn bộ dữ liệu',
+  k_u_h2:'7 ngày kỳ diệu — những gì chúng tôi tạo ra',
+  k_u_lead:'Không phải tour du lịch nhàm chán hay lớp học nhóm. Bạn trải qua quy trình sản xuất cao cấp giống 100% lộ trình debut của nghệ sĩ K-POP thật.',
+  k_u1t:'Đào tạo chuyên sâu cùng HLV chuyên nghiệp', k_u1p:'Buổi luyện thanh khám phá quãng giọng tiềm ẩn và lớp master nhảy chinh phục góc máy — xây nền tảng thực chiến.',
+  k_u2t:'Thu âm tại phòng thu hàng đầu Hàn Quốc', k_u2p:'Bản thu solo của riêng bạn tại phòng thu danh giá nơi ra đời các bản hit huyền thoại.',
+  k_u3t:'Chụp hình với nhiếp ảnh gia sao hạng A', k_u3p:'Sở hữu hồ sơ audition độ phân giải cao dưới sự chỉ đạo của bậc thầy làm bìa album cho các công ty lớn.',
+  k_u4t:'Sản xuất video trình diễn chính thức', k_u4p:'Ê-kíp quay phim & ánh sáng chuyên nghiệp quay MV vũ đạo chính thức và nội dung short-form tôn vinh sức hút của bạn.',
+  k_u5t:'Tư vấn & kết nối 1:1 cùng master', k_u5p:'Buổi tư vấn riêng với nhà sản xuất tổng phân tích thế mạnh của bạn và xây lộ trình giải pháp & kết nối công ty cho sân khấu toàn cầu.',
+  k_b_h2:'6 đặc quyền all-in-one đẳng cấp người nổi tiếng',
+  k_b_lead:'Bạn chỉ cần mang hộ chiếu và vé khứ hồi. Từ lúc đặt chân đến Hàn Quốc đến khi rời đi, hệ thống quản lý hàng đầu Hàn Quốc sẽ hộ tống bạn.',
+  k_b1b:'✨ Quản lý đồng hành toàn bộ', k_b1p:'Quản lý đang hoạt động từ công ty nổi tiếng giám sát & hộ tống toàn bộ lịch trình, bảo vệ và chăm sóc như nghệ sĩ.',
+  k_b2b:'💄 Salon sao hạng A Cheongdam', k_b2p:'Tạo kiểu tóc & trang điểm trọn gói bởi nhà tạo mẫu riêng tại salon danh giá nhất Cheongdam.',
+  k_b3b:'🚙 Xe Carnival & khách sạn cao cấp', k_b3p:'Đưa đón sân bay và toàn bộ lịch trình bằng xe Carnival mới, phòng khách sạn riêng tư, tiện nghi.',
+  k_b4b:'🥗 Chế độ ăn idol & chăm sóc sắc đẹp', k_b4p:'Chế độ ăn riêng và liệu pháp làm đẹp luôn sẵn sàng cho thể trạng và hình ảnh tốt nhất.',
+  k_b5b:'🤝 Giới thiệu công ty trong 1 năm', k_b5p:'Trong 1 năm sau khi hoàn thành, liên tục giới thiệu & kết nối audition với các công ty lớn qua mạng lưới của nhà sản xuất Kim Hyungmin.',
+  k_b6b:'👑 Đảm bảo gặp công ty cho VVIP', k_b6p:'Chỉ dành cho VVIP cá nhân: đảm bảo gặp riêng 1:1 & audition độc quyền với giám đốc A&R công ty lớn. (Nhóm: tham quan chính thức.)',
+  k_t_h2:'Đội ngũ master top 1% Hàn Quốc',
+  k_t_lead:'Những bậc thầy làm nên bảng xếp hạng toàn cầu chỉ đạo 1:1 riêng cho bạn. Đội hình này độc quyền tại trại này.',
+  k_t1r:'Nhà sản xuất tổng · A&R', k_t1p:'Nhân tố chủ lực trên bảng xếp hạng K-POP toàn cầu. Sản xuất tổng & A&R cho các nghệ sĩ hàng đầu gồm <b>XG · KARA · VIVIZ · SURAN · Jewelry · Stellar</b>. Tinh chỉnh tiềm năng của bạn theo đúng điều các công ty lớn cần, và trực tiếp kết nối công ty Hàn Quốc trong 1 năm.',
+  k_t2r:'Đạo diễn trình diễn', k_t2p:'HLV huyền thoại được kiểm chứng tại hai công ty lớn nhất Hàn Quốc. Từng là HLV·đạo diễn nhảy chuyên trách tại <b>SM Entertainment</b> (6 năm) và <b>YG Entertainment</b> (3 năm). Tạo nên màn trình diễn mạnh mẽ, cuốn hút chỉ trong một tuần.',
+  k_t3r:'HLV thanh nhạc master', k_t3p:'HLV thanh nhạc độc quyền cho <b>ENHYPEN</b> Jungwon·Jake, <b>ZEROBASEONE</b> Matthew·Gyuvin·Taerae, <b>ILLIT</b>, <b>UNIS</b> Oh Yunah. HLV thanh nhạc chính thức của Mnet 「R U NEXT」 & 「Girls Planet 999」, quán quân 「I Can See Your Voice 4」 (tập TWICE). Chỉ đạo theo hướng survival để tìm tông giọng đặc trưng.',
+  k_s_h2:'Lịch trình 7 ngày 6 đêm', k_s_lead:'Diễn ra dưới sự kèm cặp của quản lý chuyên trách. * Chi tiết điều chỉnh theo số lượng và trình độ.',
+  k_d1t:'Đón tiếp · kiểm tra trình độ', k_d1a:'Đón VIP bằng xe Carnival tại sân bay Incheon và hỗ trợ nhận phòng khách sạn', k_d1b:'Định hướng cùng quản lý và kiểm tra trình độ thanh nhạc · nhảy 1:1',
+  k_d2t:'Luyện thanh · lớp nhảy', k_d2a:'Sáng — phân tích quãng giọng & chỉnh tông đặc trưng', k_d2b:'Chiều — học vũ đạo & dựng di chuyển (bắt đầu chế độ ăn idol)',
+  k_d3t:'Chỉ đạo thu âm · master nhảy', k_d3a:'Sáng — chỉ đạo thanh nhạc cuối & tổng duyệt chi tiết trước phòng thu', k_d3b:'Chiều — dàn dựng & kiểm tra góc máy cho video trình diễn',
+  k_d4t:'Salon Cheongdam · thu âm · chụp hình', k_d4a:'Đến salon Cheongdam của người nổi tiếng (tóc & trang điểm trọn gói)', k_d4b:'Thu âm tại phòng thu hàng đầu & chụp hình cùng nhiếp ảnh gia sao hạng A, song song',
+  k_d5t:'Video trình diễn · gặp công ty', k_d5a:'Tạo phong cách concept; quay video trình diễn chính thức & short-form bởi ê-kíp chuyên nghiệp', k_d5b:'VVIP — gặp riêng công ty lớn / Nhóm — tham quan công ty chính thức',
+  k_d6t:'Giải pháp 1:1 · showcase', k_d6a:'Tư vấn 1:1 với nhà sản xuất tổng & lộ trình kết nối công ty 1 năm', k_d6b:'Mini showcase nội bộ và tiệc chia tay',
+  k_d7t:'Tiễn sân bay · xem trước thành phẩm', k_d7a:'Tiễn ra sân bay bằng xe Carnival và lời chào cuối từ quản lý', k_d7b:'Xem trước hồ sơ đã chỉnh / dữ liệu bản dựng đầu tiên',
+  k_p_h2:'Các gói', k_p_lead:'Hai gói phù hợp mục tiêu và lịch trình của bạn.', k_per:'/ người',
+  k_pv_badge:'VVIP PRIVATE · khởi hành bất kỳ lúc nào', k_pv_t:'VVIP Private cá nhân', k_pv_when:'Khởi hành bất kỳ lúc nào · 1:1 độc quyền toàn bộ',
+  k_pv1:'Gặp riêng & audition công ty lớn <b>đảm bảo 100%</b>', k_pv2:'Lịch trình tùy chỉnh hoàn toàn · chỉ đạo 1:1 độc quyền', k_pv3:'6 chăm sóc đẳng cấp sao + trọn bộ hồ sơ cao cấp', k_pv_btn:'Đăng ký VVIP',
+  k_pg_badge:'GROUP · khởi hành khi đủ 5', k_pg_t:'Nhóm Premium 5 người', k_pg_when:'Khởi hành khi đủ 5 người',
+  k_pg1:'Chương trình tham quan công ty lớn chính thức', k_pg2:'Đào tạo nhóm cùng đội ngũ master', k_pg3:'6 chăm sóc đẳng cấp sao + thành phẩm chính thức', k_pg_btn:'Đăng ký nhóm',
+  k_common:'<b>Đặc quyền chung</b> · quản lý đồng hành toàn bộ · 6 chăm sóc đẳng cấp sao · đảm bảo giới thiệu công ty trong 1 năm sau khi hoàn thành<br><span style="color:var(--ink-4)">✈️ Không bao gồm vé máy bay quốc tế · Tại Hàn Quốc chỉ vận hành chương trình K-POP. * Giá theo gói và có thể thay đổi theo tùy chọn.</span>',
+  k_a_h2:'Đăng ký', k_a_lead:'Gửi hồ sơ cơ bản và <b style="color:#fff">điều phối viên sẽ liên hệ trực tiếp</b> để hướng dẫn lịch trình và chi tiết.',
+  k_f_name:'Họ tên', k_f_contact:'Liên hệ', k_f_email:'Email', k_f_pkg:'Gói mong muốn', k_f_dob:'Ngày sinh / tuổi', k_f_field:'Lĩnh vực', k_f_loc:'Quốc gia · thành phố', k_f_msg:'Lời nhắn (giới thiệu · mục tiêu · câu hỏi)',
+  k_ph_contact:'Điện thoại · WhatsApp · Zalo', k_ph_dob:'2005-01-01 hoặc 19 tuổi', k_ph_loc:'VD: Vietnam, Ho Chi Minh', k_ph_msg:'Hãy giới thiệu ngắn gọn hoặc đặt câu hỏi.',
+  k_opt_sel:'Chọn', k_opt_vvip:'VVIP Private cá nhân', k_opt_grp:'Nhóm Premium 5 người', k_opt_later:'Quyết định sau khi tư vấn', k_opt_vocal:'Thanh nhạc', k_opt_dance:'Nhảy', k_opt_rap:'Rap', k_opt_all:'Tổng hợp (thanh nhạc + nhảy)',
+  k_f_submit:'Gửi đăng ký', k_f_priv:'Thông tin của bạn chỉ dùng cho việc tư vấn & hướng dẫn chương trình.<br>Điều phối viên sẽ liên hệ trong 2–3 ngày làm việc.',
+  k_ok_t:'Đã nhận đăng ký 🎉', k_ok_p:'Điều phối viên sẽ sớm liên hệ với bạn.<br>Vui lòng để ý điện thoại / email của bạn.',
+  k_disc:'Lên kế hoạch & vận hành bởi Rainbow Entertainment · hợp tác sản xuất. Lịch trình, giá và đặc quyền có thể thay đổi theo vận hành.'
+}};
 
-  /* ───────── 접수 자동 수집 (Google Form → Sheet) ─────────
-     아래 GFORM.action 과 entry 번호만 채우면 접수가 구글폼/시트에 자동 저장됩니다.
-     비워두면 이메일(jspark@rb-land.com) 백업으로 동작합니다. */
-  const GFORM = {
-    action: 'https://docs.google.com/forms/d/e/1FAIpQLSfcwjE7AJ_dpzmkPlZS7C8LAvSqCe-svubFNA45sftSrH3CCA/formResponse',
-    map: {
-      이름:'entry.830457360', 연락처:'entry.739972575', 이메일:'entry.591348698',
-      희망패키지:'entry.1374152477', 생년월일:'entry.1781536526', 지원분야:'entry.2115965781',
-      거주지:'entry.495991210', 메시지:'entry.1615802719'
-    }
-  };
-  const form=document.getElementById('applyForm');
-  function showOk(){ form.style.display='none'; const ok=document.getElementById('okPanel'); ok.classList.add('on'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
-  form.addEventListener('submit',e=>{
-    e.preventDefault();
-    const d=new FormData(form);
-    if(GFORM.action){
-      const hf=document.createElement('form'); hf.action=GFORM.action; hf.method='POST'; hf.target='gformSink';
-      Object.entries(GFORM.map).forEach(([k,entry])=>{ if(!entry) return; const i=document.createElement('input'); i.type='hidden'; i.name=entry; i.value=d.get(k)||''; hf.appendChild(i); });
-      document.body.appendChild(hf); hf.submit(); document.body.removeChild(hf); showOk();
-    } else {
-      let body='■ Rainbow K-POP Camp 접수\n\n';
-      for(const [k,v] of d.entries()){ if(String(v).trim()) body+=k+': '+v+'\n'; }
-      window.location.href='mailto:jspark@rb-land.com?subject='+encodeURIComponent('[K-POP 접수] '+(d.get('이름')||''))+'&body='+encodeURIComponent(body);
-      showOk();
-    }
-  });
+function setLang(l){
+  if(!I18N[l])return;
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=I18N[l][el.dataset.i18n];if(v!=null)el.innerHTML=v;});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=I18N[l][el.dataset.i18nPh];if(v!=null)el.placeholder=v;});
+  document.querySelectorAll('#langSw button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  try{localStorage.setItem('rb_lang',l);}catch(e){}
+}
+document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+(function(){
+  let l='ko';
+  try{l=localStorage.getItem('rb_lang')||'';}catch(e){}
+  if(!l){const n=(navigator.language||'').toLowerCase();l=n.startsWith('vi')?'vi':n.startsWith('en')?'en':'ko';}
+  if(l!=='ko')setLang(l);
+})();
+
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* 접수 → Google Form(시트) 자동 수집 */
+const GFORM = {
+  action: 'https://docs.google.com/forms/d/e/1FAIpQLSfcwjE7AJ_dpzmkPlZS7C8LAvSqCe-svubFNA45sftSrH3CCA/formResponse',
+  map: {
+    이름:'entry.830457360', 연락처:'entry.739972575', 이메일:'entry.591348698',
+    희망패키지:'entry.1374152477', 생년월일:'entry.1781536526', 지원분야:'entry.2115965781',
+    거주지:'entry.495991210', 메시지:'entry.1615802719'
+  }
+};
+const form=document.getElementById('applyForm');
+function showOk(){ form.style.display='none'; const ok=document.getElementById('okPanel'); ok.classList.add('on'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const d=new FormData(form);
+  if(GFORM.action){
+    const hf=document.createElement('form'); hf.action=GFORM.action; hf.method='POST'; hf.target='gformSink';
+    Object.entries(GFORM.map).forEach(([k,entry])=>{ if(!entry) return; const i=document.createElement('input'); i.type='hidden'; i.name=entry; i.value=d.get(k)||''; hf.appendChild(i); });
+    document.body.appendChild(hf); hf.submit(); document.body.removeChild(hf); showOk();
+  } else {
+    let body='Rainbow K-POP Camp\n\n';
+    for(const [k,v] of d.entries()){ if(String(v).trim()) body+=k+': '+v+'\n'; }
+    window.location.href='mailto:jspark@rb-land.com?subject='+encodeURIComponent('[K-POP] '+(d.get('이름')||''))+'&body='+encodeURIComponent(body);
+    showOk();
+  }
+});
 </script>
 </body>
 </html>
