@@ -76,6 +76,20 @@
   .svc .s .en{font-size:10.5px;letter-spacing:.12em;color:var(--ink-4);text-transform:uppercase;margin-bottom:9px}
   .svc .s p{font-size:13px;color:var(--ink-3)}
 
+  /* direction (한·베 합작 모델) */
+  .dir{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch;margin-top:46px}
+  @media(max-width:760px){.dir{grid-template-columns:1fr}}
+  .dcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 28px}
+  .dcard .flag{font-size:30px;line-height:1}
+  .dcard h3{font-size:18px;font-weight:700;margin:12px 0 8px}
+  .dcard p{font-size:13.5px;color:var(--ink-3)}
+  .dplus{display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700;color:var(--purple-3)}
+  .dir-out{margin-top:18px;background:var(--purple);color:#fff;border-radius:16px;padding:20px 24px;text-align:center;font-size:15px;font-weight:700;line-height:1.55}
+  .dir-out .y{color:var(--yellow)}
+  .dir-res{margin-top:20px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;align-items:center}
+  .dir-res .lbl{font-size:12.5px;color:var(--ink-4)}
+  .dir-res .chip{display:inline-flex;align-items:center;font-size:12.5px;font-weight:700;color:var(--purple);background:var(--purple-5);padding:9px 16px 7px;border-radius:999px;line-height:1}
+
   /* process */
   .proc{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px}
   @media(max-width:860px){.proc{grid-template-columns:1fr;gap:10px}}
@@ -154,6 +168,27 @@
     </div>
   </div>
 </section>
+
+<!-- DIRECTION -->
+<section id="direction" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Our Direction</div>
+    <h2 class="sec" data-i18n="kd_dir_h2">한국의 제작력 × 베트남의 시장</h2>
+    <p class="lead" data-i18n="kd_dir_lead">한·베 합작으로 영화·드라마를 만들고, 한국 정부 제작지원과 검증된 인력을 더해 리스크는 낮추고 완성도는 높입니다.</p>
+  </div>
+  <div class="dir rv">
+    <div class="dcard"><div class="flag">🇰🇷</div><h3 data-i18n="kd_dir_kr_t">한국이 가져오는 것</h3><p data-i18n="kd_dir_kr_p">고퀄리티 제작 인프라 · 확보된 고급 제작 인력 · 영화진흥위원회(KOFIC) 등 정부 제작지원 활용.</p></div>
+    <div class="dplus">+</div>
+    <div class="dcard"><div class="flag">🇻🇳</div><h3 data-i18n="kd_dir_vn_t">베트남이 가져오는 것</h3><p data-i18n="kd_dir_vn_p">현지 시장 · 로케이션 · 제작 환경, 그리고 Rainbow가 구축한 Gen Z 팬덤과 플랫폼.</p></div>
+  </div>
+  <div class="dir-out rv" data-i18n="kd_dir_out">→ 한·베 합작 K-드라마·영화 제작, 그리고 <span class="y">K-콘텐츠 관광상품</span>까지 확장</div>
+  <div class="dir-res rv">
+    <span class="lbl" data-i18n="kd_dir_rlbl">활용 자원</span>
+    <span class="chip" data-i18n="kd_dir_r1">한국 정부 제작지원 (KOFIC)</span>
+    <span class="chip" data-i18n="kd_dir_r2">Rainbow 팬덤 · 플랫폼</span>
+    <span class="chip" data-i18n="kd_dir_r3">한국 검증된 제작 인력</span>
+  </div>
+</div></section>
 
 <!-- SERVICES -->
 <section id="services"><div class="wrap">
@@ -234,6 +269,11 @@ ko:{
   kd_sub:'기획·개발부터 캐스팅, 촬영, 후반작업, 글로벌 배급까지 — Rainbow가 한국과 베트남을 잇는 K-드라마·영화 콘텐츠를 직접 만들고 유통합니다.',
   kd_m1:'🎬 기획 · 제작', kd_m2:'🎭 캐스팅', kd_m3:'🌏 글로벌 배급', kd_m4:'🇰🇷🇻🇳 한·베 공동제작',
   kd_btn1:'제작 문의하기', kd_btn2:'서비스 보기',
+  kd_dir_h2:'한국의 제작력 × 베트남의 시장', kd_dir_lead:'한·베 합작으로 영화·드라마를 만들고, 한국 정부 제작지원과 검증된 인력을 더해 리스크는 낮추고 완성도는 높입니다.',
+  kd_dir_kr_t:'한국이 가져오는 것', kd_dir_kr_p:'고퀄리티 제작 인프라 · 확보된 고급 제작 인력 · 영화진흥위원회(KOFIC) 등 정부 제작지원 활용.',
+  kd_dir_vn_t:'베트남이 가져오는 것', kd_dir_vn_p:'현지 시장 · 로케이션 · 제작 환경, 그리고 Rainbow가 구축한 Gen Z 팬덤과 플랫폼.',
+  kd_dir_out:'→ 한·베 합작 K-드라마·영화 제작, 그리고 <span class="y">K-콘텐츠 관광상품</span>까지 확장',
+  kd_dir_rlbl:'활용 자원', kd_dir_r1:'한국 정부 제작지원 (KOFIC)', kd_dir_r2:'Rainbow 팬덤 · 플랫폼', kd_dir_r3:'한국 검증된 제작 인력',
   kd_sv_h2:'콘텐츠 한 편이 완성되기까지, 전 과정', kd_sv_lead:'기획부터 글로벌 유통까지 — 드라마·영화 제작의 모든 단계를 한곳에서 운영합니다.',
   kd_s1t:'기획 · 개발', kd_s1p:'오리지널 IP·시나리오 개발, 트리트먼트, 한·베 공동기획.',
   kd_s2t:'캐스팅 · 탤런트', kd_s2p:'한국·베트남 배우 캐스팅과 신인 발굴, 출연 매니지먼트.',
@@ -262,6 +302,11 @@ en:{
   kd_sub:'From development and casting to production, post and global distribution — Rainbow creates and distributes K-drama and film content bridging Korea and Vietnam.',
   kd_m1:'🎬 Development · Production', kd_m2:'🎭 Casting', kd_m3:'🌏 Global distribution', kd_m4:'🇰🇷🇻🇳 Korea–Vietnam co-production',
   kd_btn1:'Start an inquiry', kd_btn2:'Our services',
+  kd_dir_h2:'Korea\'s production power × Vietnam\'s market', kd_dir_lead:'We co-produce films & dramas between Korea and Vietnam — adding Korean government production support and proven talent to lower risk and raise quality.',
+  kd_dir_kr_t:'What Korea brings', kd_dir_kr_p:'High-quality production infrastructure · proven senior production talent · government production support (KOFIC, etc.).',
+  kd_dir_vn_t:'What Vietnam brings', kd_dir_vn_p:'Local market, locations and production environment — plus the Gen Z fandom & platform Rainbow has built.',
+  kd_dir_out:'→ Korea–Vietnam co-produced K-dramas & films, expanding into <span class="y">K-content tourism products</span>',
+  kd_dir_rlbl:'Resources', kd_dir_r1:'Korean government production support (KOFIC)', kd_dir_r2:'Rainbow fandom & platform', kd_dir_r3:'Proven Korean production talent',
   kd_sv_h2:'Every stage, from idea to screen', kd_sv_lead:'From development to global distribution — every step of drama & film production, in one place.',
   kd_s1t:'Development', kd_s1p:'Original IP & screenplay development, treatments, Korea–Vietnam co-development.',
   kd_s2t:'Casting · Talent', kd_s2p:'Korean & Vietnamese casting, new-face discovery, talent management.',
@@ -290,6 +335,11 @@ vi:{
   kd_sub:'Từ phát triển, tuyển vai đến quay phim, hậu kỳ và phát hành toàn cầu — Rainbow trực tiếp sản xuất và phân phối nội dung K-drama & điện ảnh kết nối Hàn Quốc và Việt Nam.',
   kd_m1:'🎬 Phát triển · Sản xuất', kd_m2:'🎭 Tuyển vai', kd_m3:'🌏 Phát hành toàn cầu', kd_m4:'🇰🇷🇻🇳 Hợp tác sản xuất Hàn–Việt',
   kd_btn1:'Gửi yêu cầu', kd_btn2:'Dịch vụ',
+  kd_dir_h2:'Năng lực sản xuất Hàn Quốc × thị trường Việt Nam', kd_dir_lead:'Hợp tác sản xuất phim & truyền hình giữa Hàn Quốc và Việt Nam — kết hợp hỗ trợ sản xuất từ chính phủ Hàn Quốc và đội ngũ đã kiểm chứng để giảm rủi ro, nâng chất lượng.',
+  kd_dir_kr_t:'Hàn Quốc mang đến', kd_dir_kr_p:'Hạ tầng sản xuất chất lượng cao · nhân lực sản xuất cấp cao đã có · hỗ trợ sản xuất của chính phủ (KOFIC, v.v.).',
+  kd_dir_vn_t:'Việt Nam mang đến', kd_dir_vn_p:'Thị trường, bối cảnh và môi trường sản xuất bản địa — cùng cộng đồng fan Gen Z & nền tảng do Rainbow xây dựng.',
+  kd_dir_out:'→ K-drama & phim hợp tác Hàn–Việt, mở rộng sang <span class="y">sản phẩm du lịch nội dung K</span>',
+  kd_dir_rlbl:'Nguồn lực', kd_dir_r1:'Hỗ trợ sản xuất từ chính phủ Hàn Quốc (KOFIC)', kd_dir_r2:'Cộng đồng fan & nền tảng Rainbow', kd_dir_r3:'Nhân lực sản xuất Hàn Quốc đã kiểm chứng',
   kd_sv_h2:'Mọi công đoạn, từ ý tưởng đến màn ảnh', kd_sv_lead:'Từ phát triển đến phát hành toàn cầu — mọi bước sản xuất phim & truyền hình, tại một nơi.',
   kd_s1t:'Phát triển', kd_s1p:'Phát triển IP gốc & kịch bản, treatment, đồng phát triển Hàn–Việt.',
   kd_s2t:'Tuyển vai · Diễn viên', kd_s2p:'Tuyển diễn viên Hàn & Việt, tìm gương mặt mới, quản lý diễn viên.',
