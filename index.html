@@ -148,6 +148,17 @@
   .sgrid .note h4{font-size:20px;font-weight:700;color:#fff;margin:12px 0 10px;line-height:1.32}
   .sgrid .note p{font-size:13px;color:var(--purple-5);line-height:1.65}
 
+  /* events: 2 matched posters on top, 3 matched landscapes below */
+  .evt-top{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:42px}
+  .evt-bot{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+  @media(max-width:620px){.evt-bot{grid-template-columns:1fr}}
+  .evt-top .cell,.evt-bot .cell{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .evt-top .cell{aspect-ratio:3/4}
+  .evt-bot .cell{aspect-ratio:3/2}
+  .evt-top .cell img,.evt-bot .cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .evt-top .cell:hover img,.evt-bot .cell:hover img{transform:scale(1.05)}
+  .evt-top .cap,.evt-bot .cap{position:absolute;left:0;right:0;bottom:0;padding:16px 14px 11px;background:linear-gradient(transparent,rgba(0,0,0,.74));color:#fff;font-size:12px;font-weight:700;line-height:1.3}
+
   /* flywheel */
   .fly{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px}
   @media(max-width:860px){.fly{grid-template-columns:1fr;gap:10px}}
@@ -212,7 +223,7 @@
 <body>
 
 <header class="nav" id="nav"><div class="wrap nav-in">
-  <div class="brandmark"><img src="assets/rainbow-logo.png" alt="Rainbow" style="height:28px;width:auto;display:block"> <span style="font-weight:300;color:var(--ink-3);font-size:15px">Entertainment</span></div>
+  <div class="brandmark"><img src="assets/rainbow-logo.png" alt="Rainbow" style="height:28px;width:auto;display:block;position:relative;top:-3px"> <span style="font-weight:300;color:var(--ink-3);font-size:15px">Entertainment</span></div>
   <nav class="nav-links">
     <a href="#about">About</a><a href="#business">Business</a><a href="#stores">Stores</a><a href="#platform">Platform</a>
     <a href="#journey">Journey</a><a href="#global">Global</a>
@@ -381,13 +392,14 @@
   <div class="film rv">
     <div class="ratio"><iframe src="https://player.vimeo.com/video/1203035688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Rainbow Entertainment"></iframe></div>
   </div>
-  <div class="wall rv">
-    <figure><img loading="lazy" src="assets/event-vk-vocal-showcase.jpg" alt="V&amp;K Vocal Showcase"><figcaption class="cap">V&amp;K Vocal Showcase · Aeon Mall Ha Dong</figcaption></figure>
-    <figure><img loading="lazy" src="assets/event-festival-01.jpg" alt="Mall main-hall K-festival"><figcaption class="cap">K-Festival · Mall Main Hall</figcaption></figure>
-    <figure><img loading="lazy" src="assets/event-grand-opening.jpg" alt="Rainbow store grand opening"><figcaption class="cap">Grand Opening</figcaption></figure>
-    <figure><img loading="lazy" src="assets/event-festival-02.jpg" alt="K-festival audience"></figure>
-    <figure><img loading="lazy" src="assets/event-press-conference.jpg" alt="Press conference"><figcaption class="cap">Press Conference · 2026</figcaption></figure>
-    <figure><img loading="lazy" src="assets/event-festival-03.jpg" alt="K-festival crowd"></figure>
+  <div class="evt-top rv">
+    <div class="cell"><img loading="lazy" src="assets/event-vk-vocal-showcase.jpg" alt="V&amp;K Vocal Showcase"><div class="cap">V&amp;K Vocal Showcase · Aeon Mall Ha Dong</div></div>
+    <div class="cell"><img loading="lazy" src="assets/event-press-conference.jpg" alt="Press conference"><div class="cap">Press Conference · 2026</div></div>
+  </div>
+  <div class="evt-bot rv">
+    <div class="cell"><img loading="lazy" src="assets/event-festival-01.jpg" alt="Mall main-hall K-festival"><div class="cap">K-Festival · Mall Main Hall</div></div>
+    <div class="cell"><img loading="lazy" src="assets/event-grand-opening.jpg" alt="Rainbow store grand opening"><div class="cap">Grand Opening</div></div>
+    <div class="cell"><img loading="lazy" src="assets/event-festival-02.jpg" alt="K-festival audience"><div class="cap">K-Festival Crowd</div></div>
   </div>
 </div></section>
 
@@ -428,7 +440,7 @@
   </div>
   <div class="glob">
     <div class="gl rv"><div class="flag">🇻🇳</div><h3>Vietnam</h3><p data-i18n="gl1_p">호치민 · 하노이 주요 쇼핑몰 직영 지점 운영. K컬처 플랫폼 모델의 검증 무대이자 본거지.</p><span class="st now" data-i18n="gl1_s">운영 중</span></div>
-    <div class="gl rv"><div class="flag">🇦🇪</div><h3>Dubai</h3><p data-i18n="gl2_p">베트남 성공 사례를 포트폴리오로 중동 시장 진출. 쇼핑몰 기반 K엔터테인먼트 플랫폼.</p><span class="st" data-i18n="gl2_s">진출 추진</span></div>
+    <div class="gl rv"><div class="flag">🇦🇪</div><h3>United Arab Emirates</h3><p data-i18n="gl2_p">베트남 성공 사례를 포트폴리오로 중동 시장 진출. 쇼핑몰 기반 K엔터테인먼트 플랫폼.</p><span class="st" data-i18n="gl2_s">진출 추진</span></div>
     <div class="gl rv"><div class="flag">🌏</div><h3>Southeast Asia</h3><p data-i18n="gl3_p">태국 · 인도네시아 · 말레이시아 · 필리핀 — 라이센스 모델과 디지털 커머스로 확장.</p><span class="st" data-i18n="gl3_s">확장 예정</span></div>
   </div>
 </div></section>
@@ -494,7 +506,7 @@ ko:{
   jr3_t:'글로벌 확장', jr3_p:'두바이 진출과 해외 라이센스 모델 가동, 동남아 커머스 확장, 자체 브랜드와 IP 자산화 — 동남아를 선도하는 K컬처 생태계로.',
   gl_h2:'베트남에서 검증하고, 세계로 확장합니다',
   gl1_p:'호치민 · 하노이 주요 쇼핑몰 직영 지점 운영. K컬처 플랫폼 모델의 검증 무대이자 본거지.', gl1_s:'운영 중',
-  gl2_p:'베트남 성공 사례를 포트폴리오로 중동 시장 진출. 쇼핑몰 기반 K엔터테인먼트 플랫폼.', gl2_s:'진출 추진',
+  gl2_p:'베트남 성공 사례를 포트폴리오로, 두바이·아부다비 등 중동 시장 진출을 추진합니다. 쇼핑몰 기반 K엔터테인먼트 플랫폼.', gl2_s:'진출 추진',
   gl3_p:'태국 · 인도네시아 · 말레이시아 · 필리핀 — 라이센스 모델과 디지털 커머스로 확장.', gl3_s:'확장 예정',
   v1_p:'K컬처 경험을 설계하는 공간과 콘텐츠', v2_p:'팬덤을 구매로 연결하는 Enter Commerce™', v3_p:'고객이 주인공이 되는 Gen Z 커뮤니티',
   ct_p:'쇼핑몰 입점 · 해외 라이센스 · K브랜드 콜라보 · 스폰서십 · 투자 파트너십을 기다립니다.',
@@ -537,7 +549,7 @@ en:{
   jr3_t:'Global expansion', jr3_p:'Dubai entry and the overseas license model, Southeast Asian commerce expansion, own brands and IP — toward the leading K-culture ecosystem in Southeast Asia.',
   gl_h2:'Proven in Vietnam, expanding worldwide',
   gl1_p:'Direct stores in major malls in Ho Chi Minh City and Hanoi. The proving ground and home base of the K-culture platform model.', gl1_s:'Operating',
-  gl2_p:'Entering the Middle East with the Vietnam success story as our portfolio. A mall-based K-entertainment platform.', gl2_s:'In progress',
+  gl2_p:'Entering the Middle East — starting with Dubai and Abu Dhabi — with the Vietnam success story as our portfolio. A mall-based K-entertainment platform.', gl2_s:'In progress',
   gl3_p:'Thailand · Indonesia · Malaysia · Philippines — expanding through the license model and digital commerce.', gl3_s:'Planned',
   v1_p:'Spaces and content that design K-culture experiences', v2_p:'Enter Commerce™ that turns fandom into purchases', v3_p:'A Gen Z community where customers are the stars',
   ct_p:'Mall leasing · overseas licensing · K-brand collaborations · sponsorship · investment partnerships — let\'s talk.',
@@ -580,7 +592,7 @@ vi:{
   jr3_t:'Mở rộng toàn cầu', jr3_p:'Tiến vào Dubai với mô hình nhượng quyền quốc tế, mở rộng thương mại Đông Nam Á, xây dựng thương hiệu riêng và tài sản IP — hướng tới hệ sinh thái K-culture dẫn đầu Đông Nam Á.',
   gl_h2:'Kiểm chứng tại Việt Nam, vươn ra thế giới',
   gl1_p:'Chi nhánh trực tiếp tại các TTTM lớn ở TP.HCM và Hà Nội. Sân khấu kiểm chứng và đại bản doanh của mô hình nền tảng K-culture.', gl1_s:'Đang hoạt động',
-  gl2_p:'Tiến vào Trung Đông với hồ sơ thành công tại Việt Nam. Nền tảng K-entertainment đặt tại trung tâm thương mại.', gl2_s:'Đang xúc tiến',
+  gl2_p:'Tiến vào Trung Đông — khởi đầu từ Dubai và Abu Dhabi — với hồ sơ thành công tại Việt Nam. Nền tảng K-entertainment đặt tại trung tâm thương mại.', gl2_s:'Đang xúc tiến',
   gl3_p:'Thái Lan · Indonesia · Malaysia · Philippines — mở rộng qua mô hình nhượng quyền và thương mại số.', gl3_s:'Sắp mở rộng',
   v1_p:'Không gian và nội dung kiến tạo trải nghiệm K-culture', v2_p:'Enter Commerce™ biến fandom thành đơn hàng', v3_p:'Cộng đồng Gen Z nơi khách hàng là ngôi sao',
   ct_p:'Hợp tác mặt bằng TTTM · nhượng quyền quốc tế · collab K-brand · tài trợ · đầu tư — hãy liên hệ với chúng tôi.',
