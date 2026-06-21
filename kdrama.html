@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow K-Drama &amp; Film Production — 한·베 콘텐츠 제작</title>
+<meta name="description" content="기획·개발부터 캐스팅, 촬영, 후반작업, 글로벌 배급까지 — Rainbow가 한국과 베트남을 잇는 K-드라마·영화 콘텐츠를 제작·유통합니다. | rainbowent.live">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta name="theme-color" content="#5932ca">
+<style>
+  @font-face{font-family:'GmarketSans';font-weight:300;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:700;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');}
+  :root{
+    --purple:#5932ca;--purple-2:#7a5fd6;--purple-3:#9d88e4;--purple-4:#c3b6ef;--purple-5:#e7e1fa;
+    --yellow:#fcf05b;--yellow-2:#fdf486;
+    --gray-3:#efefef;--gray-5:#fafafa;
+    --black:#222;--ink-3:#6b6b6b;--ink-4:#8c8c8c;--line:#e7e7e7;
+    --font:'GmarketSans','Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--black);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}img{max-width:100%}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+  header.nav.scrolled{border-color:var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brandmark{display:flex;align-items:center;gap:8px;flex-shrink:0}
+  .brandmark img{height:26px;width:auto;display:block;position:relative;top:-3px}
+  .brandmark span{font-weight:300;color:var(--ink-3);font-size:14px}
+  .nav-right{display:flex;align-items:center;gap:14px}
+  .nav-cta{background:var(--purple);color:#fff;padding:10px 18px 8px;border-radius:999px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;line-height:1}
+  .nav-cta:hover{background:var(--purple-2)}
+  .back{font-size:13px;font-weight:500;color:var(--ink-3)}
+  .back:hover{color:var(--purple)}
+  @media(max-width:680px){.back{display:none}.nav-cta{display:none}}
+  .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
+  .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
+  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:6px 9px 4px;border-radius:999px;transition:.15s;line-height:1.15}
+  .lang button.on{background:var(--purple);color:#fff}
+  .lang button:not(.on):hover{color:var(--purple)}
+
+  .hero{background:var(--purple);color:#fff;padding:150px 0 110px;position:relative;overflow:hidden}
+  .hero .eyebrow{font-size:12.5px;letter-spacing:.24em;font-weight:700;color:var(--yellow)}
+  .hero h1{font-size:50px;font-weight:700;line-height:1.18;letter-spacing:-.015em;margin-top:18px}
+  .hero h1 .y{color:var(--yellow)}
+  .hero .sub{font-size:16.5px;color:var(--purple-5);margin-top:22px;max-width:680px}
+  .hero .meta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .hero .meta span{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12.5px;font-weight:500;padding:8px 14px 6px;border-radius:999px;line-height:1}
+  .hero .btns{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 30px 12px;border-radius:999px;font-weight:700;font-size:14.5px;line-height:1.15;transition:.2s;cursor:pointer;border:none;font-family:var(--font)}
+  .btn.y{background:var(--yellow);color:#222}.btn.y:hover{background:var(--yellow-2);transform:translateY(-2px)}
+  .btn.ghost{border:2px solid rgba(255,255,255,.5);color:#fff;background:transparent}.btn.ghost:hover{border-color:#fff}
+  .spark{position:absolute;opacity:.14;animation:float 7s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
+  @media(max-width:760px){.hero h1{font-size:32px}}
+
+  section{padding:88px 0}
+  .eyebrow{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--purple);text-transform:uppercase}
+  h2.sec{font-size:32px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.3}
+  .lead{color:var(--ink-3);font-size:15.5px;max-width:760px}
+  .center{text-align:center}.center .lead{margin:0 auto}
+
+  /* services */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  @media(max-width:860px){.svc{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.svc{grid-template-columns:1fr}}
+  .svc .s{border:1px solid var(--line);border-radius:20px;padding:30px 26px;transition:.25s;background:#fff}
+  .svc .s:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(89,50,202,.12);border-color:var(--purple-4)}
+  .svc .s .em{font-size:28px;line-height:1}
+  .svc .s h3{font-size:18px;font-weight:700;margin:14px 0 7px}
+  .svc .s .en{font-size:10.5px;letter-spacing:.12em;color:var(--ink-4);text-transform:uppercase;margin-bottom:9px}
+  .svc .s p{font-size:13px;color:var(--ink-3)}
+
+  /* process */
+  .proc{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:48px}
+  @media(max-width:860px){.proc{grid-template-columns:1fr;gap:10px}}
+  .proc .step{background:var(--gray-5);border:1px solid var(--line);padding:26px 20px;position:relative}
+  .proc .step:first-child{border-radius:18px 0 0 18px}
+  .proc .step:last-child{border-radius:0 18px 18px 0}
+  @media(max-width:860px){.proc .step{border-radius:14px !important}}
+  .proc .k{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--purple)}
+  .proc .t{font-weight:700;font-size:15.5px;margin:6px 0 6px}
+  .proc p{font-size:12.5px;color:var(--ink-3)}
+  .proc .step:after{content:"▶";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--purple);z-index:2;font-size:13px}
+  .proc .step:last-child:after{display:none}
+  @media(max-width:860px){.proc .step:after{display:none}}
+
+  /* why */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  @media(max-width:860px){.why{grid-template-columns:1fr}}
+  .why .w{border-radius:20px;padding:30px 26px;background:var(--purple-5)}
+  .why .w h3{font-size:17px;font-weight:700;color:var(--purple);margin-bottom:8px}
+  .why .w p{font-size:13.5px;color:var(--ink-3)}
+
+  /* contact */
+  .contact{background:var(--black);color:#fff;text-align:center}
+  .contact h2{font-size:32px;font-weight:700;line-height:1.32}
+  .contact .y{color:var(--yellow)}
+  .contact p{color:#adadad;font-size:15px;margin-top:16px}
+  .contact .btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .contact .mailrow{margin-top:18px;font-size:14px;color:#adadad}
+  .contact .mailrow b{color:var(--yellow)}
+
+  footer{background:var(--black);color:#8c8c8c;padding:38px 0;font-size:12.5px;border-top:1px solid #333}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}
+  .foot-brand svg{width:14px;height:14px}
+  .foot-org{text-align:right;line-height:1.6;font-size:12.5px;margin-top:22px}
+  .foot-org .o-main{color:var(--purple-4);font-weight:700;font-size:15px;margin-bottom:3px}
+  .foot-org a.kkal{color:#8c8c8c}.foot-org a.kkal:hover{color:var(--purple-4)}
+  @media(max-width:680px){.foot-org{text-align:left;margin-top:6px}}
+  .disc{margin-top:10px;font-size:11px;color:#666}
+
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .rv.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <a class="brandmark" href="index.html"><img src="assets/rainbow-logo.png" alt="Rainbow"> <span>K-Drama &amp; Film</span></a>
+  <div class="nav-right">
+    <a class="back" href="index.html" data-i18n="kd_back">← 메인으로</a>
+    <a class="nav-cta" href="#contact" data-i18n="kd_cta">제작 문의</a>
+    <div class="lang" id="langSw">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.6 15.6 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11zM12 4.1c.9 1.2 1.9 3.4 2.4 6.9H9.6c.5-3.5 1.5-5.7 2.4-6.9zM4.1 13h3.4c.2 2 .6 3.9 1.2 5.5A8 8 0 0 1 4.1 13zm3.4-2H4.1a8 8 0 0 1 4.6-5.5A15.6 15.6 0 0 0 7.5 11zm4.5 8.9c-.9-1.2-1.9-3.4-2.4-6.9h4.8c-.5 3.5-1.5 5.7-2.4 6.9zm3.3-1.4c.6-1.6 1-3.5 1.2-5.5h3.4a8 8 0 0 1-4.6 5.5z"/></svg>
+      <button data-lang="vi" type="button">VI</button><button data-lang="en" type="button">EN</button><button data-lang="ko" type="button" class="on">KO</button>
+    </div>
+  </div>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="spark" style="top:80px;right:6%;width:200px;height:200px" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fff"/></svg>
+  <svg class="spark" style="bottom:-30px;left:5%;width:130px;height:130px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">RAINBOW · K-DRAMA &amp; FILM PRODUCTION</div>
+    <h1 data-i18n="kd_h1">이야기가 세계로,<br><span class="y">K-드라마 · 영화 프로덕션</span></h1>
+    <p class="sub" data-i18n="kd_sub">기획·개발부터 캐스팅, 촬영, 후반작업, 글로벌 배급까지 — Rainbow가 한국과 베트남을 잇는 K-드라마·영화 콘텐츠를 직접 만들고 유통합니다.</p>
+    <div class="meta">
+      <span data-i18n="kd_m1">🎬 기획 · 제작</span>
+      <span data-i18n="kd_m2">🎭 캐스팅</span>
+      <span data-i18n="kd_m3">🌏 글로벌 배급</span>
+      <span data-i18n="kd_m4">🇰🇷🇻🇳 한·베 공동제작</span>
+    </div>
+    <div class="btns">
+      <a class="btn y" href="#contact" data-i18n="kd_btn1">제작 문의하기</a>
+      <a class="btn ghost" href="#services" data-i18n="kd_btn2">서비스 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">What We Do</div>
+    <h2 class="sec" data-i18n="kd_sv_h2">콘텐츠 한 편이 완성되기까지, 전 과정</h2>
+    <p class="lead" data-i18n="kd_sv_lead">기획부터 글로벌 유통까지 — 드라마·영화 제작의 모든 단계를 한곳에서 운영합니다.</p>
+  </div>
+  <div class="svc">
+    <div class="s rv"><div class="em">📝</div><h3 data-i18n="kd_s1t">기획 · 개발</h3><div class="en">Development</div><p data-i18n="kd_s1p">오리지널 IP·시나리오 개발, 트리트먼트, 한·베 공동기획.</p></div>
+    <div class="s rv"><div class="em">🎭</div><h3 data-i18n="kd_s2t">캐스팅 · 탤런트</h3><div class="en">Casting</div><p data-i18n="kd_s2p">한국·베트남 배우 캐스팅과 신인 발굴, 출연 매니지먼트.</p></div>
+    <div class="s rv"><div class="em">🎬</div><h3 data-i18n="kd_s3t">프로덕션 · 촬영</h3><div class="en">Production</div><p data-i18n="kd_s3p">현장 촬영, 로케이션 섭외, 제작 관리와 라인 프로듀싱.</p></div>
+    <div class="s rv"><div class="em">✂️</div><h3 data-i18n="kd_s4t">후반작업 · OST</h3><div class="en">Post-Production</div><p data-i18n="kd_s4p">편집·색보정·VFX·사운드 믹싱과 OST 제작까지.</p></div>
+    <div class="s rv"><div class="em">🌏</div><h3 data-i18n="kd_s5t">글로벌 배급</h3><div class="en">Distribution</div><p data-i18n="kd_s5p">OTT·방송·해외 세일즈를 통한 글로벌 유통.</p></div>
+    <div class="s rv"><div class="em">🤝</div><h3 data-i18n="kd_s6t">IP · 브랜드 콜라보</h3><div class="en">IP &amp; Brand</div><p data-i18n="kd_s6p">PPL·브랜디드 콘텐츠와 2차 사업, IP 자산화.</p></div>
+  </div>
+</div></section>
+
+<!-- PROCESS -->
+<section style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="sec" data-i18n="kd_pr_h2">제작 파이프라인</h2>
+    <p class="lead" data-i18n="kd_pr_lead">아이디어 한 줄에서 글로벌 공개까지, 검증된 단계로 진행합니다.</p>
+  </div>
+  <div class="proc rv">
+    <div class="step"><div class="k">STEP 1</div><div class="t" data-i18n="kd_p1t">기획·개발</div><p data-i18n="kd_p1p">소재 발굴, 시나리오, 제작 설계</p></div>
+    <div class="step"><div class="k">STEP 2</div><div class="t" data-i18n="kd_p2t">캐스팅·프리프로덕션</div><p data-i18n="kd_p2p">캐스팅, 스태프 구성, 로케이션</p></div>
+    <div class="step"><div class="k">STEP 3</div><div class="t" data-i18n="kd_p3t">촬영</div><p data-i18n="kd_p3p">현장 프로덕션과 제작 관리</p></div>
+    <div class="step"><div class="k">STEP 4</div><div class="t" data-i18n="kd_p4t">후반작업</div><p data-i18n="kd_p4p">편집·VFX·사운드·OST</p></div>
+    <div class="step"><div class="k">STEP 5</div><div class="t" data-i18n="kd_p5t">배급·공개</div><p data-i18n="kd_p5p">OTT·방송·해외 세일즈</p></div>
+  </div>
+</div></section>
+
+<!-- WHY -->
+<section><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Why Rainbow</div>
+    <h2 class="sec" data-i18n="kd_wy_h2">왜 Rainbow와 제작하는가</h2>
+    <p class="lead" data-i18n="kd_wy_lead">K-컬처 플랫폼을 직접 운영해 온 현장 경험이 콘텐츠 제작으로 이어집니다.</p>
+  </div>
+  <div class="why">
+    <div class="w rv"><h3 data-i18n="kd_w1t">한·베 콘텐츠 네트워크</h3><p data-i18n="kd_w1p">한국 제작 역량과 베트남 현지 인프라·인맥을 하나로 연결합니다.</p></div>
+    <div class="w rv"><h3 data-i18n="kd_w2t">Gen Z 오디언스</h3><p data-i18n="kd_w2p">Rainbow 매장·미디어·페스티벌이 만든 팬 베이스가 콘텐츠의 첫 관객이 됩니다.</p></div>
+    <div class="w rv"><h3 data-i18n="kd_w3t">기획·운영 실전 경험</h3><p data-i18n="kd_w3p">K-컬처를 직접 기획·운영해 온 팀이 제작을 끝까지 책임집니다.</p></div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact"><div class="wrap rv">
+  <h2 data-i18n="kd_ct_h2">함께 만들 이야기가 있다면 —<br><span class="y">Rainbow와 제작을 시작하세요.</span></h2>
+  <p data-i18n="kd_ct_p">공동제작 · 투자 · IP 라이선스 · 캐스팅 · 배급 파트너십을 기다립니다.</p>
+  <div class="btns">
+    <button class="btn y" id="copyMail" type="button" style="border:none;cursor:pointer;font-family:var(--font);color:#222"><span style="color:#222" data-i18n="kd_ct_btn">제작 문의하기</span></button>
+    <a class="btn ghost" href="index.html" data-i18n="kd_ct_back">메인으로</a>
+  </div>
+  <div class="mailrow">EMAIL · <b id="mailAddr">jspark@rb-land.com</b></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-in">
+    <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-Drama &amp; Film</div>
+    <div class="foot-org">
+      <div class="o-main">Rainbow Entertainment</div>
+      <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+      <div><a class="kkal" href="https://www.kkal.live/" target="_blank" rel="noopener">깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
+    </div>
+  </div>
+  <div class="disc" data-i18n="kd_disc">기획·제작: Rainbow Entertainment. 표기된 내용은 운영 상황에 따라 변경될 수 있습니다.</div>
+  <div class="disc" style="margin-top:4px">© 2026 Rainbow Entertainment · <a href="index.html" style="color:#777">rainbowent.live</a></div>
+</div></footer>
+
+<script>
+const I18N={
+ko:{
+  kd_back:'← 메인으로', kd_cta:'제작 문의',
+  kd_h1:'이야기가 세계로,<br><span class="y">K-드라마 · 영화 프로덕션</span>',
+  kd_sub:'기획·개발부터 캐스팅, 촬영, 후반작업, 글로벌 배급까지 — Rainbow가 한국과 베트남을 잇는 K-드라마·영화 콘텐츠를 직접 만들고 유통합니다.',
+  kd_m1:'🎬 기획 · 제작', kd_m2:'🎭 캐스팅', kd_m3:'🌏 글로벌 배급', kd_m4:'🇰🇷🇻🇳 한·베 공동제작',
+  kd_btn1:'제작 문의하기', kd_btn2:'서비스 보기',
+  kd_sv_h2:'콘텐츠 한 편이 완성되기까지, 전 과정', kd_sv_lead:'기획부터 글로벌 유통까지 — 드라마·영화 제작의 모든 단계를 한곳에서 운영합니다.',
+  kd_s1t:'기획 · 개발', kd_s1p:'오리지널 IP·시나리오 개발, 트리트먼트, 한·베 공동기획.',
+  kd_s2t:'캐스팅 · 탤런트', kd_s2p:'한국·베트남 배우 캐스팅과 신인 발굴, 출연 매니지먼트.',
+  kd_s3t:'프로덕션 · 촬영', kd_s3p:'현장 촬영, 로케이션 섭외, 제작 관리와 라인 프로듀싱.',
+  kd_s4t:'후반작업 · OST', kd_s4p:'편집·색보정·VFX·사운드 믹싱과 OST 제작까지.',
+  kd_s5t:'글로벌 배급', kd_s5p:'OTT·방송·해외 세일즈를 통한 글로벌 유통.',
+  kd_s6t:'IP · 브랜드 콜라보', kd_s6p:'PPL·브랜디드 콘텐츠와 2차 사업, IP 자산화.',
+  kd_pr_h2:'제작 파이프라인', kd_pr_lead:'아이디어 한 줄에서 글로벌 공개까지, 검증된 단계로 진행합니다.',
+  kd_p1t:'기획·개발', kd_p1p:'소재 발굴, 시나리오, 제작 설계',
+  kd_p2t:'캐스팅·프리프로덕션', kd_p2p:'캐스팅, 스태프 구성, 로케이션',
+  kd_p3t:'촬영', kd_p3p:'현장 프로덕션과 제작 관리',
+  kd_p4t:'후반작업', kd_p4p:'편집·VFX·사운드·OST',
+  kd_p5t:'배급·공개', kd_p5p:'OTT·방송·해외 세일즈',
+  kd_wy_h2:'왜 Rainbow와 제작하는가', kd_wy_lead:'K-컬처 플랫폼을 직접 운영해 온 현장 경험이 콘텐츠 제작으로 이어집니다.',
+  kd_w1t:'한·베 콘텐츠 네트워크', kd_w1p:'한국 제작 역량과 베트남 현지 인프라·인맥을 하나로 연결합니다.',
+  kd_w2t:'Gen Z 오디언스', kd_w2p:'Rainbow 매장·미디어·페스티벌이 만든 팬 베이스가 콘텐츠의 첫 관객이 됩니다.',
+  kd_w3t:'기획·운영 실전 경험', kd_w3p:'K-컬처를 직접 기획·운영해 온 팀이 제작을 끝까지 책임집니다.',
+  kd_ct_h2:'함께 만들 이야기가 있다면 —<br><span class="y">Rainbow와 제작을 시작하세요.</span>',
+  kd_ct_p:'공동제작 · 투자 · IP 라이선스 · 캐스팅 · 배급 파트너십을 기다립니다.',
+  kd_ct_btn:'제작 문의하기', kd_ct_back:'메인으로', copied:'이메일 복사됨 ✓',
+  kd_disc:'기획·제작: Rainbow Entertainment. 표기된 내용은 운영 상황에 따라 변경될 수 있습니다.'
+},
+en:{
+  kd_back:'← Home', kd_cta:'Inquire',
+  kd_h1:'Stories that travel —<br><span class="y">K-drama &amp; film production</span>',
+  kd_sub:'From development and casting to production, post and global distribution — Rainbow creates and distributes K-drama and film content bridging Korea and Vietnam.',
+  kd_m1:'🎬 Development · Production', kd_m2:'🎭 Casting', kd_m3:'🌏 Global distribution', kd_m4:'🇰🇷🇻🇳 Korea–Vietnam co-production',
+  kd_btn1:'Start an inquiry', kd_btn2:'Our services',
+  kd_sv_h2:'Every stage, from idea to screen', kd_sv_lead:'From development to global distribution — every step of drama & film production, in one place.',
+  kd_s1t:'Development', kd_s1p:'Original IP & screenplay development, treatments, Korea–Vietnam co-development.',
+  kd_s2t:'Casting · Talent', kd_s2p:'Korean & Vietnamese casting, new-face discovery, talent management.',
+  kd_s3t:'Production', kd_s3p:'On-set production, location scouting, production management & line producing.',
+  kd_s4t:'Post-production · OST', kd_s4p:'Editing, color, VFX, sound mixing and OST production.',
+  kd_s5t:'Global distribution', kd_s5p:'Global distribution via OTT, broadcast and overseas sales.',
+  kd_s6t:'IP · Brand collab', kd_s6p:'PPL, branded content, ancillary business and IP assets.',
+  kd_pr_h2:'Production pipeline', kd_pr_lead:'From a single idea to a global release, through proven stages.',
+  kd_p1t:'Development', kd_p1p:'Sourcing, screenplay, production design',
+  kd_p2t:'Casting · Pre-production', kd_p2p:'Casting, crew, locations',
+  kd_p3t:'Production', kd_p3p:'On-set production & management',
+  kd_p4t:'Post-production', kd_p4p:'Editing · VFX · sound · OST',
+  kd_p5t:'Distribution · Release', kd_p5p:'OTT · broadcast · overseas sales',
+  kd_wy_h2:'Why produce with Rainbow', kd_wy_lead:'Hands-on experience running a K-culture platform flows into content production.',
+  kd_w1t:'Korea–Vietnam content network', kd_w1p:'We connect Korean production capability with Vietnamese local infrastructure and networks.',
+  kd_w2t:'A Gen Z audience', kd_w2p:'The fan base built by Rainbow\'s stores, media and festivals becomes your content\'s first audience.',
+  kd_w3t:'Real operating experience', kd_w3p:'A team that has planned and run K-culture firsthand sees production through to the end.',
+  kd_ct_h2:'Have a story to tell? —<br><span class="y">Let\'s produce it with Rainbow.</span>',
+  kd_ct_p:'We welcome co-production, investment, IP licensing, casting and distribution partnerships.',
+  kd_ct_btn:'Start an inquiry', kd_ct_back:'Back to home', copied:'Email copied ✓',
+  kd_disc:'Planned & produced by Rainbow Entertainment. Details may change with operations.'
+},
+vi:{
+  kd_back:'← Trang chủ', kd_cta:'Liên hệ sản xuất',
+  kd_h1:'Câu chuyện vươn ra thế giới —<br><span class="y">sản xuất K-drama &amp; điện ảnh</span>',
+  kd_sub:'Từ phát triển, tuyển vai đến quay phim, hậu kỳ và phát hành toàn cầu — Rainbow trực tiếp sản xuất và phân phối nội dung K-drama & điện ảnh kết nối Hàn Quốc và Việt Nam.',
+  kd_m1:'🎬 Phát triển · Sản xuất', kd_m2:'🎭 Tuyển vai', kd_m3:'🌏 Phát hành toàn cầu', kd_m4:'🇰🇷🇻🇳 Hợp tác sản xuất Hàn–Việt',
+  kd_btn1:'Gửi yêu cầu', kd_btn2:'Dịch vụ',
+  kd_sv_h2:'Mọi công đoạn, từ ý tưởng đến màn ảnh', kd_sv_lead:'Từ phát triển đến phát hành toàn cầu — mọi bước sản xuất phim & truyền hình, tại một nơi.',
+  kd_s1t:'Phát triển', kd_s1p:'Phát triển IP gốc & kịch bản, treatment, đồng phát triển Hàn–Việt.',
+  kd_s2t:'Tuyển vai · Diễn viên', kd_s2p:'Tuyển diễn viên Hàn & Việt, tìm gương mặt mới, quản lý diễn viên.',
+  kd_s3t:'Sản xuất · Quay phim', kd_s3p:'Quay hiện trường, tìm bối cảnh, quản lý sản xuất & line producing.',
+  kd_s4t:'Hậu kỳ · OST', kd_s4p:'Dựng phim, chỉnh màu, VFX, hòa âm và sản xuất OST.',
+  kd_s5t:'Phát hành toàn cầu', kd_s5p:'Phân phối toàn cầu qua OTT, truyền hình và bán bản quyền quốc tế.',
+  kd_s6t:'IP · Hợp tác thương hiệu', kd_s6p:'PPL, nội dung thương hiệu, kinh doanh phái sinh và tài sản IP.',
+  kd_pr_h2:'Quy trình sản xuất', kd_pr_lead:'Từ một ý tưởng đến phát hành toàn cầu, qua các bước đã được kiểm chứng.',
+  kd_p1t:'Phát triển', kd_p1p:'Tìm đề tài, kịch bản, thiết kế sản xuất',
+  kd_p2t:'Tuyển vai · Tiền kỳ', kd_p2p:'Tuyển vai, ê-kíp, bối cảnh',
+  kd_p3t:'Quay phim', kd_p3p:'Sản xuất hiện trường & quản lý',
+  kd_p4t:'Hậu kỳ', kd_p4p:'Dựng · VFX · âm thanh · OST',
+  kd_p5t:'Phát hành', kd_p5p:'OTT · truyền hình · bán quốc tế',
+  kd_wy_h2:'Vì sao sản xuất cùng Rainbow', kd_wy_lead:'Kinh nghiệm thực tế vận hành nền tảng K-culture được chuyển hóa vào sản xuất nội dung.',
+  kd_w1t:'Mạng lưới nội dung Hàn–Việt', kd_w1p:'Kết nối năng lực sản xuất Hàn Quốc với hạ tầng và mối quan hệ tại Việt Nam.',
+  kd_w2t:'Khán giả Gen Z', kd_w2p:'Cộng đồng fan từ cửa hàng, truyền thông và festival của Rainbow là khán giả đầu tiên của nội dung.',
+  kd_w3t:'Kinh nghiệm vận hành thực chiến', kd_w3p:'Đội ngũ từng trực tiếp lên kế hoạch & vận hành K-culture đồng hành đến cùng.',
+  kd_ct_h2:'Bạn có câu chuyện muốn kể? —<br><span class="y">Hãy sản xuất cùng Rainbow.</span>',
+  kd_ct_p:'Chúng tôi chào đón hợp tác sản xuất, đầu tư, cấp phép IP, tuyển vai và đối tác phát hành.',
+  kd_ct_btn:'Gửi yêu cầu', kd_ct_back:'Về trang chủ', copied:'Đã sao chép ✓',
+  kd_disc:'Lên kế hoạch & sản xuất bởi Rainbow Entertainment. Nội dung có thể thay đổi theo vận hành.'
+}};
+let CUR='ko';
+function setLang(l){
+  if(!I18N[l])return; CUR=l; document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=I18N[l][el.dataset.i18n];if(v!=null)el.innerHTML=v;});
+  document.querySelectorAll('#langSw button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  try{localStorage.setItem('rb_lang',l);}catch(e){}
+}
+document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+(function(){let l='ko';try{l=localStorage.getItem('rb_lang')||'';}catch(e){}if(!l){const n=(navigator.language||'').toLowerCase();l=n.startsWith('vi')?'vi':n.startsWith('en')?'en':'ko';}if(l!=='ko')setLang(l);})();
+
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cm=document.getElementById('copyMail');
+if(cm)cm.addEventListener('click',()=>{
+  const addr=document.getElementById('mailAddr').textContent; const sp=cm.querySelector('span')||cm;
+  const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].kd_ct_btn,1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}
+});
+</script>
+</body>
+</html>
