@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow K-Beauty — Enter Commerce™ 팬 커머스</title>
+<meta name="description" content="K뷰티 제조 전문성과 Rainbow의 팬 커머스 인프라가 만난 Enter Commerce™. 매장 팝업존 체험에서 틱톡숍·라이브 커머스까지, 팬덤을 반복 구매로 전환합니다. | rainbowent.live">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta name="theme-color" content="#5932ca">
+<style>
+  @font-face{font-family:'GmarketSans';font-weight:300;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:700;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');}
+  :root{--purple:#5932ca;--purple-2:#7a5fd6;--purple-3:#9d88e4;--purple-4:#c3b6ef;--purple-5:#e7e1fa;--yellow:#fcf05b;--yellow-2:#fdf486;--gray-3:#efefef;--gray-5:#fafafa;--black:#222;--ink-3:#6b6b6b;--ink-4:#8c8c8c;--line:#e7e7e7;--font:'GmarketSans','Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--black);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}a{color:inherit;text-decoration:none}img{max-width:100%}
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+  header.nav.scrolled{border-color:var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brandmark{display:flex;align-items:center;gap:8px;flex-shrink:0}.brandmark img{height:26px;width:auto;display:block;position:relative;top:-3px}
+  .nav-links{display:flex;gap:18px;align-items:center;font-size:13.5px;font-weight:700;color:var(--ink-3)}
+  .nav-links a.k:hover,.nav-links a.k.on{color:var(--purple)}
+  @media(max-width:780px){.nav-links a.k{display:none}}
+  .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
+  .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
+  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:6px 9px 4px;border-radius:999px;transition:.15s;line-height:1.15}
+  .lang button.on{background:var(--purple);color:#fff}.lang button:not(.on):hover{color:var(--purple)}
+  .hero{background:var(--purple);color:#fff;padding:150px 0 110px;position:relative;overflow:hidden}
+  .hero .eyebrow{font-size:12.5px;letter-spacing:.24em;font-weight:700;color:var(--yellow)}
+  .hero h1{font-size:50px;font-weight:700;line-height:1.18;letter-spacing:-.015em;margin-top:18px}.hero h1 .y{color:var(--yellow)}
+  .hero .sub{font-size:16.5px;color:var(--purple-5);margin-top:22px;max-width:680px}
+  .hero .btns{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 30px 12px;border-radius:999px;font-weight:700;font-size:14.5px;line-height:1.15;transition:.2s;cursor:pointer;border:none;font-family:var(--font)}
+  .btn.y{background:var(--yellow);color:#222}.btn.y:hover{background:var(--yellow-2);transform:translateY(-2px)}
+  .btn.ghost{border:2px solid rgba(255,255,255,.5);color:#fff;background:transparent}.btn.ghost:hover{border-color:#fff}
+  .spark{position:absolute;opacity:.14;animation:float 7s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
+  @media(max-width:760px){.hero h1{font-size:32px}}
+  section{padding:88px 0}
+  .eyebrow{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--purple);text-transform:uppercase}
+  h2.sec{font-size:32px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.3}
+  .lead{color:var(--ink-3);font-size:15.5px;max-width:760px}.center{text-align:center}.center .lead{margin:0 auto}
+  .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  @media(max-width:860px){.feat{grid-template-columns:1fr}}
+  .feat .f{border:1px solid var(--line);border-radius:20px;padding:30px 28px;transition:.25s;background:#fff}
+  .feat .f:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(89,50,202,.12);border-color:var(--purple-4)}
+  .feat .f .em{font-size:28px;line-height:1}.feat .f h3{font-size:18px;font-weight:700;margin:14px 0 8px}.feat .f p{font-size:13.5px;color:var(--ink-3)}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px}
+  @media(max-width:860px){.flow{grid-template-columns:1fr;gap:10px}}
+  .flow .m{background:var(--gray-5);border:1px solid var(--line);padding:26px 22px;position:relative}
+  .flow .m:first-child{border-radius:18px 0 0 18px}.flow .m:last-child{border-radius:0 18px 18px 0}
+  @media(max-width:860px){.flow .m{border-radius:14px !important}}
+  .flow .k{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--purple)}.flow .t{font-weight:700;font-size:16px;margin:6px 0 8px}.flow p{font-size:13px;color:var(--ink-3)}
+  .flow .m:after{content:"▶";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--purple);z-index:2;font-size:13px}
+  .flow .m:last-child:after{display:none}@media(max-width:860px){.flow .m:after{display:none}}
+  .contact{background:var(--black);color:#fff;text-align:center}
+  .contact h2{font-size:32px;font-weight:700;line-height:1.32}.contact .y{color:var(--yellow)}
+  .contact p{color:#adadad;font-size:15px;margin-top:16px}.contact .btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .contact .mailrow{margin-top:18px;font-size:14px;color:#adadad}.contact .mailrow b{color:var(--yellow)}
+  footer{background:var(--black);color:#8c8c8c;padding:38px 0;font-size:12.5px;border-top:1px solid #333}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}.foot-brand svg{width:14px;height:14px}
+  .foot-org{text-align:right;line-height:1.6;font-size:12.5px;margin-top:22px}
+  .foot-org .o-main{color:var(--purple-4);font-weight:700;font-size:15px;margin-bottom:3px}
+  .foot-org a.kkal{color:#8c8c8c}.foot-org a.kkal:hover{color:var(--purple-4)}
+  @media(max-width:680px){.foot-org{text-align:left;margin-top:6px}}
+  .disc{margin-top:10px;font-size:11px;color:#666}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <a class="brandmark" href="index.html"><img src="assets/rainbow-logo.png" alt="Rainbow"></a>
+  <nav class="nav-links">
+    <a class="k" href="knoraebang.html">K-Noraebang</a>
+    <a class="k" href="kpop.html">K-POP</a>
+    <a class="k" href="kdrama.html">K-Drama</a>
+    <a class="k on" href="kbeauty.html">K-Beauty</a>
+    <div class="lang" id="langSw">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.6 15.6 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11zM12 4.1c.9 1.2 1.9 3.4 2.4 6.9H9.6c.5-3.5 1.5-5.7 2.4-6.9zM4.1 13h3.4c.2 2 .6 3.9 1.2 5.5A8 8 0 0 1 4.1 13zm3.4-2H4.1a8 8 0 0 1 4.6-5.5A15.6 15.6 0 0 0 7.5 11zm4.5 8.9c-.9-1.2-1.9-3.4-2.4-6.9h4.8c-.5 3.5-1.5 5.7-2.4 6.9zm3.3-1.4c.6-1.6 1-3.5 1.2-5.5h3.4a8 8 0 0 1-4.6 5.5z"/></svg>
+      <button data-lang="vi" type="button">VI</button><button data-lang="en" type="button">EN</button><button data-lang="ko" type="button" class="on">KO</button>
+    </div>
+  </nav>
+</div></header>
+
+<section class="hero">
+  <svg class="spark" style="top:80px;right:6%;width:200px;height:200px" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fff"/></svg>
+  <svg class="spark" style="bottom:-30px;left:5%;width:130px;height:130px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">RAINBOW K-BEAUTY · ENTER COMMERCE™</div>
+    <h1 data-i18n="kb_h1">팬덤을 구매로,<br><span class="y">K-뷰티 Enter Commerce™</span></h1>
+    <p class="sub" data-i18n="kb_sub">K뷰티 제조 전문성과 Rainbow의 팬 커머스 인프라가 만났습니다. 매장 팝업존 체험에서 틱톡숍·라이브 커머스까지, 검증된 Gen Z 팬덤을 반복 구매로 전환합니다.</p>
+    <div class="btns">
+      <a class="btn y" href="#contact" data-i18n="kb_btn1">제휴 · 입점 문의</a>
+      <a class="btn ghost" href="#how" data-i18n="kb_btn2">모델 보기</a>
+    </div>
+  </div>
+</section>
+
+<section id="what"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">What We Do</div>
+    <h2 class="sec" data-i18n="kb_w_h2">제조 × 팬덤 × 커머스</h2>
+    <p class="lead" data-i18n="kb_w_lead">제품력만으로는 부족합니다. Rainbow는 사람이 모이는 매장과 팬덤 위에 K-뷰티 커머스를 얹습니다.</p>
+  </div>
+  <div class="feat">
+    <div class="f rv"><div class="em">🧪</div><h3 data-i18n="kb_f1t">K-뷰티 제조 전문성</h3><p data-i18n="kb_f1p">검증된 한국 제조 파트너십으로 품질 좋은 제품을 소싱·기획합니다.</p></div>
+    <div class="f rv"><div class="em">💖</div><h3 data-i18n="kb_f2t">매장 팝업존 체험</h3><p data-i18n="kb_f2p">노래방 매장 안 팝업존에서 Gen Z가 직접 써보고 경험합니다.</p></div>
+    <div class="f rv"><div class="em">📱</div><h3 data-i18n="kb_f3t">틱톡숍 · 라이브 커머스</h3><p data-i18n="kb_f3p">자체 KOC가 만든 콘텐츠와 라이브 커머스로 반복 구매를 만듭니다.</p></div>
+  </div>
+</div></section>
+
+<section id="how" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="sec" data-i18n="kb_h_h2">Enter Commerce™ 흐름</h2>
+    <p class="lead" data-i18n="kb_h_lead">매장에서 만난 팬덤이 콘텐츠가 되고, 콘텐츠가 구매가 됩니다.</p>
+  </div>
+  <div class="flow rv">
+    <div class="m"><div class="k">STEP 1</div><div class="t" data-i18n="kb_s1t">매장 체험</div><p data-i18n="kb_s1p">팝업존에서 직접 사용·체험</p></div>
+    <div class="m"><div class="k">STEP 2</div><div class="t" data-i18n="kb_s2t">KOC 콘텐츠</div><p data-i18n="kb_s2p">자체 KOC·고객이 숏폼 제작</p></div>
+    <div class="m"><div class="k">STEP 3</div><div class="t" data-i18n="kb_s3t">라이브 커머스</div><p data-i18n="kb_s3p">틱톡숍·라이브로 즉시 판매</p></div>
+    <div class="m"><div class="k">STEP 4</div><div class="t" data-i18n="kb_s4t">반복 구매</div><p data-i18n="kb_s4p">팬덤이 충성 고객으로</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap rv">
+  <h2 data-i18n="kb_ct_h2">K-뷰티로 함께 —<br><span class="y">제휴 · 입점 · 유통 문의</span></h2>
+  <p data-i18n="kb_ct_p">브랜드 입점, OEM·ODM 제휴, 베트남 유통 파트너십을 기다립니다.</p>
+  <div class="btns">
+    <button class="btn y" id="copyMail" type="button" style="border:none;cursor:pointer;font-family:var(--font);color:#222"><span style="color:#222" data-i18n="kb_ct_btn">문의하기</span></button>
+    <a class="btn ghost" href="index.html" data-i18n="kb_ct_back">메인으로</a>
+  </div>
+  <div class="mailrow">EMAIL · <b id="mailAddr">jspark@rb-land.com</b></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-in">
+    <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-Beauty</div>
+    <div class="foot-org">
+      <div class="o-main">Rainbow Entertainment</div>
+      <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+      <div><a class="kkal" href="https://www.kkal.live/" target="_blank" rel="noopener">깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
+    </div>
+  </div>
+  <div class="disc">© 2026 Rainbow Entertainment · <a href="index.html" style="color:#777">rainbowent.live</a></div>
+</div></footer>
+
+<script>
+const I18N={
+ko:{
+  kb_h1:'팬덤을 구매로,<br><span class="y">K-뷰티 Enter Commerce™</span>',
+  kb_sub:'K뷰티 제조 전문성과 Rainbow의 팬 커머스 인프라가 만났습니다. 매장 팝업존 체험에서 틱톡숍·라이브 커머스까지, 검증된 Gen Z 팬덤을 반복 구매로 전환합니다.',
+  kb_btn1:'제휴 · 입점 문의', kb_btn2:'모델 보기',
+  kb_w_h2:'제조 × 팬덤 × 커머스', kb_w_lead:'제품력만으로는 부족합니다. Rainbow는 사람이 모이는 매장과 팬덤 위에 K-뷰티 커머스를 얹습니다.',
+  kb_f1t:'K-뷰티 제조 전문성', kb_f1p:'검증된 한국 제조 파트너십으로 품질 좋은 제품을 소싱·기획합니다.',
+  kb_f2t:'매장 팝업존 체험', kb_f2p:'노래방 매장 안 팝업존에서 Gen Z가 직접 써보고 경험합니다.',
+  kb_f3t:'틱톡숍 · 라이브 커머스', kb_f3p:'자체 KOC가 만든 콘텐츠와 라이브 커머스로 반복 구매를 만듭니다.',
+  kb_h_h2:'Enter Commerce™ 흐름', kb_h_lead:'매장에서 만난 팬덤이 콘텐츠가 되고, 콘텐츠가 구매가 됩니다.',
+  kb_s1t:'매장 체험', kb_s1p:'팝업존에서 직접 사용·체험',
+  kb_s2t:'KOC 콘텐츠', kb_s2p:'자체 KOC·고객이 숏폼 제작',
+  kb_s3t:'라이브 커머스', kb_s3p:'틱톡숍·라이브로 즉시 판매',
+  kb_s4t:'반복 구매', kb_s4p:'팬덤이 충성 고객으로',
+  kb_ct_h2:'K-뷰티로 함께 —<br><span class="y">제휴 · 입점 · 유통 문의</span>', kb_ct_p:'브랜드 입점, OEM·ODM 제휴, 베트남 유통 파트너십을 기다립니다.',
+  kb_ct_btn:'문의하기', kb_ct_back:'메인으로', copied:'이메일 복사됨 ✓'
+},
+en:{
+  kb_h1:'Fandom into purchases —<br><span class="y">K-Beauty Enter Commerce™</span>',
+  kb_sub:'K-beauty manufacturing expertise meets Rainbow\'s fan-commerce infrastructure. From in-store pop-up experiences to TikTok Shop and live commerce, we turn a proven Gen Z fandom into repeat purchases.',
+  kb_btn1:'Partnership inquiry', kb_btn2:'See the model',
+  kb_w_h2:'Manufacturing × Fandom × Commerce', kb_w_lead:'Great products alone aren\'t enough. Rainbow layers K-beauty commerce on top of stores and a fandom where people gather.',
+  kb_f1t:'K-beauty manufacturing', kb_f1p:'We source and plan quality products through proven Korean manufacturing partnerships.',
+  kb_f2t:'In-store pop-up experience', kb_f2p:'Gen Z try and experience products at pop-up zones inside karaoke stores.',
+  kb_f3t:'TikTok Shop · live commerce', kb_f3p:'Our own KOC content and live commerce drive repeat purchases.',
+  kb_h_h2:'The Enter Commerce™ flow', kb_h_lead:'The fandom met in stores becomes content, and content becomes purchases.',
+  kb_s1t:'In-store experience', kb_s1p:'Try & experience at pop-up zones',
+  kb_s2t:'KOC content', kb_s2p:'Our KOC & customers make short-form',
+  kb_s3t:'Live commerce', kb_s3p:'Instant sales via TikTok Shop & live',
+  kb_s4t:'Repeat purchase', kb_s4p:'Fandom becomes loyal customers',
+  kb_ct_h2:'Let\'s go with K-beauty —<br><span class="y">partnership · leasing · distribution</span>', kb_ct_p:'We welcome brand placement, OEM/ODM partnerships and Vietnam distribution.',
+  kb_ct_btn:'Contact us', kb_ct_back:'Back to home', copied:'Email copied ✓'
+},
+vi:{
+  kb_h1:'Biến fandom thành đơn hàng —<br><span class="y">K-Beauty Enter Commerce™</span>',
+  kb_sub:'Chuyên môn sản xuất K-beauty kết hợp hạ tầng fan-commerce của Rainbow. Từ trải nghiệm pop-up tại cửa hàng đến TikTok Shop và live commerce, biến fandom Gen Z đã kiểm chứng thành khách mua lặp lại.',
+  kb_btn1:'Liên hệ hợp tác', kb_btn2:'Xem mô hình',
+  kb_w_h2:'Sản xuất × Fandom × Thương mại', kb_w_lead:'Chỉ sản phẩm tốt là chưa đủ. Rainbow đặt thương mại K-beauty lên trên cửa hàng và fandom — nơi mọi người tụ họp.',
+  kb_f1t:'Chuyên môn sản xuất K-beauty', kb_f1p:'Tìm nguồn & lên kế hoạch sản phẩm chất lượng qua đối tác sản xuất Hàn Quốc đã kiểm chứng.',
+  kb_f2t:'Trải nghiệm pop-up tại cửa hàng', kb_f2p:'Gen Z dùng thử và trải nghiệm tại khu pop-up trong cửa hàng karaoke.',
+  kb_f3t:'TikTok Shop · live commerce', kb_f3p:'Nội dung KOC tự có và live commerce tạo ra đơn hàng lặp lại.',
+  kb_h_h2:'Dòng chảy Enter Commerce™', kb_h_lead:'Fandom gặp tại cửa hàng trở thành nội dung, và nội dung trở thành đơn hàng.',
+  kb_s1t:'Trải nghiệm cửa hàng', kb_s1p:'Dùng thử tại khu pop-up',
+  kb_s2t:'Nội dung KOC', kb_s2p:'KOC & khách tạo short-form',
+  kb_s3t:'Live commerce', kb_s3p:'Bán ngay qua TikTok Shop & live',
+  kb_s4t:'Mua lặp lại', kb_s4p:'Fandom thành khách trung thành',
+  kb_ct_h2:'Cùng K-beauty —<br><span class="y">hợp tác · vào cửa hàng · phân phối</span>', kb_ct_p:'Chúng tôi chào đón đưa thương hiệu vào cửa hàng, hợp tác OEM/ODM và phân phối tại Việt Nam.',
+  kb_ct_btn:'Liên hệ', kb_ct_back:'Về trang chủ', copied:'Đã sao chép ✓'
+}};
+let CUR='ko';
+function setLang(l){if(!I18N[l])return;CUR=l;document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(el=>{const v=I18N[l][el.dataset.i18n];if(v!=null)el.innerHTML=v;});document.querySelectorAll('#langSw button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));try{localStorage.setItem('rb_lang',l);}catch(e){}}
+document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+(function(){let l='ko';try{l=localStorage.getItem('rb_lang')||'';}catch(e){}if(!l){const n=(navigator.language||'').toLowerCase();l=n.startsWith('vi')?'vi':n.startsWith('en')?'en':'ko';}if(l!=='ko')setLang(l);})();
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cm=document.getElementById('copyMail');
+if(cm)cm.addEventListener('click',()=>{const addr=document.getElementById('mailAddr').textContent;const sp=cm.querySelector('span')||cm;const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].kb_ct_btn,1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}});
+</script>
+</body>
+</html>

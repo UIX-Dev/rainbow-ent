@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Noraebang — 베트남 No.1 한국형 코인노래방</title>
+<meta name="description" content="베트남 최초의 한국형 코인노래방 Rainbow Noraebang. 주요 쇼핑몰 직영 매장, 매일 1,500명의 Gen Z, 클린 노래문화 — 모든 K-컬처 사업의 오프라인 거점. | rainbowent.live">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta name="theme-color" content="#5932ca">
+<style>
+  @font-face{font-family:'GmarketSans';font-weight:300;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:500;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');}
+  @font-face{font-family:'GmarketSans';font-weight:700;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');}
+  :root{--purple:#5932ca;--purple-2:#7a5fd6;--purple-3:#9d88e4;--purple-4:#c3b6ef;--purple-5:#e7e1fa;--yellow:#fcf05b;--yellow-2:#fdf486;--gray-3:#efefef;--gray-5:#fafafa;--black:#222;--ink-3:#6b6b6b;--ink-4:#8c8c8c;--line:#e7e7e7;--font:'GmarketSans','Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--black);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}img{max-width:100%}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+  header.nav.scrolled{border-color:var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .brandmark{display:flex;align-items:center;gap:8px;flex-shrink:0}
+  .brandmark img{height:26px;width:auto;display:block;position:relative;top:-3px}
+  .nav-links{display:flex;gap:18px;align-items:center;font-size:13.5px;font-weight:700;color:var(--ink-3)}
+  .nav-links a.k:hover{color:var(--purple)}
+  .nav-links a.k.on{color:var(--purple)}
+  @media(max-width:780px){.nav-links a.k{display:none}}
+  .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
+  .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
+  .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:6px 9px 4px;border-radius:999px;transition:.15s;line-height:1.15}
+  .lang button.on{background:var(--purple);color:#fff}
+  .lang button:not(.on):hover{color:var(--purple)}
+
+  .hero{background:var(--purple);color:#fff;padding:150px 0 110px;position:relative;overflow:hidden}
+  .hero .eyebrow{font-size:12.5px;letter-spacing:.24em;font-weight:700;color:var(--yellow)}
+  .hero h1{font-size:50px;font-weight:700;line-height:1.18;letter-spacing:-.015em;margin-top:18px}
+  .hero h1 .y{color:var(--yellow)}
+  .hero .sub{font-size:16.5px;color:var(--purple-5);margin-top:22px;max-width:680px}
+  .hero .meta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .hero .meta span{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12.5px;font-weight:500;padding:8px 14px 6px;border-radius:999px;line-height:1}
+  .hero .btns{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 30px 12px;border-radius:999px;font-weight:700;font-size:14.5px;line-height:1.15;transition:.2s;cursor:pointer;border:none;font-family:var(--font)}
+  .btn.y{background:var(--yellow);color:#222}.btn.y:hover{background:var(--yellow-2);transform:translateY(-2px)}
+  .btn.ghost{border:2px solid rgba(255,255,255,.5);color:#fff;background:transparent}.btn.ghost:hover{border-color:#fff}
+  .spark{position:absolute;opacity:.14;animation:float 7s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
+  @media(max-width:760px){.hero h1{font-size:32px}}
+
+  .stats{background:var(--black);color:#fff;padding:42px 0}
+  .stats .row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+  @media(max-width:620px){.stats .row{grid-template-columns:1fr 1fr}}
+  .stats .v{font-size:34px;font-weight:700;color:var(--yellow)}
+  .stats .l{font-size:12px;color:#adadad;margin-top:4px}
+
+  section{padding:88px 0}
+  .eyebrow{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--purple);text-transform:uppercase}
+  h2.sec{font-size:32px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.3}
+  .lead{color:var(--ink-3);font-size:15.5px;max-width:760px}
+  .center{text-align:center}.center .lead{margin:0 auto}
+
+  .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  @media(max-width:860px){.feat{grid-template-columns:1fr}}
+  .feat .f{border:1px solid var(--line);border-radius:20px;padding:30px 28px;transition:.25s;background:#fff}
+  .feat .f:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(89,50,202,.12);border-color:var(--purple-4)}
+  .feat .f .em{font-size:28px;line-height:1}
+  .feat .f h3{font-size:18px;font-weight:700;margin:14px 0 8px}
+  .feat .f p{font-size:13.5px;color:var(--ink-3)}
+
+  /* space gallery (masonry) */
+  .wall{column-count:3;column-gap:14px;margin-top:46px}
+  @media(max-width:860px){.wall{column-count:2;column-gap:12px}}
+  @media(max-width:520px){.wall{column-count:1}}
+  .wall figure{margin:0 0 14px;border-radius:16px;overflow:hidden;break-inside:avoid;line-height:0;border:1px solid var(--line)}
+  .wall img{width:100%;display:block;transition:transform .5s ease}
+  .wall figure:hover img{transform:scale(1.05)}
+
+  /* model */
+  .model{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px}
+  @media(max-width:860px){.model{grid-template-columns:1fr;gap:10px}}
+  .model .m{background:var(--gray-5);border:1px solid var(--line);padding:26px 22px;position:relative}
+  .model .m:first-child{border-radius:18px 0 0 18px}
+  .model .m:last-child{border-radius:0 18px 18px 0}
+  @media(max-width:860px){.model .m{border-radius:14px !important}}
+  .model .k{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--purple)}
+  .model .t{font-weight:700;font-size:16px;margin:6px 0 8px}
+  .model p{font-size:13px;color:var(--ink-3)}
+  .model .m:after{content:"▶";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--purple);z-index:2;font-size:13px}
+  .model .m:last-child:after{display:none}
+  @media(max-width:860px){.model .m:after{display:none}}
+  .loopnote{text-align:center;margin-top:20px;font-size:13px;color:var(--purple);font-weight:700}
+
+  .contact{background:var(--black);color:#fff;text-align:center}
+  .contact h2{font-size:32px;font-weight:700;line-height:1.32}
+  .contact .y{color:var(--yellow)}
+  .contact p{color:#adadad;font-size:15px;margin-top:16px}
+  .contact .btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .contact .mailrow{margin-top:18px;font-size:14px;color:#adadad}.contact .mailrow b{color:var(--yellow)}
+
+  footer{background:var(--black);color:#8c8c8c;padding:38px 0;font-size:12.5px;border-top:1px solid #333}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}.foot-brand svg{width:14px;height:14px}
+  .foot-org{text-align:right;line-height:1.6;font-size:12.5px;margin-top:22px}
+  .foot-org .o-main{color:var(--purple-4);font-weight:700;font-size:15px;margin-bottom:3px}
+  .foot-org a.kkal{color:#8c8c8c}.foot-org a.kkal:hover{color:var(--purple-4)}
+  @media(max-width:680px){.foot-org{text-align:left;margin-top:6px}}
+  .disc{margin-top:10px;font-size:11px;color:#666}
+
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav"><div class="wrap nav-in">
+  <a class="brandmark" href="index.html"><img src="assets/rainbow-logo.png" alt="Rainbow"></a>
+  <nav class="nav-links">
+    <a class="k on" href="knoraebang.html">K-Noraebang</a>
+    <a class="k" href="kpop.html">K-POP</a>
+    <a class="k" href="kdrama.html">K-Drama</a>
+    <a class="k" href="kbeauty.html">K-Beauty</a>
+    <div class="lang" id="langSw">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.6 15.6 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11zM12 4.1c.9 1.2 1.9 3.4 2.4 6.9H9.6c.5-3.5 1.5-5.7 2.4-6.9zM4.1 13h3.4c.2 2 .6 3.9 1.2 5.5A8 8 0 0 1 4.1 13zm3.4-2H4.1a8 8 0 0 1 4.6-5.5A15.6 15.6 0 0 0 7.5 11zm4.5 8.9c-.9-1.2-1.9-3.4-2.4-6.9h4.8c-.5 3.5-1.5 5.7-2.4 6.9zm3.3-1.4c.6-1.6 1-3.5 1.2-5.5h3.4a8 8 0 0 1-4.6 5.5z"/></svg>
+      <button data-lang="vi" type="button">VI</button><button data-lang="en" type="button">EN</button><button data-lang="ko" type="button" class="on">KO</button>
+    </div>
+  </nav>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="spark" style="top:80px;right:6%;width:200px;height:200px" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fff"/></svg>
+  <svg class="spark" style="bottom:-30px;left:5%;width:130px;height:130px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">RAINBOW NORAEBANG · K-NORAEBANG</div>
+    <h1 data-i18n="kn_h1">노래가 모이는 공간,<br><span class="y">베트남 No.1 K-노래방</span></h1>
+    <p class="sub" data-i18n="kn_sub">베트남 최초의 한국형 코인노래방 Rainbow Noraebang. 주요 쇼핑몰 안에서 매일 1,500명의 Gen Z가 노래하고, 찍고, 공유합니다 — 모든 K-컬처 사업이 시작되는 오프라인 거점입니다.</p>
+    <div class="meta">
+      <span data-i18n="kn_m1">🎤 베트남 최초 한국형 코인노래방</span>
+      <span data-i18n="kn_m2">🏬 직영 매장 6곳</span>
+      <span data-i18n="kn_m3">🧑‍🤝‍🧑 일 1,500 Gen Z</span>
+      <span data-i18n="kn_m4">✨ 클린 노래문화</span>
+    </div>
+    <div class="btns">
+      <a class="btn y" href="#contact" data-i18n="kn_btn1">입점 · 라이센스 문의</a>
+      <a class="btn ghost" href="#spaces" data-i18n="kn_btn2">공간 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats"><div class="wrap row">
+  <div><div class="v">6</div><div class="l" data-i18n="kn_st1">직영 매장 (운영 중)</div></div>
+  <div><div class="v">1,500</div><div class="l" data-i18n="kn_st2">일평균 Gen Z 방문 (명)</div></div>
+  <div><div class="v">70%</div><div class="l" data-i18n="kn_st3">여성 고객 비중</div></div>
+  <div><div class="v">3</div><div class="l" data-i18n="kn_st4">진출 도시 (호치민·하노이·뀌년)</div></div>
+</div></div>
+
+<!-- ABOUT / FEATURES -->
+<section id="about"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">About Rainbow Noraebang</div>
+    <h2 class="sec" data-i18n="kn_ab_h2">노래방을 운영하는 회사가 아닙니다</h2>
+    <p class="lead" data-i18n="kn_ab_lead">Rainbow의 핵심 자산은 매장이 아니라 매장을 찾는 고객입니다. 트렌디한 인테리어와 IT가 결합된 한국형 코인노래방으로, K-컬처 경험을 설계하고 고객을 콘텐츠·커머스로 연결합니다.</p>
+  </div>
+  <div class="feat">
+    <div class="f rv"><div class="em">🧑‍🎤</div><h3 data-i18n="kn_f1t">검증된 Gen Z 팬 베이스</h3><p data-i18n="kn_f1p">콘텐츠를 소비하고 직접 생산하는 실질적 팬덤 — 단순 이용객이 아닌 브랜드 확산의 주체입니다.</p></div>
+    <div class="f rv"><div class="em">✨</div><h3 data-i18n="kn_f2t">건전하고 깨끗한 K-노래문화</h3><p data-i18n="kn_f2p">술·담배·사행성 없는 클린 콘텐츠 원칙 — 가족 단위까지 확장되는 신뢰 브랜드.</p></div>
+    <div class="f rv"><div class="em">🏛️</div><h3 data-i18n="kn_f3t">크고 쾌적한 프리미엄 공간</h3><p data-i18n="kn_f3p">대형·고급 인테리어의 직영 매장은 팝업존·브랜드 이벤트·라이브 커머스의 무대가 됩니다.</p></div>
+  </div>
+</div></section>
+
+<!-- SPACES -->
+<section id="spaces" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Our Spaces</div>
+    <h2 class="sec" data-i18n="kn_sp_h2">직접 설계한 실제 매장</h2>
+    <p class="lead" data-i18n="kn_sp_lead">베트남 주요 쇼핑몰(Van Hanh · Aeon · Vincom · Go!) 안의 Rainbow Noraebang 직영 매장 — 실제 공간입니다.</p>
+  </div>
+  <div class="wall rv">
+    <figure><img loading="lazy" src="assets/space-entrance-neon.jpg" alt="Rainbow Noraebang 입구"></figure>
+    <figure><img loading="lazy" src="assets/space-rooms-premium-01.jpg" alt="프리미엄 노래방 룸"></figure>
+    <figure><img loading="lazy" src="assets/space-room-tropical.jpg" alt="테마 노래방 룸"></figure>
+    <figure><img loading="lazy" src="assets/space-corridor-01.jpg" alt="매장 복도"></figure>
+    <figure><img loading="lazy" src="assets/space-brand-wall.jpg" alt="브랜드 월"></figure>
+    <figure><img loading="lazy" src="assets/store-front-opening.jpg" alt="몰 매장 외관"></figure>
+  </div>
+</div></section>
+
+<!-- MODEL -->
+<section><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Why It Matters</div>
+    <h2 class="sec" data-i18n="kn_md_h2">노래방은 끝이 아니라 시작입니다</h2>
+    <p class="lead" data-i18n="kn_md_lead">노래방이 만든 Gen Z 트래픽이 모든 사업의 모수가 됩니다 — 같은 고객 위에 콘텐츠·커머스·이벤트가 쌓입니다.</p>
+  </div>
+  <div class="model rv">
+    <div class="m"><div class="k">NORAEBANG</div><div class="t" data-i18n="kn_md1t">집객 · 트래픽</div><p data-i18n="kn_md1p">쇼핑몰 거점에서 매일 Gen Z가 모입니다.</p></div>
+    <div class="m"><div class="k">MEDIA</div><div class="t" data-i18n="kn_md2t">콘텐츠 생산</div><p data-i18n="kn_md2p">고객의 노래 영상이 매일 숏폼 콘텐츠로.</p></div>
+    <div class="m"><div class="k">COMMERCE</div><div class="t" data-i18n="kn_md3t">커머스 전환</div><p data-i18n="kn_md3p">팝업존 체험이 뷰티·라이브 커머스 구매로.</p></div>
+    <div class="m"><div class="k">FESTIVAL</div><div class="t" data-i18n="kn_md4t">브랜드 증폭</div><p data-i18n="kn_md4p">K-페스티벌이 트래픽을 다시 키웁니다.</p></div>
+  </div>
+  <div class="loopnote rv" data-i18n="kn_md_loop">↻ 그리고 다시 노래방으로 — 선순환 플랫폼</div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact"><div class="wrap rv">
+  <h2 data-i18n="kn_ct_h2">함께 매장을 열까요? —<br><span class="y">입점 · 라이센스 · 투자 문의</span></h2>
+  <p data-i18n="kn_ct_p">쇼핑몰 입점, 해외 라이센스, 투자 파트너십을 기다립니다.</p>
+  <div class="btns">
+    <button class="btn y" id="copyMail" type="button" style="border:none;cursor:pointer;font-family:var(--font);color:#222"><span style="color:#222" data-i18n="kn_ct_btn">문의하기</span></button>
+    <a class="btn ghost" href="index.html" data-i18n="kn_ct_back">메인으로</a>
+  </div>
+  <div class="mailrow">EMAIL · <b id="mailAddr">jspark@rb-land.com</b></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-in">
+    <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> Noraebang</div>
+    <div class="foot-org">
+      <div class="o-main">Rainbow Entertainment</div>
+      <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+      <div><a class="kkal" href="https://www.kkal.live/" target="_blank" rel="noopener">깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
+    </div>
+  </div>
+  <div class="disc">© 2026 Rainbow Entertainment · <a href="index.html" style="color:#777">rainbowent.live</a></div>
+</div></footer>
+
+<script>
+const I18N={
+ko:{
+  kn_h1:'노래가 모이는 공간,<br><span class="y">베트남 No.1 K-노래방</span>',
+  kn_sub:'베트남 최초의 한국형 코인노래방 Rainbow Noraebang. 주요 쇼핑몰 안에서 매일 1,500명의 Gen Z가 노래하고, 찍고, 공유합니다 — 모든 K-컬처 사업이 시작되는 오프라인 거점입니다.',
+  kn_m1:'🎤 베트남 최초 한국형 코인노래방', kn_m2:'🏬 직영 매장 6곳', kn_m3:'🧑‍🤝‍🧑 일 1,500 Gen Z', kn_m4:'✨ 클린 노래문화',
+  kn_btn1:'입점 · 라이센스 문의', kn_btn2:'공간 보기',
+  kn_st1:'직영 매장 (운영 중)', kn_st2:'일평균 Gen Z 방문 (명)', kn_st3:'여성 고객 비중', kn_st4:'진출 도시 (호치민·하노이·뀌년)',
+  kn_ab_h2:'노래방을 운영하는 회사가 아닙니다', kn_ab_lead:'Rainbow의 핵심 자산은 매장이 아니라 매장을 찾는 고객입니다. 트렌디한 인테리어와 IT가 결합된 한국형 코인노래방으로, K-컬처 경험을 설계하고 고객을 콘텐츠·커머스로 연결합니다.',
+  kn_f1t:'검증된 Gen Z 팬 베이스', kn_f1p:'콘텐츠를 소비하고 직접 생산하는 실질적 팬덤 — 단순 이용객이 아닌 브랜드 확산의 주체입니다.',
+  kn_f2t:'건전하고 깨끗한 K-노래문화', kn_f2p:'술·담배·사행성 없는 클린 콘텐츠 원칙 — 가족 단위까지 확장되는 신뢰 브랜드.',
+  kn_f3t:'크고 쾌적한 프리미엄 공간', kn_f3p:'대형·고급 인테리어의 직영 매장은 팝업존·브랜드 이벤트·라이브 커머스의 무대가 됩니다.',
+  kn_sp_h2:'직접 설계한 실제 매장', kn_sp_lead:'베트남 주요 쇼핑몰(Van Hanh · Aeon · Vincom · Go!) 안의 Rainbow Noraebang 직영 매장 — 실제 공간입니다.',
+  kn_md_h2:'노래방은 끝이 아니라 시작입니다', kn_md_lead:'노래방이 만든 Gen Z 트래픽이 모든 사업의 모수가 됩니다 — 같은 고객 위에 콘텐츠·커머스·이벤트가 쌓입니다.',
+  kn_md1t:'집객 · 트래픽', kn_md1p:'쇼핑몰 거점에서 매일 Gen Z가 모입니다.',
+  kn_md2t:'콘텐츠 생산', kn_md2p:'고객의 노래 영상이 매일 숏폼 콘텐츠로.',
+  kn_md3t:'커머스 전환', kn_md3p:'팝업존 체험이 뷰티·라이브 커머스 구매로.',
+  kn_md4t:'브랜드 증폭', kn_md4p:'K-페스티벌이 트래픽을 다시 키웁니다.',
+  kn_md_loop:'↻ 그리고 다시 노래방으로 — 선순환 플랫폼',
+  kn_ct_h2:'함께 매장을 열까요? —<br><span class="y">입점 · 라이센스 · 투자 문의</span>', kn_ct_p:'쇼핑몰 입점, 해외 라이센스, 투자 파트너십을 기다립니다.',
+  kn_ct_btn:'문의하기', kn_ct_back:'메인으로', copied:'이메일 복사됨 ✓'
+},
+en:{
+  kn_h1:'Where music gathers,<br><span class="y">Vietnam\'s No.1 K-noraebang</span>',
+  kn_sub:'Rainbow Noraebang — Vietnam\'s first Korean-style coin karaoke. Every day, 1,500 Gen Z visitors sing, film and share inside major malls — the offline base where every K-culture business begins.',
+  kn_m1:'🎤 Vietnam\'s first Korean coin karaoke', kn_m2:'🏬 6 direct stores', kn_m3:'🧑‍🤝‍🧑 1,500 Gen Z / day', kn_m4:'✨ Clean singing culture',
+  kn_btn1:'Leasing · license inquiry', kn_btn2:'See the spaces',
+  kn_st1:'Direct stores (operating)', kn_st2:'Daily Gen Z visitors', kn_st3:'Female customers', kn_st4:'Cities (HCMC · Hanoi · Quy Nhon)',
+  kn_ab_h2:'We are not a karaoke operator', kn_ab_lead:'Rainbow\'s core asset is not the stores — it\'s the customers who fill them. A Korean-style coin karaoke blending trendy interiors with IT, designing K-culture experiences and connecting customers to content and commerce.',
+  kn_f1t:'A proven Gen Z fan base', kn_f1p:'A real fandom that consumes and creates content — not just visitors, but the engine of brand growth.',
+  kn_f2t:'Clean & healthy K-singing culture', kn_f2p:'No alcohol, tobacco or gambling — a trusted brand that extends to families.',
+  kn_f3t:'Large, premium spaces', kn_f3p:'Spacious, high-end direct stores become stages for pop-ups, brand events and live commerce.',
+  kn_sp_h2:'Real stores, designed in-house', kn_sp_lead:'Rainbow Noraebang direct stores inside Vietnam\'s major malls (Van Hanh · Aeon · Vincom · Go!) — actual spaces.',
+  kn_md_h2:'Karaoke is the start, not the end', kn_md_lead:'The Gen Z traffic karaoke creates becomes the base for every business — content, commerce and events stack on the same customers.',
+  kn_md1t:'Footfall · Traffic', kn_md1p:'Gen Z gather daily at our mall hubs.',
+  kn_md2t:'Content creation', kn_md2p:'Customers\' singing videos become daily short-form.',
+  kn_md3t:'Commerce conversion', kn_md3p:'Pop-up experiences convert to beauty & live-commerce sales.',
+  kn_md4t:'Brand amplification', kn_md4p:'K-festivals grow the traffic again.',
+  kn_md_loop:'↻ And back to karaoke — a virtuous platform',
+  kn_ct_h2:'Open a store with us —<br><span class="y">leasing · license · investment</span>', kn_ct_p:'We welcome mall leasing, overseas licensing and investment partnerships.',
+  kn_ct_btn:'Contact us', kn_ct_back:'Back to home', copied:'Email copied ✓'
+},
+vi:{
+  kn_h1:'Nơi âm nhạc hội tụ,<br><span class="y">karaoke kiểu Hàn số 1 Việt Nam</span>',
+  kn_sub:'Rainbow Noraebang — karaoke xu kiểu Hàn đầu tiên tại Việt Nam. Mỗi ngày 1.500 bạn trẻ Gen Z hát, quay và chia sẻ trong các TTTM lớn — điểm tựa offline nơi mọi mảng K-culture bắt đầu.',
+  kn_m1:'🎤 Karaoke xu kiểu Hàn đầu tiên tại VN', kn_m2:'🏬 6 cửa hàng trực tiếp', kn_m3:'🧑‍🤝‍🧑 1.500 Gen Z / ngày', kn_m4:'✨ Văn hóa hát lành mạnh',
+  kn_btn1:'Hợp tác · nhượng quyền', kn_btn2:'Xem không gian',
+  kn_st1:'Cửa hàng trực tiếp (đang HĐ)', kn_st2:'Khách Gen Z mỗi ngày', kn_st3:'Tỷ lệ khách nữ', kn_st4:'Thành phố (TP.HCM · Hà Nội · Quy Nhơn)',
+  kn_ab_h2:'Chúng tôi không chỉ là công ty karaoke', kn_ab_lead:'Tài sản cốt lõi của Rainbow không phải cửa hàng mà là khách hàng. Karaoke xu kiểu Hàn kết hợp nội thất thời thượng và công nghệ, kiến tạo trải nghiệm K-culture và kết nối khách hàng với nội dung và thương mại.',
+  kn_f1t:'Cộng đồng fan Gen Z đã kiểm chứng', kn_f1p:'Một fandom thực thụ vừa tiêu thụ vừa sáng tạo nội dung — không chỉ là khách, mà là động lực lan tỏa thương hiệu.',
+  kn_f2t:'Văn hóa hát lành mạnh kiểu Hàn', kn_f2p:'Không rượu bia, thuốc lá hay cờ bạc — thương hiệu đáng tin cho cả gia đình.',
+  kn_f3t:'Không gian rộng, cao cấp', kn_f3p:'Cửa hàng trực tiếp rộng rãi, sang trọng trở thành sân khấu cho pop-up, sự kiện thương hiệu và live commerce.',
+  kn_sp_h2:'Cửa hàng thật, tự thiết kế', kn_sp_lead:'Cửa hàng Rainbow Noraebang trong các TTTM lớn ở Việt Nam (Van Hanh · Aeon · Vincom · Go!) — không gian thực tế.',
+  kn_md_h2:'Karaoke là khởi đầu, không phải kết thúc', kn_md_lead:'Lượng khách Gen Z từ karaoke trở thành nền tảng cho mọi mảng — nội dung, thương mại và sự kiện chồng lên cùng tệp khách.',
+  kn_md1t:'Thu hút khách', kn_md1p:'Gen Z tụ họp mỗi ngày tại các điểm trong TTTM.',
+  kn_md2t:'Sản xuất nội dung', kn_md2p:'Video hát của khách thành nội dung ngắn mỗi ngày.',
+  kn_md3t:'Chuyển đổi thương mại', kn_md3p:'Trải nghiệm pop-up chuyển thành đơn beauty & live commerce.',
+  kn_md4t:'Khuếch đại thương hiệu', kn_md4p:'K-festival lại làm tăng lượng khách.',
+  kn_md_loop:'↻ Rồi quay lại karaoke — nền tảng tuần hoàn',
+  kn_ct_h2:'Cùng mở cửa hàng nhé —<br><span class="y">hợp tác · nhượng quyền · đầu tư</span>', kn_ct_p:'Chúng tôi chào đón hợp tác mặt bằng TTTM, nhượng quyền quốc tế và đầu tư.',
+  kn_ct_btn:'Liên hệ', kn_ct_back:'Về trang chủ', copied:'Đã sao chép ✓'
+}};
+let CUR='ko';
+function setLang(l){if(!I18N[l])return;CUR=l;document.documentElement.lang=l;document.querySelectorAll('[data-i18n]').forEach(el=>{const v=I18N[l][el.dataset.i18n];if(v!=null)el.innerHTML=v;});document.querySelectorAll('#langSw button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));try{localStorage.setItem('rb_lang',l);}catch(e){}}
+document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+(function(){let l='ko';try{l=localStorage.getItem('rb_lang')||'';}catch(e){}if(!l){const n=(navigator.language||'').toLowerCase();l=n.startsWith('vi')?'vi':n.startsWith('en')?'en':'ko';}if(l!=='ko')setLang(l);})();
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const cm=document.getElementById('copyMail');
+if(cm)cm.addEventListener('click',()=>{const addr=document.getElementById('mailAddr').textContent;const sp=cm.querySelector('span')||cm;const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].kn_ct_btn,1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}});
+</script>
+</body>
+</html>
