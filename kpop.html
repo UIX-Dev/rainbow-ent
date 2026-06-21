@@ -52,6 +52,19 @@
   @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
   @media(max-width:760px){.hero h1{font-size:33px}}
 
+  /* signature: personal content crew (핵심 차별점) */
+  .signature{background:var(--purple);color:#fff;position:relative;overflow:hidden}
+  .signature .eyebrow{color:var(--yellow)}
+  .signature h2{font-size:34px;font-weight:700;line-height:1.28;margin:12px 0 16px}
+  .signature h2 .y{color:var(--yellow)}
+  .signature p{font-size:16px;color:var(--purple-5);max-width:640px}
+  .sig-points{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+  @media(max-width:760px){.signature h2{font-size:26px}.sig-points{grid-template-columns:1fr}}
+  .sig-points > div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px}
+  .sig-points b{display:flex;align-items:center;gap:9px;font-size:15px}
+  .sig-points b:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);flex-shrink:0}
+  .sig-points span{display:block;font-size:13px;color:var(--purple-4);margin-top:8px;line-height:1.55}
+
   section{padding:88px 0}
   .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--purple);text-transform:uppercase}
   h2.sec{font-size:32px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.3}
@@ -148,6 +161,7 @@
     <h1>한국에서 보내는 1주일,<br><span class="y">당신이 K-POP 연습생</span>이 됩니다</h1>
     <p class="sub">레인보우가 모집하고, 한국의 <b style="color:#fff">전문 K-POP 디렉터</b>가 직접 설계하는 올인클루시브 연습생 프로그램. 숙소부터 무대까지 — 한국 현지에서 진짜 아이돌의 하루를 경험합니다.</p>
     <div class="meta">
+      <span style="background:var(--yellow);color:#222;border-color:transparent;font-weight:700">🎬 전담 콘텐츠 스태프 1:1</span>
       <span>📍 진행 · 대한민국 서울</span>
       <span>🗓️ 기간 · 7일 (1주)</span>
       <span>✈️ 항공권 별도</span>
@@ -155,6 +169,21 @@
     <div class="btns">
       <a class="btn y" href="#apply">지금 접수하기</a>
       <a class="btn ghost" href="#program">프로그램 살펴보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE : personal content crew -->
+<section class="signature">
+  <svg class="spark" style="top:-10px;right:5%;width:160px;height:160px;animation-delay:1s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <div class="wrap rv">
+    <div class="eyebrow">★ Signature Service</div>
+    <h2>당신만 따라다니는 <span class="y">전담 콘텐츠 크루</span></h2>
+    <p>이 프로그램의 핵심입니다. 7일 내내 <b style="color:#fff">전담 스태프 1명</b>이 트레이닝·녹음·화보·무대 뒤까지 모든 순간을 촬영합니다. 매일 숏폼·릴스용으로 편집해 공유 — SNS에 바로 올리는 <b style="color:#fff">'나만의 데뷔 브이로그'</b>를 완성해 드립니다.</p>
+    <div class="sig-points">
+      <div><b>매일 촬영분 공유</b><span>그날 찍은 사진·영상을 당일 정리해 전달</span></div>
+      <div><b>숏폼 즉시 업로드용</b><span>TikTok · Reels · Shorts 세로 편집본 제공</span></div>
+      <div><b>전 과정 아카이브</b><span>화보 · 비하인드 · 뮤직비디오까지 결과물 일체</span></div>
     </div>
   </div>
 </section>
