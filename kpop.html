@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rainbow K-POP Program — 한국 1주 연습생 클래스</title>
-<meta name="description" content="레인보우가 모집하고 한국의 전문 K-POP 디렉터가 직접 설계하는 1주 올인클루시브 연습생 프로그램. 숙소·트레이닝·녹음·의상·메이크업·화보·공연·촬영까지. | rainbowent.live">
+<title>Rainbow K-POP Production Camp — 6박 7일 프리미엄 아티스트 메이킹</title>
+<meta name="description" content="대한민국 메이저 기획사 전속 마스터 군단과 함께하는 6박 7일 프리미엄 K-POP 프로덕션 캠프. 청담동 탑스타 샵, 최고 녹음실, 오피셜 퍼포먼스 비디오·화보, 1년 기획사 매칭까지. | rainbowent.live">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="favicon-180.png">
@@ -38,14 +38,14 @@
   .back{font-size:13px;font-weight:500;color:var(--ink-3)}
   .back:hover{color:var(--purple)}
 
-  /* hero */
   .hero{background:var(--purple);color:#fff;padding:150px 0 110px;position:relative;overflow:hidden}
-  .hero .eyebrow{font-size:12.5px;letter-spacing:.26em;font-weight:700;color:var(--yellow)}
+  .hero .eyebrow{font-size:12.5px;letter-spacing:.24em;font-weight:700;color:var(--yellow)}
   .hero h1{font-size:50px;font-weight:700;line-height:1.18;letter-spacing:-.015em;margin-top:18px}
   .hero h1 .y{color:var(--yellow)}
-  .hero .sub{font-size:17px;color:var(--purple-5);margin-top:22px;max-width:660px}
+  .hero .sub{font-size:16.5px;color:var(--purple-5);margin-top:22px;max-width:680px}
   .hero .meta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
   .hero .meta span{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12.5px;font-weight:500;padding:8px 14px 6px;border-radius:999px;line-height:1}
+  .hero .meta span.hi{background:var(--yellow);color:#222;border-color:transparent;font-weight:700}
   .hero .btns{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
   .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 30px 12px;border-radius:999px;font-weight:700;font-size:14.5px;line-height:1.15;transition:.2s;cursor:pointer;border:none;font-family:var(--font)}
   .btn.y{background:var(--yellow);color:#222}
@@ -54,14 +54,20 @@
   .btn.ghost:hover{border-color:#fff}
   .spark{position:absolute;opacity:.14;animation:float 7s ease-in-out infinite}
   @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
-  @media(max-width:760px){.hero h1{font-size:33px}}
+  @media(max-width:760px){.hero h1{font-size:32px}}
 
-  /* signature: personal content crew (핵심 차별점) */
+  section{padding:88px 0}
+  .eyebrow{font-size:12px;letter-spacing:.2em;font-weight:700;color:var(--purple);text-transform:uppercase}
+  h2.sec{font-size:32px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.3}
+  .lead{color:var(--ink-3);font-size:15.5px;max-width:760px}
+  .center{text-align:center}.center .lead{margin:0 auto}
+
+  /* signature band */
   .signature{background:var(--purple);color:#fff;position:relative;overflow:hidden}
   .signature .eyebrow{color:var(--yellow)}
   .signature h2{font-size:34px;font-weight:700;line-height:1.28;margin:12px 0 16px}
   .signature h2 .y{color:var(--yellow)}
-  .signature p{font-size:16px;color:var(--purple-5);max-width:640px}
+  .signature p{font-size:16px;color:var(--purple-5);max-width:660px}
   .sig-points{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
   @media(max-width:760px){.signature h2{font-size:26px}.sig-points{grid-template-columns:1fr}}
   .sig-points > div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px}
@@ -69,54 +75,73 @@
   .sig-points b:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yellow);flex-shrink:0}
   .sig-points span{display:block;font-size:13px;color:var(--purple-4);margin-top:8px;line-height:1.55}
 
-  section{padding:88px 0}
-  .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:700;color:var(--purple);text-transform:uppercase}
-  h2.sec{font-size:32px;font-weight:700;margin:10px 0 14px;letter-spacing:-.01em;line-height:1.3}
-  .lead{color:var(--ink-3);font-size:15.5px;max-width:740px}
-  .center{text-align:center}.center .lead{margin:0 auto}
+  /* usp */
+  .usp{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:48px}
+  @media(max-width:760px){.usp{grid-template-columns:1fr}}
+  .usp .u{border:1px solid var(--line);border-radius:20px;padding:30px 28px;transition:.25s;background:#fff}
+  .usp .u:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(89,50,202,.12);border-color:var(--purple-4)}
+  .usp .u .em{font-size:30px;line-height:1}
+  .usp .u h3{font-size:19px;font-weight:700;margin:14px 0 8px}
+  .usp .u p{font-size:13.5px;color:var(--ink-3)}
 
-  /* included grid */
-  .inc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
-  @media(max-width:860px){.inc{grid-template-columns:1fr 1fr}}
-  .inc .it{border:1px solid var(--line);border-radius:18px;padding:26px 22px;text-align:center;transition:.25s;background:#fff}
-  .inc .it:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(89,50,202,.12);border-color:var(--purple-4)}
-  .inc .it .ic{width:52px;height:52px;border-radius:15px;background:var(--purple-5);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
-  .inc .it .ic svg{width:26px;height:26px;fill:var(--purple)}
-  .inc .it b{font-size:15px;display:block}
-  .inc .it p{font-size:12.5px;color:var(--ink-4);margin-top:5px}
+  /* care grid */
+  .care{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+  @media(max-width:760px){.care{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.care{grid-template-columns:1fr}}
+  .care .c{border:1px solid var(--line);border-radius:16px;padding:24px 22px;background:#fff;transition:.2s}
+  .care .c:hover{border-color:var(--purple-4)}
+  .care .c .n{font-size:12px;font-weight:700;color:var(--purple-4);letter-spacing:.1em}
+  .care .c b{display:block;font-size:15.5px;font-weight:700;margin:8px 0 5px}
+  .care .c p{font-size:13px;color:var(--ink-4)}
+
+  /* trainers */
+  .tr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  @media(max-width:860px){.tr{grid-template-columns:1fr}}
+  .trainer{border:1px solid var(--line);border-radius:20px;padding:30px 26px;background:#fff;transition:.25s}
+  .trainer:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(89,50,202,.12);border-color:var(--purple-4)}
+  .trainer .role{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--purple);text-transform:uppercase}
+  .trainer h3{font-size:21px;font-weight:700;margin:8px 0 2px}
+  .trainer .en{font-size:11.5px;letter-spacing:.1em;color:var(--ink-4);text-transform:uppercase;margin-bottom:14px}
+  .trainer p{font-size:13px;color:var(--ink-3);line-height:1.6}
 
   /* schedule */
   .sch{margin-top:48px;display:flex;flex-direction:column;gap:12px}
-  .day{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start;border:1px solid var(--line);border-radius:16px;padding:22px 24px;background:#fff;transition:.2s}
+  .day{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start;border:1px solid var(--line);border-radius:16px;padding:22px 24px;background:#fff;transition:.2s}
   .day:hover{border-color:var(--purple-4)}
-  .day .d{font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--purple)}
-  .day .d small{display:block;font-size:11px;font-weight:500;color:var(--ink-4);letter-spacing:0;margin-top:3px}
+  .day .d{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--purple)}
+  .day .d small{display:block;font-size:11px;font-weight:500;color:var(--ink-4);letter-spacing:.04em;margin-top:3px}
   .day h4{font-size:16px;font-weight:700}
-  .day p{font-size:13.5px;color:var(--ink-3);margin-top:4px}
+  .day ul{margin:6px 0 0;padding-left:0;list-style:none}
+  .day li{font-size:13.5px;color:var(--ink-3);padding-left:14px;position:relative;margin-top:3px}
+  .day li:before{content:"·";position:absolute;left:3px;color:var(--purple-3);font-weight:700}
   @media(max-width:600px){.day{grid-template-columns:1fr;gap:8px}}
 
   /* pricing */
-  .price-wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;margin-top:48px;align-items:stretch}
-  @media(max-width:860px){.price-wrap{grid-template-columns:1fr}}
-  .price{background:var(--purple);color:#fff;border-radius:24px;padding:40px;position:relative;overflow:hidden}
-  .price .tag{font-size:12px;letter-spacing:.16em;font-weight:700;color:var(--yellow)}
-  .price .amt{font-size:46px;font-weight:700;margin:14px 0 4px;line-height:1}
-  .price .amt small{font-size:15px;font-weight:500;color:var(--purple-4)}
-  .price .note{font-size:12.5px;color:var(--purple-4)}
-  .price ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:9px}
-  .price li{font-size:13.5px;display:flex;gap:9px;align-items:flex-start;color:#fff}
-  .price li svg{width:17px;height:17px;fill:var(--yellow);flex-shrink:0;margin-top:2px}
-  .price .ex{margin-top:18px;font-size:12.5px;color:var(--purple-4);border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
-  .pside{border:1px solid var(--line);border-radius:24px;padding:34px;display:flex;flex-direction:column;justify-content:center;background:var(--gray-5)}
-  .pside h3{font-size:19px;font-weight:700;line-height:1.4}
-  .pside p{font-size:13.5px;color:var(--ink-3);margin-top:10px}
-  .pside .btn{margin-top:22px;background:var(--purple);color:#fff;width:100%}
-  .pside .btn:hover{background:var(--purple-2)}
+  .pricing{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px;align-items:stretch}
+  @media(max-width:860px){.pricing{grid-template-columns:1fr}}
+  .pk{border-radius:24px;padding:38px 34px;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
+  .pk.vvip{background:var(--purple);color:#fff;border-color:transparent;position:relative;overflow:hidden}
+  .pk .badge{display:inline-flex;align-self:flex-start;align-items:center;font-size:11px;font-weight:700;letter-spacing:.08em;padding:6px 12px 4px;border-radius:999px;line-height:1;background:var(--purple-5);color:var(--purple)}
+  .pk.vvip .badge{background:var(--yellow);color:#222}
+  .pk h3{font-size:20px;font-weight:700;margin:16px 0 4px}
+  .pk .amt{font-size:38px;font-weight:700;line-height:1;margin:6px 0 2px}
+  .pk .amt small{font-size:15px;font-weight:500;color:var(--ink-4)}
+  .pk.vvip .amt small{color:var(--purple-4)}
+  .pk .when{font-size:13px;color:var(--ink-4)}
+  .pk.vvip .when{color:var(--purple-4)}
+  .pk ul{list-style:none;margin:22px 0 0;display:flex;flex-direction:column;gap:10px;flex-grow:1}
+  .pk li{font-size:13.5px;display:flex;gap:9px;align-items:flex-start}
+  .pk li svg{width:17px;height:17px;flex-shrink:0;margin-top:2px;fill:var(--purple)}
+  .pk.vvip li svg{fill:var(--yellow)}
+  .pk .btn{margin-top:24px;width:100%}
+  .pk .btn{background:var(--purple);color:#fff}
+  .pk.vvip .btn{background:var(--yellow);color:#222}
+  .common{margin-top:22px;border:1px dashed var(--purple-4);background:var(--purple-5);border-radius:18px;padding:22px 26px;font-size:13.5px;color:var(--ink-3);text-align:center;line-height:1.7}
+  .common b{color:var(--purple)}
 
-  /* apply form */
+  /* apply */
   .apply{background:var(--black);color:#fff}
-  .apply h2.sec{color:#fff}
-  .apply .lead{color:#adadad}
+  .apply h2.sec{color:#fff}.apply .lead{color:#adadad}
   .form{max-width:680px;margin:42px auto 0;background:#fff;color:var(--black);border-radius:24px;padding:38px}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   @media(max-width:560px){.grid2{grid-template-columns:1fr}}
@@ -134,13 +159,13 @@
   .ok.on{display:block}
   .ok .chk{width:64px;height:64px;border-radius:50%;background:var(--purple-5);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
   .ok .chk svg{width:32px;height:32px;fill:var(--purple)}
-  .ok h3{font-size:22px;font-weight:700}
-  .ok p{font-size:14px;color:var(--ink-3);margin-top:10px}
+  .ok h3{font-size:22px;font-weight:700}.ok p{font-size:14px;color:var(--ink-3);margin-top:10px}
 
   footer{background:var(--black);color:#8c8c8c;padding:38px 0;font-size:12.5px;border-top:1px solid #333}
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
   .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}
   .foot-brand svg{width:14px;height:14px}
+  .disc{margin-top:10px;font-size:11px;color:#666}
 
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .rv.on{opacity:1;transform:none}
@@ -149,7 +174,7 @@
 <body>
 
 <header class="nav" id="nav"><div class="wrap nav-in">
-  <a class="brandmark" href="index.html"><img src="assets/rainbow-logo.png" alt="Rainbow"> <span>K-POP Program</span></a>
+  <a class="brandmark" href="index.html"><img src="assets/rainbow-logo.png" alt="Rainbow"> <span>K-POP Camp</span></a>
   <div style="display:flex;align-items:center;gap:18px">
     <a class="back" href="index.html">← 메인으로</a>
     <a class="nav-cta" href="#apply">지금 접수하기</a>
@@ -161,18 +186,19 @@
   <svg class="spark" style="top:80px;right:6%;width:200px;height:200px" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fff"/></svg>
   <svg class="spark" style="bottom:-30px;left:5%;width:130px;height:130px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
   <div class="wrap">
-    <div class="eyebrow">RAINBOW × K-POP ACADEMY</div>
-    <h1>한국에서 보내는 1주일,<br><span class="y">당신이 K-POP 연습생</span>이 됩니다</h1>
-    <p class="sub">레인보우가 모집하고, 한국의 <b style="color:#fff">전문 K-POP 디렉터</b>가 직접 설계하는 올인클루시브 연습생 프로그램. 숙소부터 무대까지 — 한국 현지에서 진짜 아이돌의 하루를 경험합니다.</p>
+    <div class="eyebrow">RAINBOW × K-POP PRODUCTION CAMP</div>
+    <h1>일주일간, 완벽한<br><span class="y">K-POP 아티스트로 다시 태어나다</span></h1>
+    <p class="sub">대한민국 메이저 기획사 전속 마스터 군단과 함께하는, 오직 당신만을 위한 프로덕션 메이킹. 청담동 탑스타 전담 샵 메이크업, 레전드 히트곡이 탄생한 스튜디오 녹음, 오피셜 퍼포먼스 비디오와 화보까지 — 단 일주일 만에 완벽한 오디션 포트폴리오를 완성합니다.</p>
     <div class="meta">
-      <span style="background:var(--yellow);color:#222;border-color:transparent;font-weight:700">🎬 전담 콘텐츠 스태프 1:1</span>
-      <span>📍 진행 · 대한민국 서울</span>
-      <span>🗓️ 기간 · 7일 (1주)</span>
-      <span>✈️ 항공권 별도</span>
+      <span class="hi">🎬 전담 콘텐츠 스태프 1:1</span>
+      <span>🗓️ 6박 7일</span>
+      <span>📍 서울 · 청담</span>
+      <span>🤝 현역 매니저 전 일정 동행</span>
+      <span>🎯 1년 기획사 매칭</span>
     </div>
     <div class="btns">
       <a class="btn y" href="#apply">지금 접수하기</a>
-      <a class="btn ghost" href="#program">프로그램 살펴보기</a>
+      <a class="btn ghost" href="#pricing">패키지 보기</a>
     </div>
   </div>
 </section>
@@ -183,85 +209,127 @@
   <div class="wrap rv">
     <div class="eyebrow">★ Signature Service</div>
     <h2>당신만 따라다니는 <span class="y">전담 콘텐츠 크루</span></h2>
-    <p>이 프로그램의 핵심입니다. 7일 내내 <b style="color:#fff">전담 스태프 1명</b>이 트레이닝·녹음·화보·무대 뒤까지 모든 순간을 촬영합니다. 매일 숏폼·릴스용으로 편집해 공유 — SNS에 바로 올리는 <b style="color:#fff">'나만의 데뷔 브이로그'</b>를 완성해 드립니다.</p>
+    <p>전 일정 동안 <b style="color:#fff">전담 스태프</b>가 트레이닝·녹음·화보·무대 뒤 모든 순간을 촬영합니다. 매일 숏폼·릴스용으로 편집해 공유 — SNS에 바로 올리는 <b style="color:#fff">'나만의 데뷔 브이로그'</b>와, 오디션에 바로 쓰는 하이엔드 포트폴리오를 완성해 드립니다.</p>
     <div class="sig-points">
       <div><b>매일 촬영분 공유</b><span>그날 찍은 사진·영상을 당일 정리해 전달</span></div>
       <div><b>숏폼 즉시 업로드용</b><span>TikTok · Reels · Shorts 세로 편집본 제공</span></div>
-      <div><b>전 과정 아카이브</b><span>화보 · 비하인드 · 뮤직비디오까지 결과물 일체</span></div>
+      <div><b>오피셜 결과물 일체</b><span>퍼포먼스 비디오 · 화보 · 음원까지 데이터 전체</span></div>
     </div>
   </div>
 </section>
 
-<!-- INTRO / INCLUDED -->
-<section id="program"><div class="wrap">
+<!-- USP -->
+<section id="why"><div class="wrap">
   <div class="center rv">
-    <div class="eyebrow">All-Inclusive</div>
-    <h2 class="sec">하나부터 열까지, 전 과정 포함</h2>
-    <p class="lead">참가자는 몸만 오시면 됩니다. 숙소·트레이닝·녹음·스타일링·촬영까지 한국의 전문 스태프가 7일간 책임지고 진행합니다.</p>
+    <div class="eyebrow">Why Rainbow K-POP Camp</div>
+    <h2 class="sec">단순 한류 관광이 아닙니다</h2>
+    <p class="lead">대한민국 최고 권위의 크루들이 당신을 실제 K-POP 아티스트와 동일한 시스템으로 케어합니다.</p>
   </div>
-  <div class="inc">
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><b>숙소</b><p>한국 현지 숙소 제공</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5 9a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"/></svg></div><b>트레이닝</b><p>보컬 · 댄스 집중 레슨</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V7a4 4 0 0 0-4-4zm-1 16h2v2h-2zM5 11a7 7 0 0 0 14 0"/></svg></div><b>녹음</b><p>전문 스튜디오 레코딩</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M16 2l-4 4-4-4-5 5 3 3v10h12V10l3-3zm-4 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></div><b>의상</b><p>무대 의상 스타일링</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></div><b>헤어·메이크업</b><p>프로 아티스트 스타일링</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h3l2-2h6l2 2h3a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm8 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div><b>프로필 화보</b><p>아이돌 콘셉트 촬영</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 1l2.6 6.6L21 8.2l-5 4.4 1.6 6.9L12 15.9l-5.6 3.6L8 12.6 3 8.2l6.4-.6z"/></svg></div><b>쇼케이스 공연</b><p>실제 무대 데뷔 경험</p></div>
-    <div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg></div><b>영상 촬영</b><p>뮤직비디오 · 비하인드</p></div>
+  <div class="usp">
+    <div class="u rv"><div class="em">👑</div><h3>연예인급 올인원 6대 케어</h3><p>현역 엔터사 매니저의 전 일정 밀착 동행 의전부터 청담동 탑스타 전담 샵, 최고급 호텔, 카니발 차량 의전, 프리미엄 식단·미용 케어까지 일체 포함.</p></div>
+    <div class="u rv"><div class="em">🎙️</div><h3>K-POP 거장들의 1:1 디렉팅</h3><p>XG · KARA · VIVIZ 등을 이끈 총괄 프로듀서, SM/YG 전속 안무가, 엔하이픈·제베원·아일릿 보컬 코치 군단의 직접 디렉팅.</p></div>
+    <div class="u rv"><div class="em">📸</div><h3>하이엔드 포트폴리오 패키지</h3><p>최고 유명 녹음실 레코딩 음원, 탑스타 전담 포토그래퍼 오디션 화보, 전문 크루의 오피셜 퍼포먼스 비디오 데이터 전체 제공.</p></div>
+    <div class="u rv"><div class="em">🎯</div><h3>압도적인 사후 기획사 매칭</h3><p>수료 후 1년간 국내 유명 기획사 지속 연결 주선. VVIP 패키지는 메이저 기획사 비공개 미팅 및 오디션 100% 보장.</p></div>
   </div>
 </div></section>
 
-<!-- DIRECTOR -->
-<section style="background:var(--gray-5)"><div class="wrap center rv">
-  <div class="eyebrow">Designed by a K-POP Director</div>
-  <h2 class="sec">한국의 현업 K-POP 디렉터가 직접 설계</h2>
-  <p class="lead">아이돌 트레이닝 현장에서 활동하는 전문 디렉터가 참가자 레벨에 맞춰 7일 커리큘럼을 구성합니다. 레인보우는 베트남 현지 모집과 코디네이션을, 한국 팀은 오직 K-POP 프로그램 운영에 집중합니다.</p>
+<!-- 6 CARE -->
+<section style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">All-Inclusive 6 Care</div>
+    <h2 class="sec">REAL 연예인급, 6대 케어</h2>
+    <p class="lead">참가자는 몸만 오시면 됩니다. 의전부터 컨디션까지 한국 전문 스태프가 전 일정 책임집니다.</p>
+  </div>
+  <div class="care">
+    <div class="c rv"><div class="n">CARE 01</div><b>현역 매니저 의전</b><p>전 일정 1:1 밀착 동행 의전</p></div>
+    <div class="c rv"><div class="n">CARE 02</div><b>청담동 탑스타 샵</b><p>연예인 전담 헤어·메이크업</p></div>
+    <div class="c rv"><div class="n">CARE 03</div><b>최고급 호텔 투숙</b><p>지정 호텔 6박 숙박</p></div>
+    <div class="c rv"><div class="n">CARE 04</div><b>카니발 이동 의전</b><p>신형 차량 전용 의전 이동</p></div>
+    <div class="c rv"><div class="n">CARE 05</div><b>아이돌 식단 케어</b><p>프리미엄 맞춤 식단·F&amp;B</p></div>
+    <div class="c rv"><div class="n">CARE 06</div><b>미용·컨디션 케어</b><p>일정 내내 집중 컨디셔닝</p></div>
+  </div>
+</div></section>
+
+<!-- TRAINERS -->
+<section id="trainers"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Master Trainer Line-up</div>
+    <h2 class="sec">대한민국 전속 마스터 군단</h2>
+    <p class="lead">실제 데뷔 아티스트를 만든 현업 거장들이 직접 디렉팅합니다.</p>
+  </div>
+  <div class="tr">
+    <div class="trainer rv">
+      <div class="role">총괄 프로듀싱 · A&amp;R</div>
+      <h3>김형민</h3><div class="en">KIM HYUNGMIN</div>
+      <p>XG · KARA · VIVIZ · SURAN · 쥬얼리 · 스텔라 등 다수 글로벌 아티스트의 메인 프로덕션 총괄. 데뷔 전략 빌딩, 레코딩 세션 1:1 디렉팅, 수료 후 1년간 기획사 연결 매칭 총괄.</p>
+    </div>
+    <div class="trainer rv">
+      <div class="role">퍼포먼스 · 안무</div>
+      <h3>이시원</h3><div class="en">LEE SIWON</div>
+      <p>SM 엔터테인먼트 전담 댄스 트레이너·디렉터(6년), YG 엔터테인먼트 전담 댄스 트레이너·디렉터(3년). 現 프리미엄 댄스 스튜디오 ALBZ 총괄 대표.</p>
+    </div>
+    <div class="trainer rv">
+      <div class="role">보컬 마스터 코치</div>
+      <h3>홍남화</h3><div class="en">HONG NAMHWA</div>
+      <p>ENHYPEN · ZEROBASEONE · ILLIT 전속 트레이닝. Belift · Wakeone · BIGPLANETMADE 공식 코치, Mnet 「R U NEXT」·「걸스플래닛999」 보컬 마스터, 「너의 목소리가 보여 4」 트와이스 편 최종 우승.</p>
+    </div>
+  </div>
 </div></section>
 
 <!-- SCHEDULE -->
-<section><div class="wrap">
+<section style="background:var(--gray-5)"><div class="wrap">
   <div class="center rv">
-    <div class="eyebrow">7-Day Journey</div>
-    <h2 class="sec">7일, 연습생의 하루하루</h2>
-    <p class="lead">* 아래 일정은 예시이며, 참가 인원·레벨에 따라 세부 커리큘럼이 조정됩니다.</p>
+    <div class="eyebrow">6 Nights · 7 Days</div>
+    <h2 class="sec">6박 7일 표준 일정</h2>
+    <p class="lead">현역 매니저 전담 마크 하에 진행됩니다. * 세부 일정은 참가 인원·레벨에 따라 조정됩니다.</p>
   </div>
   <div class="sch">
-    <div class="day rv"><div class="d">DAY 1<small>입소</small></div><div><h4>입국 · 오리엔테이션 · 레벨 체크</h4><p>한국 도착 후 숙소 입실, 프로그램 안내와 보컬·댄스 레벨 진단으로 7일을 설계합니다.</p></div></div>
-    <div class="day rv"><div class="d">DAY 2<small>트레이닝</small></div><div><h4>보컬 &amp; 댄스 집중 레슨</h4><p>전문 트레이너와 1:1·그룹 레슨. 발성, 기본기, 안무 파트를 빠르게 익힙니다.</p></div></div>
-    <div class="day rv"><div class="d">DAY 3<small>트레이닝</small></div><div><h4>안무 완성 · 표정 &amp; 카메라 연기</h4><p>곡 안무를 완성하고, 무대 표정·시선 처리·카메라 워킹을 연습합니다.</p></div></div>
-    <div class="day rv"><div class="d">DAY 4<small>녹음</small></div><div><h4>스튜디오 레코딩 세션</h4><p>전문 엔지니어와 함께 본인 보컬을 녹음하고, 결과물을 음원으로 받습니다.</p></div></div>
-    <div class="day rv"><div class="d">DAY 5<small>화보</small></div><div><h4>스타일링 · 헤어메이크업 · 프로필 화보</h4><p>콘셉트 의상과 프로 메이크업으로 아이돌 화보를 촬영합니다.</p></div></div>
-    <div class="day rv"><div class="d">DAY 6<small>리허설</small></div><div><h4>무대 리허설 &amp; 의상 피팅</h4><p>쇼케이스 동선·조명·음향을 맞추는 최종 무대 리허설을 진행합니다.</p></div></div>
-    <div class="day rv"><div class="d">DAY 7<small>공연</small></div><div><h4>쇼케이스 공연 · MV 촬영 · 수료</h4><p>실제 무대에서 공연하고 뮤직비디오·비하인드를 촬영, 수료증과 결과물을 받습니다.</p></div></div>
+    <div class="day rv"><div class="d">DAY 1<small>Arrival &amp; Identity</small></div><div><h4>입국 의전 · 레벨 테스트</h4><ul><li>인천공항 카니발 전용 차량 의전 픽업 및 지정 호텔 체크인 서포트</li><li>매니저 동행 오리엔테이션 및 1:1 보컬·댄스 사전 레벨 정밀 테스트</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 2<small>Intensive Training I</small></div><div><h4>보컬 코칭 · 댄스 클래스</h4><ul><li>오전 — 개인별 음역대 분석 및 시그니처 톤 발성 교정</li><li>오후 — 안무 카피 및 기본 동선 빌드업 (연예인 식단 케어 시작)</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 3<small>Intensive Training II</small></div><div><h4>레코딩 디렉팅 · 댄스 마스터</h4><ul><li>오전 — 스튜디오 세션 전 최종 보컬 디렉팅 및 디테일 리허설</li><li>오후 — 퍼포먼스 비디오용 세부 구성 및 카메라 앵글 점검</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 4<small>Official Production</small></div><div><h4>청담동 샵 · 녹음 · 화보</h4><ul><li>연예인 전담 청담동 샵 방문 (헤어·메이크업 풀 세팅)</li><li>최고 유명 레코딩 스튜디오 음원 녹음 &amp; 탑스타 전담 포토그래퍼 화보 촬영 동시 가동</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 5<small>Visual Performance</small></div><div><h4>퍼포먼스 비디오 · 기획사 미팅</h4><ul><li>콘셉트 의상 스타일링, 전문 영상 크루 오피셜 퍼포먼스 비디오 및 숏폼 촬영</li><li>VVIP — 메이저 기획사 비공개 미팅 / 그룹 — 메이저 기획사 공식 견학</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 6<small>Master Solution</small></div><div><h4>1:1 솔루션 · 쇼케이스</h4><ul><li>총괄 프로듀서 1:1 상담 및 향후 1년 기획사 연계 로드맵 설계</li><li>자체 미니 쇼케이스 개최 및 송별 파티</li></ul></div></div>
+    <div class="day rv"><div class="d">DAY 7<small>Departure Escort</small></div><div><h4>출국 의전 · 결과물 프리뷰</h4><ul><li>전용 카니발 차량 공항 센딩 의전 및 매니저 최종 배웅</li><li>보정본 프로필 / 1차 편집 릴리즈 데이터 프리뷰 안내</li></ul></div></div>
   </div>
 </div></section>
 
 <!-- PRICING -->
-<section id="price" style="background:var(--gray-5)"><div class="wrap">
+<section id="pricing"><div class="wrap">
   <div class="center rv">
-    <div class="eyebrow">Pricing</div>
-    <h2 class="sec">금액 안내</h2>
-    <p class="lead">* 아래 금액은 예시이며, 세부 일정·인원·옵션 확정 후 정식 안내됩니다.</p>
+    <div class="eyebrow">Packages</div>
+    <h2 class="sec">패키지 안내</h2>
+    <p class="lead">목표와 일정에 맞춰 두 가지 라인업으로 운영합니다.</p>
   </div>
-  <div class="price-wrap">
-    <div class="price rv">
-      <div class="tag">K-POP TRAINEE · 1 WEEK</div>
-      <div class="amt">$2,500 <small>/ 1인</small></div>
-      <div class="note">7일 올인클루시브 패키지 (예시 금액)</div>
+  <div class="pricing">
+    <div class="pk vvip rv">
+      <span class="badge">VVIP PRIVATE · 상시 출발</span>
+      <h3>1인 단독 VVIP 프라이빗</h3>
+      <div class="amt">₩20,000,000 <small>/ 1인</small></div>
+      <div class="when">상시 출발 · 전 과정 1:1 독점 진행</div>
       <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>숙소 + 전 일정 트레이닝</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>스튜디오 녹음 · 음원 결과물</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>의상 · 헤어메이크업 · 프로필 화보</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>쇼케이스 공연 · 뮤직비디오 촬영</li>
-        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>수료증 · 촬영 결과물 일체</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>메이저 기획사 비공개 미팅 &amp; 오디션 <b>100% 보장</b></li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>전 일정 완전 맞춤 · 1:1 독점 디렉팅</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>연예인급 6대 케어 + 하이엔드 포트폴리오 일체</li>
       </ul>
-      <div class="ex">불포함: ✈️ 국제 항공권, 개인 경비, 비자(필요 시)</div>
+      <a class="btn" href="#apply">VVIP 접수하기</a>
     </div>
-    <div class="pside rv">
-      <h3>인원·일정에 맞춰<br>맞춤 견적도 가능합니다</h3>
-      <p>그룹 단위 참가, 일정 조정, 옵션 추가(개인 레슨·추가 촬영 등)는 코디네이터와 상담해 주세요.</p>
-      <a class="btn" href="#apply">상담 · 접수하기</a>
+    <div class="pk rv">
+      <span class="badge">GROUP · 5인 출발</span>
+      <h3>5인 프리미엄 그룹</h3>
+      <div class="amt">₩5,000,000 <small>/ 1인</small></div>
+      <div class="when">5인 모집 시 출발</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>메이저 기획사 오피셜 견학 프로그램</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>거장 마스터 군단 그룹 트레이닝</li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg>연예인급 6대 케어 + 오피셜 결과물 제공</li>
+      </ul>
+      <a class="btn" href="#apply">그룹 접수하기</a>
     </div>
+  </div>
+  <div class="common rv">
+    <b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br>
+    <span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.</span>
   </div>
 </div></section>
 
@@ -274,11 +342,11 @@
   </div>
   <form class="form rv" id="applyForm">
     <div class="grid2">
-      <div class="field"><label>이름 <span class="req">*</span></label><input name="이름" required placeholder="홍길동 / Full name"></div>
+      <div class="field"><label>이름 <span class="req">*</span></label><input name="이름" required placeholder="Full name"></div>
       <div class="field"><label>연락처 <span class="req">*</span></label><input name="연락처" required placeholder="전화 · WhatsApp · Zalo"></div>
       <div class="field"><label>이메일 <span class="req">*</span></label><input name="이메일" type="email" required placeholder="you@email.com"></div>
+      <div class="field"><label>희망 패키지</label><select name="희망패키지"><option value="">선택</option><option>1인 VVIP 프라이빗</option><option>5인 프리미엄 그룹</option><option>상담 후 결정</option></select></div>
       <div class="field"><label>생년월일 / 나이</label><input name="생년월일" placeholder="2005-01-01 또는 만 19세"></div>
-      <div class="field"><label>성별</label><select name="성별"><option value="">선택</option><option>여성</option><option>남성</option><option>기타·무응답</option></select></div>
       <div class="field"><label>지원 분야</label><select name="지원분야"><option value="">선택</option><option>보컬</option><option>댄스</option><option>랩</option><option>종합(보컬+댄스)</option></select></div>
       <div class="field full"><label>거주 국가 · 도시</label><input name="거주지" placeholder="예: Vietnam, Ho Chi Minh"></div>
       <div class="field full"><label>한마디 (자기소개 · 각오 · 문의)</label><textarea name="메시지" placeholder="간단한 자기소개나 궁금한 점을 적어주세요."></textarea></div>
@@ -295,10 +363,13 @@
 
 <iframe name="gformSink" style="display:none" aria-hidden="true" title="form sink"></iframe>
 
-<footer><div class="wrap foot-in">
-  <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-POP Program</div>
-  <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
-  <div>© 2026 Rainbow Entertainment · <a href="index.html" style="color:#adadad">rainbowent.live</a></div>
+<footer><div class="wrap">
+  <div class="foot-in">
+    <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-POP Camp</div>
+    <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+    <div>© 2026 Rainbow Entertainment · <a href="index.html" style="color:#adadad">rainbowent.live</a></div>
+  </div>
+  <div class="disc">기획·운영: Rainbow Entertainment · 프로그램 총괄 프로듀싱 협업. 표기된 일정·금액·혜택은 운영 상황에 따라 변경될 수 있습니다.</div>
 </div></footer>
 
 <script>
@@ -307,39 +378,24 @@
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-  /* ───────── 접수 자동 수집 설정 ─────────
-     Google Form에 자동 저장(→연결된 Google Sheet/엑셀)하려면 아래 2가지만 채우면 됩니다.
-     1) ACTION : 구글폼 주소의 .../viewform 을 .../formResponse 로 바꾼 URL
-     2) MAP    : 각 항목의 entry.번호 (구글폼 '미리 채워진 링크 가져오기'에서 확인)
-     비워두면 자동으로 이메일(jspark@rb-land.com) 백업 방식으로 동작합니다. */
+  /* ───────── 접수 자동 수집 (Google Form → Sheet) ─────────
+     아래 GFORM.action 과 entry 번호만 채우면 접수가 구글폼/시트에 자동 저장됩니다.
+     비워두면 이메일(jspark@rb-land.com) 백업으로 동작합니다. */
   const GFORM = {
     action: '',  // 예: https://docs.google.com/forms/d/e/AAAA.../formResponse
-    map: { 이름:'', 연락처:'', 이메일:'', 생년월일:'', 성별:'', 지원분야:'', 거주지:'', 메시지:'' }
+    map: { 이름:'', 연락처:'', 이메일:'', 희망패키지:'', 생년월일:'', 지원분야:'', 거주지:'', 메시지:'' }
   };
-
   const form=document.getElementById('applyForm');
-  function showOk(){
-    form.style.display='none';
-    const ok=document.getElementById('okPanel');
-    ok.classList.add('on'); ok.scrollIntoView({behavior:'smooth',block:'center'});
-  }
+  function showOk(){ form.style.display='none'; const ok=document.getElementById('okPanel'); ok.classList.add('on'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
   form.addEventListener('submit',e=>{
     e.preventDefault();
     const d=new FormData(form);
     if(GFORM.action){
-      // Google Form으로 POST (숨김 iframe → 페이지 이동 없음 → Sheet에 자동 수집)
-      const hf=document.createElement('form');
-      hf.action=GFORM.action; hf.method='POST'; hf.target='gformSink';
-      Object.entries(GFORM.map).forEach(([k,entry])=>{
-        if(!entry) return;
-        const i=document.createElement('input');
-        i.type='hidden'; i.name=entry; i.value=d.get(k)||''; hf.appendChild(i);
-      });
-      document.body.appendChild(hf); hf.submit(); document.body.removeChild(hf);
-      showOk();
+      const hf=document.createElement('form'); hf.action=GFORM.action; hf.method='POST'; hf.target='gformSink';
+      Object.entries(GFORM.map).forEach(([k,entry])=>{ if(!entry) return; const i=document.createElement('input'); i.type='hidden'; i.name=entry; i.value=d.get(k)||''; hf.appendChild(i); });
+      document.body.appendChild(hf); hf.submit(); document.body.removeChild(hf); showOk();
     } else {
-      // 백업: 이메일로 전송
-      let body='■ Rainbow K-POP 프로그램 접수\n\n';
+      let body='■ Rainbow K-POP Camp 접수\n\n';
       for(const [k,v] of d.entries()){ if(String(v).trim()) body+=k+': '+v+'\n'; }
       window.location.href='mailto:jspark@rb-land.com?subject='+encodeURIComponent('[K-POP 접수] '+(d.get('이름')||''))+'&body='+encodeURIComponent(body);
       showOk();
