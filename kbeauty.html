@@ -70,6 +70,39 @@
   .foot-org a.kkal{color:#8c8c8c}.foot-org a.kkal:hover{color:var(--purple-4)}
   @media(max-width:680px){.foot-org{text-align:left;margin-top:6px}}
   .disc{margin-top:10px;font-size:11px;color:#666}
+  /* creator connect band */
+  .connect{background:var(--purple);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .connect .eyebrow{color:var(--yellow)}
+  .connect h2{font-size:38px;font-weight:700;line-height:1.25;margin:12px 0 0;letter-spacing:-.01em}
+  .connect h2 .y{color:var(--yellow)}
+  .connect .sub{font-size:15.5px;color:var(--purple-5);max-width:700px;margin:18px auto 0}
+  .cstat{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:38px}
+  .cstat .c{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:22px 30px;min-width:180px}
+  .cstat .v{font-size:42px;font-weight:700;color:var(--yellow);line-height:1}
+  .cstat .l{font-size:13px;color:#fff;margin-top:8px}
+  @media(max-width:760px){.connect h2{font-size:26px}.cstat .c{min-width:138px;padding:18px 18px}.cstat .v{font-size:34px}}
+  /* creator roster */
+  .roster{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+  @media(max-width:860px){.roster{grid-template-columns:1fr 1fr}}
+  .cr{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;transition:.25s}
+  .cr:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(89,50,202,.14);border-color:var(--purple-4)}
+  .cr-photo{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,var(--g1,#9d88e4),var(--g2,#5932ca))}
+  .cr-photo img{width:100%;height:100%;object-fit:cover}
+  .cr-emoji{font-size:48px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.18))}
+  .cr-cast{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);color:var(--purple);font-size:10.5px;font-weight:700;padding:4px 9px 3px;border-radius:999px;letter-spacing:.03em}
+  .cr-body{padding:15px 16px 18px}
+  .cr-cat{font-size:15.5px;font-weight:700}
+  .cr-handle{font-size:12.5px;color:var(--ink-4);margin-top:2px}
+  .cr-region{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--purple);margin-top:9px}
+  .cr-soc{display:flex;gap:8px;margin-top:11px}
+  .cr-soc a{width:31px;height:31px;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--ink-3);transition:.18s}
+  .cr-soc a:hover{background:var(--purple);border-color:var(--purple);color:#fff}
+  .cr-soc svg{width:15px;height:15px;fill:currentColor}
+  .cr-join{border:2px dashed var(--purple-4);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:var(--purple-5);color:var(--purple);transition:.25s}
+  .cr-join:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+  .cr-join .plus{font-size:38px;font-weight:700;line-height:1}
+  .cr-join .jt{font-size:14.5px;font-weight:700;margin-top:10px}
+  .cr-join .js{font-size:11.5px;margin-top:5px;opacity:.85;max-width:140px}
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.on{opacity:1;transform:none}
   .toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,16px);background:var(--black);color:#fff;font-size:14px;font-weight:700;padding:13px 22px 11px;border-radius:999px;box-shadow:0 12px 36px rgba(0,0,0,.32);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200}
   .toast.on{opacity:1;transform:translate(-50%,0)}
@@ -133,6 +166,62 @@
   </div>
 </div></section>
 
+<svg style="display:none" aria-hidden="true">
+  <symbol id="ic-ig" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.86.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.86.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.86s.01-3.59.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.21 8.8 2.2 12 2.2m0 1.95c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.18.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.41-.35 1.03-.4 2.18-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.4 2.18.22.55.47.94.88 1.35.41.41.8.66 1.35.88.41.16 1.03.35 2.18.4 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.18-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.41.35-1.03.4-2.18.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.4-2.18a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.18-.4-1.24-.06-1.61-.07-4.76-.07m0 3.32a4.53 4.53 0 1 0 0 9.06 4.53 4.53 0 0 0 0-9.06m0 7.47a2.94 2.94 0 1 1 0-5.88 2.94 2.94 0 0 1 0 5.88m5.77-7.69a1.06 1.06 0 1 1-2.12 0 1.06 1.06 0 0 1 2.12 0"/></symbol>
+  <symbol id="ic-tt" viewBox="0 0 24 24"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.93a2.59 2.59 0 0 1-2.59 2.5 2.59 2.59 0 1 1 .74-5.07v-3.3a5.88 5.88 0 0 0-5.85 5.88 5.88 5.88 0 0 0 11.76 0V9.01a7.49 7.49 0 0 0 4.37 1.4V7.2a4.28 4.28 0 0 1-3.12-1.38z"/></symbol>
+</svg>
+
+<!-- CREATOR CONNECT -->
+<section class="connect">
+  <svg class="spark" style="top:-20px;left:5%;width:150px;height:150px" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <svg class="spark" style="bottom:-30px;right:6%;width:120px;height:120px;animation-delay:2s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fff"/></svg>
+  <div class="wrap rv">
+    <div class="eyebrow">Creator Connect</div>
+    <h2 data-i18n="kb_cc_h2">K-뷰티 브랜드 <span class="y">100</span> × 베트남 크리에이터 <span class="y">100</span></h2>
+    <p class="sub" data-i18n="kb_cc_sub">한국 화장품 브랜드와 베트남 인플루언서가 한 무대에서 만납니다. 아직 발굴되지 않은 베트남 크리에이터 시장에 던지는 첫 번째 돌 — 서로가 서로를 알아보는 매칭의 장.</p>
+    <div class="cstat">
+      <div class="c"><div class="v">100</div><div class="l" data-i18n="kb_cc_s1">K-뷰티 브랜드</div></div>
+      <div class="c"><div class="v">100</div><div class="l" data-i18n="kb_cc_s2">베트남 크리에이터</div></div>
+      <div class="c"><div class="v">1</div><div class="l" data-i18n="kb_cc_s3">매칭 무대</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHING FLOW -->
+<section id="match"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">How Matching Works</div>
+    <h2 class="sec" data-i18n="kb_cm_h2">매칭은 이렇게 진행됩니다</h2>
+    <p class="lead" data-i18n="kb_cm_lead">지원부터 전속 계약까지, Rainbow가 브랜드와 크리에이터를 직접 큐레이션해 연결합니다.</p>
+  </div>
+  <div class="flow rv">
+    <div class="m"><div class="k">STEP 1</div><div class="t" data-i18n="kb_m1t">지원 · 등록</div><p data-i18n="kb_m1p">크리에이터와 브랜드가 프로필을 등록</p></div>
+    <div class="m"><div class="k">STEP 2</div><div class="t" data-i18n="kb_m2t">Rainbow 큐레이션</div><p data-i18n="kb_m2p">콘셉트·타깃에 맞춰 최적의 짝을 선별</p></div>
+    <div class="m"><div class="k">STEP 3</div><div class="t" data-i18n="kb_m3t">매칭데이</div><p data-i18n="kb_m3p">한자리에서 서로를 알아보는 만남</p></div>
+    <div class="m"><div class="k">STEP 4</div><div class="t" data-i18n="kb_m4t">전속 · 캠페인</div><p data-i18n="kb_m4p">전속 계약과 콘텐츠 캠페인 실행</p></div>
+  </div>
+</div></section>
+
+<!-- CREATOR ROSTER -->
+<section id="roster" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Creator Roster · Now Casting</div>
+    <h2 class="sec" data-i18n="kb_cr_h2">전속 크리에이터 라인업</h2>
+    <p class="lead" data-i18n="kb_cr_lead">뷰티·패션·라이프스타일 베트남 크리에이터를 MCN 방식으로 매니지먼트합니다. 1기 전속 크리에이터를 모집 중입니다.</p>
+  </div>
+  <!-- 실제 크리에이터로 교체: .cr-photo 안에 <img src="assets/creators/이름.jpg">, .cr-cat=이름, .cr-handle=@핸들, .cr-soc a href=실제 IG/TikTok URL -->
+  <div class="roster rv">
+    <div class="cr"><div class="cr-photo" style="--g1:#ff9ec4;--g2:#c44fb0"><span class="cr-emoji">💄</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat1">메이크업</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <div class="cr"><div class="cr-photo" style="--g1:#7fd1e0;--g2:#3b8fd6"><span class="cr-emoji">🧴</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat2">스킨케어</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <div class="cr"><div class="cr-photo" style="--g1:#b3a4ef;--g2:#5932ca"><span class="cr-emoji">👗</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat3">패션</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <div class="cr"><div class="cr-photo" style="--g1:#ffd27f;--g2:#f0972b"><span class="cr-emoji">💇</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat4">헤어</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <div class="cr"><div class="cr-photo" style="--g1:#ff9e9e;--g2:#e0506b"><span class="cr-emoji">💅</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat5">네일</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <div class="cr"><div class="cr-photo" style="--g1:#9be0b0;--g2:#2bae6a"><span class="cr-emoji">🎥</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat6">데일리 브이로그</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <div class="cr"><div class="cr-photo" style="--g1:#ffc46b;--g2:#e08b2b"><span class="cr-emoji">🍜</span><span class="cr-cast" data-i18n="kb_cast">모집 중</span></div><div class="cr-body"><div class="cr-cat" data-i18n="kb_cat7">푸드 · 라이프</div><div class="cr-handle">@your.handle</div><div class="cr-region">VIETNAM</div><div class="cr-soc"><a href="#" aria-label="Instagram"><svg><use href="#ic-ig"/></svg></a><a href="#" aria-label="TikTok"><svg><use href="#ic-tt"/></svg></a></div></div></div>
+    <a class="cr-join" href="#contact"><div class="plus">+</div><div class="jt" data-i18n="kb_join_t">크리에이터 지원</div><div class="js" data-i18n="kb_join_s">1기 라인업에 합류하세요</div></a>
+  </div>
+</div></section>
+
 <section class="contact" id="contact"><div class="wrap rv">
   <h2 data-i18n="kb_ct_h2">K-뷰티로 함께 —<br><span class="y">제휴 · 입점 · 유통 문의</span></h2>
   <p data-i18n="kb_ct_p">브랜드 입점, OEM·ODM 제휴, 베트남 유통 파트너십을 기다립니다.</p>
@@ -172,6 +261,18 @@ ko:{
   kb_s2t:'KOC 콘텐츠', kb_s2p:'자체 KOC·고객이 숏폼 제작',
   kb_s3t:'라이브 커머스', kb_s3p:'틱톡숍·라이브로 즉시 판매',
   kb_s4t:'반복 구매', kb_s4p:'팬덤이 충성 고객으로',
+  kb_cc_h2:'K-뷰티 브랜드 <span class="y">100</span> × 베트남 크리에이터 <span class="y">100</span>',
+  kb_cc_sub:'한국 화장품 브랜드와 베트남 인플루언서가 한 무대에서 만납니다. 아직 발굴되지 않은 베트남 크리에이터 시장에 던지는 첫 번째 돌 — 서로가 서로를 알아보는 매칭의 장.',
+  kb_cc_s1:'K-뷰티 브랜드', kb_cc_s2:'베트남 크리에이터', kb_cc_s3:'매칭 무대',
+  kb_cm_h2:'매칭은 이렇게 진행됩니다', kb_cm_lead:'지원부터 전속 계약까지, Rainbow가 브랜드와 크리에이터를 직접 큐레이션해 연결합니다.',
+  kb_m1t:'지원 · 등록', kb_m1p:'크리에이터와 브랜드가 프로필을 등록',
+  kb_m2t:'Rainbow 큐레이션', kb_m2p:'콘셉트·타깃에 맞춰 최적의 짝을 선별',
+  kb_m3t:'매칭데이', kb_m3p:'한자리에서 서로를 알아보는 만남',
+  kb_m4t:'전속 · 캠페인', kb_m4p:'전속 계약과 콘텐츠 캠페인 실행',
+  kb_cr_h2:'전속 크리에이터 라인업', kb_cr_lead:'뷰티·패션·라이프스타일 베트남 크리에이터를 MCN 방식으로 매니지먼트합니다. 1기 전속 크리에이터를 모집 중입니다.',
+  kb_cast:'모집 중',
+  kb_cat1:'메이크업', kb_cat2:'스킨케어', kb_cat3:'패션', kb_cat4:'헤어', kb_cat5:'네일', kb_cat6:'데일리 브이로그', kb_cat7:'푸드 · 라이프',
+  kb_join_t:'크리에이터 지원', kb_join_s:'1기 라인업에 합류하세요',
   kb_ct_h2:'K-뷰티로 함께 —<br><span class="y">제휴 · 입점 · 유통 문의</span>', kb_ct_p:'브랜드 입점, OEM·ODM 제휴, 베트남 유통 파트너십을 기다립니다.',
   kb_ct_btn:'문의하기', kb_ct_back:'메인으로', copied:'이메일이 복사되었습니다 ✓'
 },
@@ -188,6 +289,18 @@ en:{
   kb_s2t:'KOC content', kb_s2p:'Our KOC & customers make short-form',
   kb_s3t:'Live commerce', kb_s3p:'Instant sales via TikTok Shop & live',
   kb_s4t:'Repeat purchase', kb_s4p:'Fandom becomes loyal customers',
+  kb_cc_h2:'K-Beauty Brands <span class="y">100</span> × Vietnam Creators <span class="y">100</span>',
+  kb_cc_sub:'Korean cosmetic brands meet Vietnamese influencers on one stage. The first stone thrown into Vietnam\'s still-undiscovered creator market — a place where both sides find each other.',
+  kb_cc_s1:'K-Beauty brands', kb_cc_s2:'Vietnam creators', kb_cc_s3:'Matching stage',
+  kb_cm_h2:'How matching works', kb_cm_lead:'From application to exclusive contract, Rainbow curates and connects brands and creators directly.',
+  kb_m1t:'Apply · register', kb_m1p:'Creators and brands register profiles',
+  kb_m2t:'Rainbow curation', kb_m2p:'We match the best pairs by concept & target',
+  kb_m3t:'Matching day', kb_m3p:'Both sides meet and recognize each other',
+  kb_m4t:'Exclusive · campaign', kb_m4p:'Exclusive deals and content campaigns',
+  kb_cr_h2:'Exclusive creator lineup', kb_cr_lead:'We manage Vietnamese beauty, fashion and lifestyle creators MCN-style. Now casting our first exclusive class.',
+  kb_cast:'Casting',
+  kb_cat1:'Makeup', kb_cat2:'Skincare', kb_cat3:'Fashion', kb_cat4:'Hair', kb_cat5:'Nail', kb_cat6:'Daily vlog', kb_cat7:'Food & life',
+  kb_join_t:'Apply as creator', kb_join_s:'Join the first lineup',
   kb_ct_h2:'Let\'s go with K-beauty —<br><span class="y">partnership · leasing · distribution</span>', kb_ct_p:'We welcome brand placement, OEM/ODM partnerships and Vietnam distribution.',
   kb_ct_btn:'Contact us', kb_ct_back:'Back to home', copied:'Email copied ✓'
 },
@@ -204,6 +317,18 @@ vi:{
   kb_s2t:'Nội dung KOC', kb_s2p:'KOC & khách tạo short-form',
   kb_s3t:'Live commerce', kb_s3p:'Bán ngay qua TikTok Shop & live',
   kb_s4t:'Mua lặp lại', kb_s4p:'Fandom thành khách trung thành',
+  kb_cc_h2:'Thương hiệu K-Beauty <span class="y">100</span> × Creator Việt <span class="y">100</span>',
+  kb_cc_sub:'Thương hiệu mỹ phẩm Hàn gặp influencer Việt trên cùng một sân khấu. Viên đá đầu tiên ném vào thị trường creator Việt còn chưa được khai phá — nơi cả hai bên tìm thấy nhau.',
+  kb_cc_s1:'Thương hiệu K-Beauty', kb_cc_s2:'Creator Việt Nam', kb_cc_s3:'Sân khấu kết nối',
+  kb_cm_h2:'Cách kết nối hoạt động', kb_cm_lead:'Từ đăng ký đến hợp đồng độc quyền, Rainbow trực tiếp tuyển chọn và kết nối thương hiệu với creator.',
+  kb_m1t:'Đăng ký', kb_m1p:'Creator và thương hiệu đăng ký hồ sơ',
+  kb_m2t:'Rainbow tuyển chọn', kb_m2p:'Ghép cặp tối ưu theo concept & đối tượng',
+  kb_m3t:'Ngày kết nối', kb_m3p:'Hai bên gặp gỡ và nhận ra nhau',
+  kb_m4t:'Độc quyền · chiến dịch', kb_m4p:'Hợp đồng độc quyền & chiến dịch nội dung',
+  kb_cr_h2:'Dàn creator độc quyền', kb_cr_lead:'Quản lý creator Việt mảng làm đẹp, thời trang, lifestyle theo mô hình MCN. Đang tuyển chọn lứa độc quyền đầu tiên.',
+  kb_cast:'Đang tuyển',
+  kb_cat1:'Trang điểm', kb_cat2:'Chăm sóc da', kb_cat3:'Thời trang', kb_cat4:'Tóc', kb_cat5:'Nail', kb_cat6:'Daily vlog', kb_cat7:'Ẩm thực & đời sống',
+  kb_join_t:'Ứng tuyển creator', kb_join_s:'Gia nhập lứa đầu tiên',
   kb_ct_h2:'Cùng K-beauty —<br><span class="y">hợp tác · vào cửa hàng · phân phối</span>', kb_ct_p:'Chúng tôi chào đón đưa thương hiệu vào cửa hàng, hợp tác OEM/ODM và phân phối tại Việt Nam.',
   kb_ct_btn:'Liên hệ', kb_ct_back:'Về trang chủ', copied:'Đã sao chép ✓'
 }};
