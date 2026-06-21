@@ -185,14 +185,14 @@
   .news-more a:hover{background:var(--purple-2);transform:translateY(-2px)}
 
   /* floating K-POP program button */
-  .kpop-fab{position:fixed;right:22px;bottom:22px;z-index:85;display:inline-flex;align-items:center;gap:13px;background:var(--purple);color:#fff;padding:12px 24px 12px 13px;border-radius:26px;box-shadow:0 12px 32px rgba(89,50,202,.42);transition:.25s;animation:fabpulse 2.6s ease-in-out infinite}
+  .kpop-fab{position:fixed;right:20px;top:40%;z-index:85;display:inline-flex;align-items:center;gap:12px;background:var(--purple);color:#fff;padding:12px 22px 9px 12px;border-radius:22px;box-shadow:0 12px 32px rgba(89,50,202,.42);transition:.25s;animation:fabpulse 2.6s ease-in-out infinite}
   .kpop-fab:hover{background:var(--purple-2);transform:translateY(-3px)}
   .kpop-fab .ic{width:44px;height:44px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;flex-shrink:0}
   .kpop-fab .ic svg{width:23px;height:23px;fill:var(--purple)}
-  .kpop-fab .tx{font-weight:700;font-size:14.5px;line-height:1.22}
-  .kpop-fab .tx small{display:block;font-size:10.5px;font-weight:500;color:var(--purple-4);line-height:1.3;margin-top:4px}
+  .kpop-fab .tx{font-weight:700;font-size:14.5px;line-height:1.2}
+  .kpop-fab .tx small{display:block;font-size:10.5px;font-weight:500;color:var(--purple-4);line-height:1.25;margin-top:3px}
   @keyframes fabpulse{0%,100%{box-shadow:0 12px 30px rgba(89,50,202,.32)}50%{box-shadow:0 12px 40px rgba(89,50,202,.6)}}
-  @media(max-width:600px){.kpop-fab{right:16px;bottom:16px;padding:9px;border-radius:50%}.kpop-fab .tx{display:none}}
+  @media(max-width:600px){.kpop-fab{right:14px;top:auto;bottom:18px;padding:9px;border-radius:50%}.kpop-fab .tx{display:none}}
 
   /* flywheel */
   .fly{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px}
