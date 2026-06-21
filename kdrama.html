@@ -104,6 +104,29 @@
   .proc .step:last-child:after{display:none}
   @media(max-width:860px){.proc .step:after{display:none}}
 
+  /* founders */
+  .fnd{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:46px}
+  @media(max-width:760px){.fnd{grid-template-columns:1fr}}
+  .fnd .p{border:1px solid var(--line);border-radius:20px;padding:30px 28px;background:#fff;display:flex;gap:18px;align-items:flex-start;transition:.25s}
+  .fnd .p:hover{border-color:var(--purple-4);box-shadow:0 14px 36px rgba(89,50,202,.1)}
+  .fnd .av{width:54px;height:54px;border-radius:50%;background:var(--purple-5);color:var(--purple);font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .fnd .role{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--purple);text-transform:uppercase}
+  .fnd h3{font-size:20px;font-weight:700;margin:7px 0 1px}
+  .fnd .en{font-size:11px;letter-spacing:.1em;color:var(--ink-4);text-transform:uppercase;margin-bottom:11px}
+  .fnd p{font-size:13.5px;color:var(--ink-3);line-height:1.6}
+
+  /* works / video + stills */
+  .film{max-width:880px;margin:44px auto 0;border-radius:18px;overflow:hidden;box-shadow:0 22px 55px rgba(89,50,202,.18);background:#000}
+  .film .ratio{padding:56.25% 0 0 0;position:relative}
+  .film iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+  .dgal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:16px;max-width:880px;margin-left:auto;margin-right:auto}
+  .dgal .cell{border-radius:14px;overflow:hidden;aspect-ratio:16/9;border:1px solid var(--line);position:relative}
+  .dgal .cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .dgal .cell:hover img{transform:scale(1.07)}
+  .works-more{text-align:center;margin-top:28px}
+  .works-more a{display:inline-flex;align-items:center;gap:8px;background:#ff0033;color:#fff;padding:13px 26px 11px;border-radius:999px;font-weight:700;font-size:14px;line-height:1}
+  .works-more a:hover{filter:brightness(1.08);transform:translateY(-2px)}
+
   /* why */
   .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
   @media(max-width:860px){.why{grid-template-columns:1fr}}
@@ -190,6 +213,33 @@
   </div>
 </div></section>
 
+<!-- FOUNDERS -->
+<section id="founders"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Founders</div>
+    <h2 class="sec" data-i18n="kd_fn_h2">Rainbow Cloud Entertainment, 함께 세웠습니다</h2>
+    <p class="lead" data-i18n="kd_fn_lead">한국과 베트남, 두 창업자가 손잡고 K-드라마·영화 제작을 시작합니다.</p>
+  </div>
+  <div class="fnd rv">
+    <div class="p">
+      <div class="av">박</div>
+      <div>
+        <div class="role" data-i18n="kd_fn1r">공동 설립 · 총괄 프로듀서</div>
+        <h3>박종성</h3><div class="en">PARK JONG SEONG</div>
+        <p data-i18n="kd_fn1p">베트남에 한국형 K-컬처 플랫폼 Rainbow를 일군 창업자. 한국 제작 네트워크·자본·기획을 총괄합니다.</p>
+      </div>
+    </div>
+    <div class="p">
+      <div class="av">L</div>
+      <div>
+        <div class="role" data-i18n="kd_fn2r">공동 설립 · 감독</div>
+        <h3>Luk Vân</h3><div class="en">LUK HỒ HẢI VÂN</div>
+        <p data-i18n="kd_fn2p">호치민 연극영화대학 연출 수석 졸업. 단편 20여 편(누적 100만+ 뷰)과 웹드라마·장편을 연출한 베트남 대표 여성 감독.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <!-- SERVICES -->
 <section id="services"><div class="wrap">
   <div class="center rv">
@@ -221,6 +271,26 @@
     <div class="step"><div class="k">STEP 4</div><div class="t" data-i18n="kd_p4t">후반작업</div><p data-i18n="kd_p4p">편집·VFX·사운드·OST</p></div>
     <div class="step"><div class="k">STEP 5</div><div class="t" data-i18n="kd_p5t">배급·공개</div><p data-i18n="kd_p5p">OTT·방송·해외 세일즈</p></div>
   </div>
+</div></section>
+
+<!-- WORKS -->
+<section id="works" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">On Air · Works</div>
+    <h2 class="sec" data-i18n="kd_wk_h2">이미 스크린에서 만나고 있습니다</h2>
+    <p class="lead" data-i18n="kd_wk_lead">MoWo 채널 웹드라마에 Rainbow가 함께합니다 — 콘텐츠와 브랜드가 만나는 실제 제작 현장.</p>
+  </div>
+  <div class="film rv">
+    <div class="ratio"><iframe src="https://www.youtube.com/embed/97aqrDmi6SM?rel=0" title="MoWo Web Drama" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+  </div>
+  <div class="dgal rv">
+    <div class="cell"><img loading="lazy" src="assets/drama/drama-01.jpg" alt="MoWo web drama still — Rainbow"></div>
+    <div class="cell"><img loading="lazy" src="assets/drama/drama-02.jpg" alt="MoWo web drama still"></div>
+    <div class="cell"><img loading="lazy" src="assets/drama/drama-03.jpg" alt="MoWo web drama still — Rainbow"></div>
+    <div class="cell"><img loading="lazy" src="assets/drama/drama-04.jpg" alt="MoWo web drama still"></div>
+    <div class="cell"><img loading="lazy" src="assets/drama/drama-05.jpg" alt="MoWo web drama still"></div>
+  </div>
+  <div class="works-more rv"><a href="https://www.youtube.com/@mowochannel" target="_blank" rel="noopener" data-i18n="kd_wk_more">▶ MoWo 채널에서 더 보기</a></div>
 </div></section>
 
 <!-- WHY -->
@@ -287,6 +357,10 @@ ko:{
   kd_p3t:'촬영', kd_p3p:'현장 프로덕션과 제작 관리',
   kd_p4t:'후반작업', kd_p4p:'편집·VFX·사운드·OST',
   kd_p5t:'배급·공개', kd_p5p:'OTT·방송·해외 세일즈',
+  kd_fn_h2:'Rainbow Cloud Entertainment, 함께 세웠습니다', kd_fn_lead:'한국과 베트남, 두 창업자가 손잡고 K-드라마·영화 제작을 시작합니다.',
+  kd_fn1r:'공동 설립 · 총괄 프로듀서', kd_fn1p:'베트남에 한국형 K-컬처 플랫폼 Rainbow를 일군 창업자. 한국 제작 네트워크·자본·기획을 총괄합니다.',
+  kd_fn2r:'공동 설립 · 감독', kd_fn2p:'호치민 연극영화대학 연출 수석 졸업. 단편 20여 편(누적 100만+ 뷰)과 웹드라마·장편을 연출한 베트남 대표 여성 감독.',
+  kd_wk_h2:'이미 스크린에서 만나고 있습니다', kd_wk_lead:'MoWo 채널 웹드라마에 Rainbow가 함께합니다 — 콘텐츠와 브랜드가 만나는 실제 제작 현장.', kd_wk_more:'▶ MoWo 채널에서 더 보기',
   kd_wy_h2:'왜 Rainbow와 제작하는가', kd_wy_lead:'K-컬처 플랫폼을 직접 운영해 온 현장 경험이 콘텐츠 제작으로 이어집니다.',
   kd_w1t:'한·베 콘텐츠 네트워크', kd_w1p:'한국 제작 역량과 베트남 현지 인프라·인맥을 하나로 연결합니다.',
   kd_w2t:'Gen Z 오디언스', kd_w2p:'Rainbow 매장·미디어·페스티벌이 만든 팬 베이스가 콘텐츠의 첫 관객이 됩니다.',
@@ -320,6 +394,10 @@ en:{
   kd_p3t:'Production', kd_p3p:'On-set production & management',
   kd_p4t:'Post-production', kd_p4p:'Editing · VFX · sound · OST',
   kd_p5t:'Distribution · Release', kd_p5p:'OTT · broadcast · overseas sales',
+  kd_fn_h2:'We founded Rainbow Cloud Entertainment together', kd_fn_lead:'Two founders from Korea and Vietnam join hands to produce K-dramas and films.',
+  kd_fn1r:'Co-founder · Executive Producer', kd_fn1p:'The founder who built Rainbow, a Korean-style K-culture platform in Vietnam. Leads the Korean production network, capital and planning.',
+  kd_fn2r:'Co-founder · Director', kd_fn2p:'Top graduate in Directing from the HCMC University of Theatre & Cinema. A leading Vietnamese female director behind 20+ short films (1M+ views), web dramas and features.',
+  kd_wk_h2:'Already on screen', kd_wk_lead:'Rainbow features in MoWo Channel web dramas — where content meets brand, in real production.', kd_wk_more:'▶ More on MoWo Channel',
   kd_wy_h2:'Why produce with Rainbow', kd_wy_lead:'Hands-on experience running a K-culture platform flows into content production.',
   kd_w1t:'Korea–Vietnam content network', kd_w1p:'We connect Korean production capability with Vietnamese local infrastructure and networks.',
   kd_w2t:'A Gen Z audience', kd_w2p:'The fan base built by Rainbow\'s stores, media and festivals becomes your content\'s first audience.',
@@ -353,6 +431,10 @@ vi:{
   kd_p3t:'Quay phim', kd_p3p:'Sản xuất hiện trường & quản lý',
   kd_p4t:'Hậu kỳ', kd_p4p:'Dựng · VFX · âm thanh · OST',
   kd_p5t:'Phát hành', kd_p5p:'OTT · truyền hình · bán quốc tế',
+  kd_fn_h2:'Chúng tôi cùng sáng lập Rainbow Cloud Entertainment', kd_fn_lead:'Hai nhà sáng lập từ Hàn Quốc và Việt Nam bắt tay sản xuất K-drama & điện ảnh.',
+  kd_fn1r:'Đồng sáng lập · Nhà sản xuất tổng', kd_fn1p:'Nhà sáng lập đã xây dựng Rainbow — nền tảng K-culture kiểu Hàn tại Việt Nam. Phụ trách mạng lưới sản xuất, vốn và kế hoạch từ Hàn Quốc.',
+  kd_fn2r:'Đồng sáng lập · Đạo diễn', kd_fn2p:'Thủ khoa ngành Đạo diễn ĐH Sân khấu & Điện ảnh TP.HCM. Nữ đạo diễn hàng đầu Việt Nam với hơn 20 phim ngắn (1M+ lượt xem), web drama và phim điện ảnh.',
+  kd_wk_h2:'Đã lên màn ảnh', kd_wk_lead:'Rainbow xuất hiện trong các web drama của MoWo Channel — nơi nội dung gặp thương hiệu, trong sản xuất thực tế.', kd_wk_more:'▶ Xem thêm trên MoWo Channel',
   kd_wy_h2:'Vì sao sản xuất cùng Rainbow', kd_wy_lead:'Kinh nghiệm thực tế vận hành nền tảng K-culture được chuyển hóa vào sản xuất nội dung.',
   kd_w1t:'Mạng lưới nội dung Hàn–Việt', kd_w1p:'Kết nối năng lực sản xuất Hàn Quốc với hạ tầng và mối quan hệ tại Việt Nam.',
   kd_w2t:'Khán giả Gen Z', kd_w2p:'Cộng đồng fan từ cửa hàng, truyền thông và festival của Rainbow là khán giả đầu tiên của nội dung.',
