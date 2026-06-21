@@ -69,6 +69,8 @@
   @media(max-width:680px){.foot-org{text-align:left;margin-top:6px}}
   .disc{margin-top:10px;font-size:11px;color:#666}
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.on{opacity:1;transform:none}
+  .toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,16px);background:var(--black);color:#fff;font-size:14px;font-weight:700;padding:13px 22px 11px;border-radius:999px;box-shadow:0 12px 36px rgba(0,0,0,.32);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
 </style>
 </head>
 <body>
@@ -138,6 +140,8 @@
   <div class="mailrow">EMAIL · <b id="mailAddr">jspark@rb-land.com</b></div>
 </div></section>
 
+<div class="toast" id="toast"></div>
+
 <footer><div class="wrap">
   <div class="foot-in">
     <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-Beauty</div>
@@ -166,7 +170,7 @@ ko:{
   kb_s3t:'라이브 커머스', kb_s3p:'틱톡숍·라이브로 즉시 판매',
   kb_s4t:'반복 구매', kb_s4p:'팬덤이 충성 고객으로',
   kb_ct_h2:'K-뷰티로 함께 —<br><span class="y">제휴 · 입점 · 유통 문의</span>', kb_ct_p:'브랜드 입점, OEM·ODM 제휴, 베트남 유통 파트너십을 기다립니다.',
-  kb_ct_btn:'문의하기', kb_ct_back:'메인으로', copied:'이메일 복사됨 ✓'
+  kb_ct_btn:'문의하기', kb_ct_back:'메인으로', copied:'이메일이 복사되었습니다 ✓'
 },
 en:{
   kb_h1:'Fandom into purchases —<br><span class="y">K-Beauty Enter Commerce™</span>',
@@ -207,8 +211,9 @@ document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-const cm=document.getElementById('copyMail');
-if(cm)cm.addEventListener('click',()=>{const addr=document.getElementById('mailAddr').textContent;const sp=cm.querySelector('span')||cm;const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].kb_ct_btn,1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}});
+const cm=document.getElementById('copyMail');const toastEl=document.getElementById('toast');let _toastT;
+function showToast(){toastEl.textContent=I18N[CUR].copied;toastEl.classList.add('on');clearTimeout(_toastT);_toastT=setTimeout(()=>toastEl.classList.remove('on'),1900);}
+if(cm)cm.addEventListener('click',()=>{const addr=document.getElementById('mailAddr').textContent;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(showToast).catch(showToast);}else{showToast();}});
 </script>
 </body>
 </html>

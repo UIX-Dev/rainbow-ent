@@ -260,6 +260,10 @@
   /* reveal animation */
   .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
   .rv.on{opacity:1;transform:none}
+
+  /* toast (no layout shift) */
+  .toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,16px);background:var(--black);color:#fff;font-size:14px;font-weight:700;padding:13px 22px 11px;border-radius:999px;box-shadow:0 12px 36px rgba(0,0,0,.32);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
 </style>
 </head>
 <body>
@@ -589,7 +593,7 @@ ko:{
   gl3_p:'태국 · 인도네시아 · 말레이시아 · 필리핀 — 라이센스 모델과 디지털 커머스로 확장.', gl3_s:'확장 예정',
   v1_p:'K컬처 경험을 설계하는 공간과 콘텐츠', v2_p:'팬덤을 구매로 연결하는 Enter Commerce™', v3_p:'고객이 주인공이 되는 Gen Z 커뮤니티',
   ct_p:'쇼핑몰 입점 · 해외 라이센스 · K브랜드 콜라보 · 스폰서십 · 투자 파트너십을 기다립니다.',
-  ct_btn:'파트너십 문의하기', ct_back:'회사 소개 다시 보기', copied:'이메일 복사됨 ✓',
+  ct_btn:'파트너십 문의하기', ct_back:'회사 소개 다시 보기', copied:'이메일이 복사되었습니다 ✓',
   st_h2:'컨셉이 아니라, 직접 운영하는 공간입니다',
   st_lead:'Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.',
   st_m1:'6개 운영 중', st_m2:'3개 도시', st_m3:'누적 7개 오픈', s_open:'운영 중', s_closed:'폐점',
@@ -756,13 +760,15 @@ const io2=new IntersectionObserver(es=>es.forEach(e=>{
 document.querySelectorAll('.stats .v').forEach(el=>io2.observe(el));
 // copy email
 const cm=document.getElementById('copyMail');
+const toastEl=document.getElementById('toast');let _toastT;
+function showToast(){toastEl.textContent=I18N[CUR].copied;toastEl.classList.add('on');clearTimeout(_toastT);_toastT=setTimeout(()=>toastEl.classList.remove('on'),1900);}
 if(cm)cm.addEventListener('click',()=>{
   const addr=document.getElementById('mailAddr').textContent;
-  const sp=cm.querySelector('span')||cm;
-  const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].ct_btn,1600);};
-  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(showToast).catch(showToast);}else{showToast();}
 });
 </script>
+
+<div class="toast" id="toast"></div>
 
 <a class="kpop-fab" href="kpop.html" aria-label="K-POP 프로그램">
   <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z"/></svg></span>

@@ -93,6 +93,31 @@
   @media(max-width:860px){.model .m:after{display:none}}
   .loopnote{text-align:center;margin-top:20px;font-size:13px;color:var(--purple);font-weight:700}
 
+  /* five-star band */
+  .fivestar{background:var(--purple);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .fivestar .eyebrow{color:var(--yellow)}
+  .fivestar .q{font-size:26px;font-weight:700;line-height:1.45;max-width:860px;margin:14px auto 0}
+  .fivestar .q .y{color:var(--yellow)}
+  .fivestar .s{font-size:15px;color:var(--purple-5);margin:18px auto 0;max-width:660px}
+  @media(max-width:760px){.fivestar .q{font-size:20px}}
+  /* market stats */
+  .mstat{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+  @media(max-width:620px){.mstat{grid-template-columns:1fr 1fr}}
+  .mstat .c{border:1px solid var(--line);border-radius:18px;padding:26px 18px;text-align:center;background:#fff}
+  .mstat .v{font-size:34px;font-weight:700;color:var(--purple)}
+  .mstat .l{font-size:12.5px;color:var(--ink-3);margin-top:6px;line-height:1.4}
+  /* roadmap */
+  .road{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:46px}
+  @media(max-width:760px){.road{grid-template-columns:1fr}}
+  .road .r{border:1px solid var(--line);border-radius:20px;padding:30px 28px;background:#fff;transition:.25s}
+  .road .r:hover{border-color:var(--purple-4);box-shadow:0 14px 36px rgba(89,50,202,.1)}
+  .road .yr{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--purple);background:var(--purple-5);display:inline-flex;align-items:center;padding:5px 12px 3px;border-radius:999px}
+  .road h3{font-size:18px;font-weight:700;margin:13px 0 8px}
+  .road p{font-size:13.5px;color:var(--ink-3)}
+  /* toast */
+  .toast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,16px);background:var(--black);color:#fff;font-size:14px;font-weight:700;padding:13px 22px 11px;border-radius:999px;box-shadow:0 12px 36px rgba(0,0,0,.32);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+
   .contact{background:var(--black);color:#fff;text-align:center}
   .contact h2{font-size:32px;font-weight:700;line-height:1.32}
   .contact .y{color:var(--yellow)}
@@ -171,6 +196,31 @@
   </div>
 </div></section>
 
+<!-- FIVE STAR -->
+<section class="fivestar">
+  <svg class="spark" style="top:-10px;right:6%;width:160px;height:160px;animation-delay:1s" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg>
+  <div class="wrap rv">
+    <div class="eyebrow">5-Star Service</div>
+    <div class="q" data-i18n="kn_5s_q">우리의 VIP는 한 달에 한 번 50만동 쓰는 어른이 아니라, <span class="y">하루에 한 번 5만동 쓰는 Gen Z</span>입니다.</div>
+    <p class="s" data-i18n="kn_5s_s">고객 한 명 한 명이 빛나는 별. 잊지 못할 경험과 가장 깨끗한 분위기를 제공합니다.</p>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Market · Why Vietnam</div>
+    <h2 class="sec" data-i18n="kn_mk_h2">왜 베트남인가</h2>
+    <p class="lead" data-i18n="kn_mk_lead">1억 인구, 낮은 평균 연령, 한국 문화를 선망하는 Z세대 — 노래방 놀이문화가 폭발적으로 성장하는 시장입니다.</p>
+  </div>
+  <div class="mstat">
+    <div class="c rv"><div class="v">100M</div><div class="l" data-i18n="kn_mk1l">전체 인구</div></div>
+    <div class="c rv"><div class="v">50M</div><div class="l" data-i18n="kn_mk2l">Z세대 타깃 인구</div></div>
+    <div class="c rv"><div class="v">98%</div><div class="l" data-i18n="kn_mk3l">스마트폰 보급 (SNS 64%)</div></div>
+    <div class="c rv"><div class="v">175%</div><div class="l" data-i18n="kn_mk4l">1인 객단가 (한국 대비)</div></div>
+  </div>
+</div></section>
+
 <!-- SPACES -->
 <section id="spaces" style="background:var(--gray-5)"><div class="wrap">
   <div class="center rv">
@@ -204,6 +254,19 @@
   <div class="loopnote rv" data-i18n="kn_md_loop">↻ 그리고 다시 노래방으로 — 선순환 플랫폼</div>
 </div></section>
 
+<!-- ROADMAP -->
+<section id="roadmap" style="background:var(--gray-5)"><div class="wrap">
+  <div class="center rv">
+    <div class="eyebrow">Roadmap</div>
+    <h2 class="sec" data-i18n="kn_rd_h2">확장 로드맵</h2>
+    <p class="lead" data-i18n="kn_rd_lead">검증된 모델을 베트남 주요 도시, 그리고 동남아로 확장합니다.</p>
+  </div>
+  <div class="road rv">
+    <div class="r"><span class="yr">NOW</span><h3 data-i18n="kn_rd1t">도시 거점 확장</h3><p data-i18n="kn_rd1p">호치민을 시작으로 주요 5개 도시 10개 직영점. 300m²+ 대형화로 각 도시의 랜드마크를 추구합니다.</p></div>
+    <div class="r"><span class="yr">~2028</span><h3 data-i18n="kn_rd2t">동남아 진출</h3><p data-i18n="kn_rd2p">베트남 30개 매장을 거점으로 태국·캄보디아·말레이시아·싱가포르 등 동남아로 확장합니다.</p></div>
+  </div>
+</div></section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact"><div class="wrap rv">
   <h2 data-i18n="kn_ct_h2">함께 매장을 열까요? —<br><span class="y">입점 · 라이센스 · 투자 문의</span></h2>
@@ -214,6 +277,8 @@
   </div>
   <div class="mailrow">EMAIL · <b id="mailAddr">jspark@rb-land.com</b></div>
 </div></section>
+
+<div class="toast" id="toast"></div>
 
 <footer><div class="wrap">
   <div class="foot-in">
@@ -246,8 +311,15 @@ ko:{
   kn_md3t:'커머스 전환', kn_md3p:'팝업존 체험이 뷰티·라이브 커머스 구매로.',
   kn_md4t:'브랜드 증폭', kn_md4p:'K-페스티벌이 트래픽을 다시 키웁니다.',
   kn_md_loop:'↻ 그리고 다시 노래방으로 — 선순환 플랫폼',
+  kn_5s_q:'우리의 VIP는 한 달에 한 번 50만동 쓰는 어른이 아니라, <span class="y">하루에 한 번 5만동 쓰는 Gen Z</span>입니다.',
+  kn_5s_s:'고객 한 명 한 명이 빛나는 별. 잊지 못할 경험과 가장 깨끗한 분위기를 제공합니다.',
+  kn_mk_h2:'왜 베트남인가', kn_mk_lead:'1억 인구, 낮은 평균 연령, 한국 문화를 선망하는 Z세대 — 노래방 놀이문화가 폭발적으로 성장하는 시장입니다.',
+  kn_mk1l:'전체 인구', kn_mk2l:'Z세대 타깃 인구', kn_mk3l:'스마트폰 보급 (SNS 64%)', kn_mk4l:'1인 객단가 (한국 대비)',
+  kn_rd_h2:'확장 로드맵', kn_rd_lead:'검증된 모델을 베트남 주요 도시, 그리고 동남아로 확장합니다.',
+  kn_rd1t:'도시 거점 확장', kn_rd1p:'호치민을 시작으로 주요 5개 도시 10개 직영점. 300m²+ 대형화로 각 도시의 랜드마크를 추구합니다.',
+  kn_rd2t:'동남아 진출', kn_rd2p:'베트남 30개 매장을 거점으로 태국·캄보디아·말레이시아·싱가포르 등 동남아로 확장합니다.',
   kn_ct_h2:'함께 매장을 열까요? —<br><span class="y">입점 · 라이센스 · 투자 문의</span>', kn_ct_p:'쇼핑몰 입점, 해외 라이센스, 투자 파트너십을 기다립니다.',
-  kn_ct_btn:'문의하기', kn_ct_back:'메인으로', copied:'이메일 복사됨 ✓'
+  kn_ct_btn:'문의하기', kn_ct_back:'메인으로', copied:'이메일이 복사되었습니다 ✓'
 },
 en:{
   kn_h1:'Where music gathers,<br><span class="y">Vietnam\'s No.1 K-noraebang</span>',
@@ -266,6 +338,13 @@ en:{
   kn_md3t:'Commerce conversion', kn_md3p:'Pop-up experiences convert to beauty & live-commerce sales.',
   kn_md4t:'Brand amplification', kn_md4p:'K-festivals grow the traffic again.',
   kn_md_loop:'↻ And back to karaoke — a virtuous platform',
+  kn_5s_q:'Our VIP isn\'t an adult spending 500k once a month — it\'s a <span class="y">Gen Z spending 50k once a day</span>.',
+  kn_5s_s:'Every customer is a shining star. We deliver an unforgettable experience and the cleanest atmosphere.',
+  kn_mk_h2:'Why Vietnam', kn_mk_lead:'100M people, a low median age, and a Gen Z that admires Korean culture — a market where karaoke play-culture is exploding.',
+  kn_mk1l:'Total population', kn_mk2l:'Gen Z target', kn_mk3l:'Smartphone use (SNS 64%)', kn_mk4l:'Spend per visit (vs Korea)',
+  kn_rd_h2:'Expansion Roadmap', kn_rd_lead:'Scaling a proven model across Vietnam\'s major cities and into Southeast Asia.',
+  kn_rd1t:'City-hub expansion', kn_rd1p:'10 direct stores across 5 major cities, starting from Ho Chi Minh City — 300m²+ flagship landmarks in each city.',
+  kn_rd2t:'Into Southeast Asia', kn_rd2p:'From a base of 30 stores in Vietnam, expanding into Thailand, Cambodia, Malaysia and Singapore.',
   kn_ct_h2:'Open a store with us —<br><span class="y">leasing · license · investment</span>', kn_ct_p:'We welcome mall leasing, overseas licensing and investment partnerships.',
   kn_ct_btn:'Contact us', kn_ct_back:'Back to home', copied:'Email copied ✓'
 },
@@ -286,6 +365,13 @@ vi:{
   kn_md3t:'Chuyển đổi thương mại', kn_md3p:'Trải nghiệm pop-up chuyển thành đơn beauty & live commerce.',
   kn_md4t:'Khuếch đại thương hiệu', kn_md4p:'K-festival lại làm tăng lượng khách.',
   kn_md_loop:'↻ Rồi quay lại karaoke — nền tảng tuần hoàn',
+  kn_5s_q:'VIP của chúng tôi không phải người lớn chi 500k một lần mỗi tháng — mà là <span class="y">Gen Z chi 50k mỗi ngày</span>.',
+  kn_5s_s:'Mỗi khách hàng là một ngôi sao tỏa sáng. Chúng tôi mang đến trải nghiệm khó quên và không gian sạch nhất.',
+  kn_mk_h2:'Vì sao Việt Nam', kn_mk_lead:'100 triệu dân, độ tuổi trung bình trẻ, và Gen Z ngưỡng mộ văn hóa Hàn — thị trường nơi văn hóa giải trí karaoke bùng nổ.',
+  kn_mk1l:'Tổng dân số', kn_mk2l:'Mục tiêu Gen Z', kn_mk3l:'Dùng smartphone (MXH 64%)', kn_mk4l:'Chi tiêu/lượt (so với Hàn)',
+  kn_rd_h2:'Lộ trình mở rộng', kn_rd_lead:'Mở rộng mô hình đã kiểm chứng ra các thành phố lớn của Việt Nam và Đông Nam Á.',
+  kn_rd1t:'Mở rộng điểm trong thành phố', kn_rd1p:'10 cửa hàng trực tiếp tại 5 thành phố lớn, bắt đầu từ TP.HCM — landmark 300m²+ tại mỗi thành phố.',
+  kn_rd2t:'Tiến vào Đông Nam Á', kn_rd2p:'Từ nền tảng 30 cửa hàng tại Việt Nam, mở rộng sang Thái Lan, Campuchia, Malaysia và Singapore.',
   kn_ct_h2:'Cùng mở cửa hàng nhé —<br><span class="y">hợp tác · nhượng quyền · đầu tư</span>', kn_ct_p:'Chúng tôi chào đón hợp tác mặt bằng TTTM, nhượng quyền quốc tế và đầu tư.',
   kn_ct_btn:'Liên hệ', kn_ct_back:'Về trang chủ', copied:'Đã sao chép ✓'
 }};
@@ -296,8 +382,9 @@ document.querySelectorAll('#langSw button').forEach(b=>b.addEventListener('click
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-const cm=document.getElementById('copyMail');
-if(cm)cm.addEventListener('click',()=>{const addr=document.getElementById('mailAddr').textContent;const sp=cm.querySelector('span')||cm;const done=()=>{sp.textContent=I18N[CUR].copied;setTimeout(()=>sp.textContent=I18N[CUR].kn_ct_btn,1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done).catch(done);}else{done();}});
+const cm=document.getElementById('copyMail');const toast=document.getElementById('toast');let _tt;
+function showToast(){toast.textContent=I18N[CUR].copied;toast.classList.add('on');clearTimeout(_tt);_tt=setTimeout(()=>toast.classList.remove('on'),1900);}
+if(cm)cm.addEventListener('click',()=>{const addr=document.getElementById('mailAddr').textContent;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(showToast).catch(showToast);}else{showToast();}});
 </script>
 </body>
 </html>
