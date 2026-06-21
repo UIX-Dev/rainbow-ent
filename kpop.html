@@ -383,8 +383,12 @@
      아래 GFORM.action 과 entry 번호만 채우면 접수가 구글폼/시트에 자동 저장됩니다.
      비워두면 이메일(jspark@rb-land.com) 백업으로 동작합니다. */
   const GFORM = {
-    action: '',  // 예: https://docs.google.com/forms/d/e/AAAA.../formResponse
-    map: { 이름:'', 연락처:'', 이메일:'', 희망패키지:'', 생년월일:'', 지원분야:'', 거주지:'', 메시지:'' }
+    action: 'https://docs.google.com/forms/d/e/1FAIpQLSfcwjE7AJ_dpzmkPlZS7C8LAvSqCe-svubFNA45sftSrH3CCA/formResponse',
+    map: {
+      이름:'entry.830457360', 연락처:'entry.739972575', 이메일:'entry.591348698',
+      희망패키지:'entry.1374152477', 생년월일:'entry.1781536526', 지원분야:'entry.2115965781',
+      거주지:'entry.495991210', 메시지:'entry.1615802719'
+    }
   };
   const form=document.getElementById('applyForm');
   function showOk(){ form.style.display='none'; const ok=document.getElementById('okPanel'); ok.classList.add('on'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
