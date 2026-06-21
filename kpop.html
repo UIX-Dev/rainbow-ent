@@ -132,6 +132,8 @@
   .pk.vvip .amt small{color:var(--purple-4)}
   .pk .when{font-size:13px;color:var(--ink-4)}
   .pk.vvip .when{color:var(--purple-4)}
+  .pk .fx{font-size:12.5px;font-weight:500;color:var(--ink-4);margin-top:4px}
+  .pk.vvip .fx{color:var(--purple-4)}
   .pk ul{list-style:none;margin:22px 0 0;display:flex;flex-direction:column;gap:10px;flex-grow:1}
   .pk li{font-size:13.5px;display:flex;gap:9px;align-items:flex-start}
   .pk li svg{width:17px;height:17px;flex-shrink:0;margin-top:2px;fill:var(--purple)}
@@ -317,7 +319,8 @@
     <div class="pk vvip rv">
       <span class="badge" data-i18n="k_pv_badge">VVIP PRIVATE · 상시 출발</span>
       <h3 data-i18n="k_pv_t">1인 단독 VVIP 프라이빗</h3>
-      <div class="amt">₩20,000,000 <small data-i18n="k_per">/ 1인</small></div>
+      <div class="amt"><span data-i18n="k_pv_amt">₩20,000,000</span> <small data-i18n="k_per">/ 1인</small></div>
+      <div class="fx" data-i18n="k_pv_fx">$1,400 · 약 36,000,000₫</div>
       <div class="when" data-i18n="k_pv_when">상시 출발 · 전 과정 1:1 독점 진행</div>
       <ul>
         <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pv1">메이저 기획사 비공개 미팅 &amp; 오디션 <b>100% 보장</b></span></li>
@@ -329,7 +332,8 @@
     <div class="pk rv">
       <span class="badge" data-i18n="k_pg_badge">GROUP · 5인 출발</span>
       <h3 data-i18n="k_pg_t">5인 프리미엄 그룹</h3>
-      <div class="amt">₩5,000,000 <small data-i18n="k_per">/ 1인</small></div>
+      <div class="amt"><span data-i18n="k_pg_amt">₩5,000,000</span> <small data-i18n="k_per">/ 1인</small></div>
+      <div class="fx" data-i18n="k_pg_fx">$350 · 약 9,000,000₫</div>
       <div class="when" data-i18n="k_pg_when">5인 모집 시 출발</div>
       <ul>
         <li><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg><span data-i18n="k_pg1">메이저 기획사 오피셜 견학 프로그램</span></li>
@@ -339,7 +343,7 @@
       <a class="btn" href="#apply" data-i18n="k_pg_btn">그룹 접수하기</a>
     </div>
   </div>
-  <div class="common rv" data-i18n="k_common"><b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br><span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.</span></div>
+  <div class="common rv" data-i18n="k_common"><b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br><span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.<br>💱 USD·VND 금액은 환율 기준 참고용입니다 — 환율에 맞춰 한화(KRW)로 입금하시는 것이 가장 유리합니다.</span></div>
 </div></section>
 
 <!-- APPLY -->
@@ -428,11 +432,12 @@ ko:{
   k_d6t:'1:1 솔루션 · 쇼케이스', k_d6a:'총괄 프로듀서 1:1 상담 및 향후 1년 기획사 연계 로드맵 설계', k_d6b:'자체 미니 쇼케이스 개최 및 송별 파티',
   k_d7t:'출국 의전 · 결과물 프리뷰', k_d7a:'전용 카니발 차량 공항 센딩 의전 및 매니저 최종 배웅', k_d7b:'보정본 프로필 / 1차 편집 릴리즈 데이터 프리뷰 안내',
   k_p_h2:'패키지 안내', k_p_lead:'목표와 일정에 맞춰 두 가지 라인업으로 운영합니다.', k_per:'/ 1인',
+  k_pv_amt:'₩20,000,000', k_pv_fx:'$1,400 · 약 36,000,000₫', k_pg_amt:'₩5,000,000', k_pg_fx:'$350 · 약 9,000,000₫',
   k_pv_badge:'VVIP PRIVATE · 상시 출발', k_pv_t:'1인 단독 VVIP 프라이빗', k_pv_when:'상시 출발 · 전 과정 1:1 독점 진행',
   k_pv1:'메이저 기획사 비공개 미팅 & 오디션 <b>100% 보장</b>', k_pv2:'전 일정 완전 맞춤 · 1:1 독점 디렉팅', k_pv3:'연예인급 6대 케어 + 하이엔드 포트폴리오 일체', k_pv_btn:'VVIP 접수하기',
   k_pg_badge:'GROUP · 5인 출발', k_pg_t:'5인 프리미엄 그룹', k_pg_when:'5인 모집 시 출발',
   k_pg1:'메이저 기획사 오피셜 견학 프로그램', k_pg2:'거장 마스터 군단 그룹 트레이닝', k_pg3:'연예인급 6대 케어 + 오피셜 결과물 제공', k_pg_btn:'그룹 접수하기',
-  k_common:'<b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br><span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.</span>',
+  k_common:'<b>공통 혜택</b> · 현역 매니저 전 일정 동행 · 연예인급 6대 케어 · 수료 후 1년간 국내 유명 기획사 연결 주선 보장<br><span style="color:var(--ink-4)">✈️ 국제 항공권 별도 · 한국 현지에서는 K-POP 프로그램만 운영합니다. * 표기 금액은 패키지 기준이며 옵션에 따라 달라질 수 있습니다.<br>💱 USD·VND 금액은 환율 기준 참고용입니다 — 환율에 맞춰 한화(KRW)로 입금하시는 것이 가장 유리합니다.</span>',
   k_a_h2:'접수하기', k_a_lead:'기본 프로필을 등록해 주시면, 담당 <b style="color:#fff">코디네이터가 직접 연락</b>드려 일정과 세부 사항을 안내합니다.',
   k_f_name:'이름', k_f_contact:'연락처', k_f_email:'이메일', k_f_pkg:'희망 패키지', k_f_dob:'생년월일 / 나이', k_f_field:'지원 분야', k_f_loc:'거주 국가 · 도시', k_f_msg:'한마디 (자기소개 · 각오 · 문의)',
   k_ph_contact:'전화 · WhatsApp · Zalo', k_ph_dob:'2005-01-01 또는 만 19세', k_ph_loc:'예: Vietnam, Ho Chi Minh', k_ph_msg:'간단한 자기소개나 궁금한 점을 적어주세요.',
@@ -481,11 +486,12 @@ en:{
   k_d6t:'1:1 solution · showcase', k_d6a:'1:1 consult with the head producer & a 1-year agency roadmap', k_d6b:'In-house mini showcase and farewell party',
   k_d7t:'Departure escort · deliverable preview', k_d7a:'Carnival airport send-off and a final farewell by the manager', k_d7b:'Preview of the retouched profile / first-cut release data',
   k_p_h2:'Packages', k_p_lead:'Two lineups to fit your goals and schedule.', k_per:'/ person',
+  k_pv_amt:'$1,400', k_pv_fx:'₩20,000,000 · ~36,000,000₫', k_pg_amt:'$350', k_pg_fx:'₩5,000,000 · ~9,000,000₫',
   k_pv_badge:'VVIP PRIVATE · departs anytime', k_pv_t:'Solo VVIP Private', k_pv_when:'Departs anytime · fully 1:1 exclusive',
   k_pv1:'Major-agency private meeting & audition <b>100% guaranteed</b>', k_pv2:'Fully customized schedule · 1:1 exclusive directing', k_pv3:'6 celebrity-level care + full high-end portfolio', k_pv_btn:'Apply for VVIP',
   k_pg_badge:'GROUP · departs with 5', k_pg_t:'5-person Premium Group', k_pg_when:'Departs once 5 are gathered',
   k_pg1:'Official major-agency tour program', k_pg2:'Group training with the master team', k_pg3:'6 celebrity-level care + official deliverables', k_pg_btn:'Apply for Group',
-  k_common:'<b>Included in both</b> · active manager throughout · 6 celebrity-level care · guaranteed 1-year agency introductions after completion<br><span style="color:var(--ink-4)">✈️ International airfare not included · In Korea we run only the K-POP program. * Prices are per package and may vary by options.</span>',
+  k_common:'<b>Included in both</b> · active manager throughout · 6 celebrity-level care · guaranteed 1-year agency introductions after completion<br><span style="color:var(--ink-4)">✈️ International airfare not included · In Korea we run only the K-POP program. * Prices are per package and may vary by options.<br>💱 USD·VND are reference estimates at current rates — paying in KRW at the live exchange rate is the most favorable.</span>',
   k_a_h2:'Apply', k_a_lead:'Submit your basic profile and our <b style="color:#fff">coordinator will contact you directly</b> with the schedule and details.',
   k_f_name:'Name', k_f_contact:'Contact', k_f_email:'Email', k_f_pkg:'Preferred package', k_f_dob:'Date of birth / age', k_f_field:'Field', k_f_loc:'Country · city', k_f_msg:'Message (intro · goals · questions)',
   k_ph_contact:'Phone · WhatsApp · Zalo', k_ph_dob:'2005-01-01 or age 19', k_ph_loc:'e.g. Vietnam, Ho Chi Minh', k_ph_msg:'Tell us briefly about yourself or any questions.',
@@ -534,11 +540,12 @@ vi:{
   k_d6t:'Giải pháp 1:1 · showcase', k_d6a:'Tư vấn 1:1 với nhà sản xuất tổng & lộ trình kết nối công ty 1 năm', k_d6b:'Mini showcase nội bộ và tiệc chia tay',
   k_d7t:'Tiễn sân bay · xem trước thành phẩm', k_d7a:'Tiễn ra sân bay bằng xe Carnival và lời chào cuối từ quản lý', k_d7b:'Xem trước hồ sơ đã chỉnh / dữ liệu bản dựng đầu tiên',
   k_p_h2:'Các gói', k_p_lead:'Hai gói phù hợp mục tiêu và lịch trình của bạn.', k_per:'/ người',
+  k_pv_amt:'36.000.000₫', k_pv_fx:'₩20,000,000 · $1,400', k_pg_amt:'9.000.000₫', k_pg_fx:'₩5,000,000 · $350',
   k_pv_badge:'VVIP PRIVATE · khởi hành bất kỳ lúc nào', k_pv_t:'VVIP Private cá nhân', k_pv_when:'Khởi hành bất kỳ lúc nào · 1:1 độc quyền toàn bộ',
   k_pv1:'Gặp riêng & audition công ty lớn <b>đảm bảo 100%</b>', k_pv2:'Lịch trình tùy chỉnh hoàn toàn · chỉ đạo 1:1 độc quyền', k_pv3:'6 chăm sóc đẳng cấp sao + trọn bộ hồ sơ cao cấp', k_pv_btn:'Đăng ký VVIP',
   k_pg_badge:'GROUP · khởi hành khi đủ 5', k_pg_t:'Nhóm Premium 5 người', k_pg_when:'Khởi hành khi đủ 5 người',
   k_pg1:'Chương trình tham quan công ty lớn chính thức', k_pg2:'Đào tạo nhóm cùng đội ngũ master', k_pg3:'6 chăm sóc đẳng cấp sao + thành phẩm chính thức', k_pg_btn:'Đăng ký nhóm',
-  k_common:'<b>Đặc quyền chung</b> · quản lý đồng hành toàn bộ · 6 chăm sóc đẳng cấp sao · đảm bảo giới thiệu công ty trong 1 năm sau khi hoàn thành<br><span style="color:var(--ink-4)">✈️ Không bao gồm vé máy bay quốc tế · Tại Hàn Quốc chỉ vận hành chương trình K-POP. * Giá theo gói và có thể thay đổi theo tùy chọn.</span>',
+  k_common:'<b>Đặc quyền chung</b> · quản lý đồng hành toàn bộ · 6 chăm sóc đẳng cấp sao · đảm bảo giới thiệu công ty trong 1 năm sau khi hoàn thành<br><span style="color:var(--ink-4)">✈️ Không bao gồm vé máy bay quốc tế · Tại Hàn Quốc chỉ vận hành chương trình K-POP. * Giá theo gói và có thể thay đổi theo tùy chọn.<br>💱 Số tiền USD·VND là ước tính tham khảo theo tỷ giá — thanh toán bằng KRW theo tỷ giá hiện hành là có lợi nhất.</span>',
   k_a_h2:'Đăng ký', k_a_lead:'Gửi hồ sơ cơ bản và <b style="color:#fff">điều phối viên sẽ liên hệ trực tiếp</b> để hướng dẫn lịch trình và chi tiết.',
   k_f_name:'Họ tên', k_f_contact:'Liên hệ', k_f_email:'Email', k_f_pkg:'Gói mong muốn', k_f_dob:'Ngày sinh / tuổi', k_f_field:'Lĩnh vực', k_f_loc:'Quốc gia · thành phố', k_f_msg:'Lời nhắn (giới thiệu · mục tiêu · câu hỏi)',
   k_ph_contact:'Điện thoại · WhatsApp · Zalo', k_ph_dob:'2005-01-01 hoặc 19 tuổi', k_ph_loc:'VD: Vietnam, Ho Chi Minh', k_ph_msg:'Hãy giới thiệu ngắn gọn hoặc đặt câu hỏi.',
