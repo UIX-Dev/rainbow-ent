@@ -121,6 +121,10 @@
   .store .lc{font-size:12.5px;color:var(--ink-3);margin-top:5px}
   .store.closed{opacity:.62}
   .store.closed .area{color:var(--ink-4)}
+  /* planned / upcoming store */
+  .store.soon{border-style:dashed;background:var(--gray-5);display:flex;flex-direction:column}
+  .store .sst.soon{background:var(--purple-5);color:var(--purple)}
+  .store.soon .soon-nm{font-size:24px;font-weight:700;color:var(--purple);margin-top:auto}
 
   /* photo wall (masonry — keeps each photo's natural ratio) */
   .wall{column-count:3;column-gap:14px;margin-top:42px}
@@ -367,6 +371,16 @@
       <div class="nm">Go! Quy Nhon</div>
       <div class="lc" data-i18n="store7_loc">뀌년</div>
     </div>
+    <div class="store soon rv">
+      <div class="shead"><span class="no">STORE 08</span><span class="sst soon" data-i18n="s_soon">준비 중</span></div>
+      <div class="soon-nm">Hanoi</div>
+      <div class="lc" data-i18n="store8_loc">베트남 · 신규 출점 준비 중</div>
+    </div>
+    <div class="store soon rv">
+      <div class="shead"><span class="no">STORE 09</span><span class="sst soon" data-i18n="s_soon">준비 중</span></div>
+      <div class="soon-nm">Dubai</div>
+      <div class="lc" data-i18n="store9_loc">UAE · 신규 출점 준비 중</div>
+    </div>
   </div>
   <div class="sgrid rv">
     <div class="cell note">
@@ -514,7 +528,7 @@ ko:{
   st_h2:'컨셉이 아니라, 직접 운영하는 공간입니다',
   st_lead:'Rainbow는 기획·설계·운영까지 직접 합니다. 베트남 주요 쇼핑몰 안에 크고 쾌적하게 설계한 직영 매장은, 팝업존·브랜드 이벤트·라이브 커머스를 펼치기에 최적화된 무대입니다.',
   st_m1:'6개 운영 중', st_m2:'3개 도시', st_m3:'누적 7개 오픈', s_open:'운영 중', s_closed:'폐점',
-  store1_loc:'호치민 · 10군', store2_loc:'호치민 · 투득', store3_loc:'호치민 · 빈떤', store4_loc:'호치민 · 7군', store5_loc:'하노이 · 하동', store6_loc:'호치민 · 떤푸', store7_loc:'뀌년',
+  store1_loc:'호치민 · 10군', store2_loc:'호치민 · 투득', store3_loc:'호치민 · 빈떤', store4_loc:'호치민 · 7군', store5_loc:'하노이 · 하동', store6_loc:'호치민 · 떤푸', store7_loc:'뀌년', store8_loc:'베트남 · 신규 출점 준비 중', store9_loc:'UAE · 신규 출점 준비 중', s_soon:'준비 중',
   sg_t:'직접 설계한 실제 매장', sg_p:'베트남 주요 쇼핑몰 직영 매장의 실제 사진입니다. 크고 쾌적하게 설계한 공간이 팝업·브랜드 이벤트·라이브 커머스의 무대가 됩니다.',
   lv_h2:'기획부터 운영, 그리고 무대까지',
   lv_lead:'매장을 직접 설계하고 운영하며, 그 공간에서 K-페스티벌과 브랜드 행사를 엽니다. 컨셉이 아니라 매일 돌아가는 현장입니다.'
@@ -557,7 +571,7 @@ en:{
   st_h2:'Not a concept — spaces we actually run',
   st_lead:'Rainbow plans, designs and operates its own spaces. Our spacious, well-crafted stores inside Vietnam\'s major malls are stages built for pop-up zones, brand events and live commerce.',
   st_m1:'6 operating', st_m2:'3 cities', st_m3:'7 opened to date', s_open:'Operating', s_closed:'Closed',
-  store1_loc:'District 10 · HCMC', store2_loc:'Thu Duc · HCMC', store3_loc:'Binh Tan · HCMC', store4_loc:'District 7 · HCMC', store5_loc:'Ha Dong · Hanoi', store6_loc:'Tan Phu · HCMC', store7_loc:'Quy Nhon',
+  store1_loc:'District 10 · HCMC', store2_loc:'Thu Duc · HCMC', store3_loc:'Binh Tan · HCMC', store4_loc:'District 7 · HCMC', store5_loc:'Ha Dong · Hanoi', store6_loc:'Tan Phu · HCMC', store7_loc:'Quy Nhon', store8_loc:'Vietnam · New store in planning', store9_loc:'UAE · New store in planning', s_soon:'Planned',
   sg_t:'Real spaces, designed in-house', sg_p:'Actual photos of our direct-operated stores inside Vietnam\'s major malls — large, well-crafted spaces built for pop-ups, brand events and live commerce.',
   lv_h2:'From design to operation — and the stage',
   lv_lead:'We design and operate our own venues, then host K-festivals and brand events inside them. Not a concept — a place that runs every single day.'
@@ -600,7 +614,7 @@ vi:{
   st_h2:'Không chỉ là ý tưởng — không gian chúng tôi thực sự vận hành',
   st_lead:'Rainbow tự lên kế hoạch, thiết kế và vận hành. Những cửa hàng trực tiếp rộng rãi, được thiết kế chỉn chu trong các TTTM lớn ở Việt Nam là sân khấu lý tưởng cho pop-up, sự kiện thương hiệu và live commerce.',
   st_m1:'6 đang hoạt động', st_m2:'3 thành phố', st_m3:'7 đã khai trương', s_open:'Đang hoạt động', s_closed:'Đã đóng',
-  store1_loc:'Quận 10 · TP.HCM', store2_loc:'Thủ Đức · TP.HCM', store3_loc:'Bình Tân · TP.HCM', store4_loc:'Quận 7 · TP.HCM', store5_loc:'Hà Đông · Hà Nội', store6_loc:'Tân Phú · TP.HCM', store7_loc:'Quy Nhơn',
+  store1_loc:'Quận 10 · TP.HCM', store2_loc:'Thủ Đức · TP.HCM', store3_loc:'Bình Tân · TP.HCM', store4_loc:'Quận 7 · TP.HCM', store5_loc:'Hà Đông · Hà Nội', store6_loc:'Tân Phú · TP.HCM', store7_loc:'Quy Nhơn', store8_loc:'Việt Nam · Cửa hàng mới đang chuẩn bị', store9_loc:'UAE · Cửa hàng mới đang chuẩn bị', s_soon:'Đang chuẩn bị',
   sg_t:'Không gian thật, tự thiết kế', sg_p:'Ảnh thực tế các cửa hàng trực tiếp trong những TTTM lớn ở Việt Nam — không gian rộng rãi, chỉn chu cho pop-up, sự kiện thương hiệu và live commerce.',
   lv_h2:'Từ thiết kế, vận hành đến sân khấu',
   lv_lead:'Chúng tôi tự thiết kế và vận hành cửa hàng, rồi tổ chức K-festival và sự kiện thương hiệu ngay tại đó. Không phải ý tưởng — mà là hiện trường vận hành mỗi ngày.'
