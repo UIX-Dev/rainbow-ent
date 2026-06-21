@@ -249,6 +249,12 @@
   footer{background:var(--black);color:#8c8c8c;padding:40px 0;font-size:12.5px;border-top:1px solid #333}
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
   .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}
+  .foot-org{text-align:right;line-height:1.6;font-size:12.5px}
+  .foot-org .o-main{color:var(--purple-4);font-weight:700;font-size:15px;margin-bottom:3px}
+  .foot-org a.kkal{color:#8c8c8c}
+  .foot-org a.kkal:hover{color:var(--purple-4)}
+  .foot-org .o-copy{margin-top:7px;font-size:11px;color:#666}
+  @media(max-width:680px){.foot-org{text-align:left}}
 
   /* reveal animation */
   .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
@@ -538,8 +544,12 @@
 
 <footer><div class="wrap foot-in">
   <div class="foot-brand">Rainbow <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> Entertainment</div>
-  <div>㈜빛나는별 · NGOI SAO SANG VINA · Clean &amp; Healthy Singing Culture from Korea<br><a href="https://www.kkal.live/" target="_blank" rel="noopener" style="color:var(--purple-4)">한국 깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
-  <div>© 2026 Rainbow Entertainment · rainbowent.live</div>
+  <div class="foot-org">
+    <div class="o-main">Rainbow Entertainment</div>
+    <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+    <div><a class="kkal" href="https://www.kkal.live/" target="_blank" rel="noopener">한국 깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
+    <div class="o-copy">© 2026 Rainbow Entertainment · rainbowent.live · Clean &amp; Healthy Singing Culture from Korea</div>
+  </div>
 </div></footer>
 
 <script>

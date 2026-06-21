@@ -167,6 +167,11 @@
   .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
   .foot-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;color:#fff}
   .foot-brand svg{width:14px;height:14px}
+  .foot-org{text-align:right;line-height:1.6;font-size:12.5px}
+  .foot-org .o-main{color:var(--purple-4);font-weight:700;font-size:15px;margin-bottom:3px}
+  .foot-org a.kkal{color:#8c8c8c}
+  .foot-org a.kkal:hover{color:var(--purple-4)}
+  @media(max-width:680px){.foot-org{text-align:left}}
   .disc{margin-top:10px;font-size:11px;color:#666}
 
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
@@ -370,10 +375,14 @@
 <footer><div class="wrap">
   <div class="foot-in">
     <div class="foot-brand">Rainbow <svg viewBox="0 0 24 24"><path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12z" fill="#fcf05b"/></svg> K-POP Camp</div>
-    <div>㈜빛나는별 · NGOI SAO SANG VINA<br><a href="https://www.kkal.live/" target="_blank" rel="noopener" style="color:var(--purple-4)">한국 깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
-    <div>© 2026 Rainbow Entertainment · <a href="index.html" style="color:#adadad">rainbowent.live</a></div>
+    <div class="foot-org">
+      <div class="o-main">Rainbow Entertainment</div>
+      <div>㈜빛나는별 · NGOI SAO SANG VINA</div>
+      <div><a class="kkal" href="https://www.kkal.live/" target="_blank" rel="noopener">한국 깔엔터테인먼트 코리아 · KKAL Entertainment Korea ↗</a></div>
+    </div>
   </div>
   <div class="disc" data-i18n="k_disc">기획·운영: Rainbow Entertainment · 프로그램 총괄 프로듀싱 협업. 표기된 일정·금액·혜택은 운영 상황에 따라 변경될 수 있습니다.</div>
+  <div class="disc" style="margin-top:4px">© 2026 Rainbow Entertainment · <a href="index.html" style="color:#777">rainbowent.live</a></div>
 </div></footer>
 
 <script>
