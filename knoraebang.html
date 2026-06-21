@@ -28,7 +28,9 @@
   .nav-links{display:flex;gap:18px;align-items:center;font-size:13.5px;font-weight:700;color:var(--ink-3)}
   .nav-links a.k:hover{color:var(--purple)}
   .nav-links a.k.on{color:var(--purple)}
-  @media(max-width:780px){.nav-links a.k{display:none}}
+  .nav-cta{background:var(--purple);color:#fff;width:160px;justify-content:center;white-space:nowrap;padding:10px 0 8px;border-radius:999px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;line-height:1}
+  .nav-cta:hover{background:var(--purple-2)}
+  @media(max-width:900px){.nav-links a.k{display:none}}
   .lang{display:flex;align-items:center;gap:2px;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
   .lang svg{width:15px;height:15px;fill:var(--ink-4);margin:0 4px 0 7px;flex-shrink:0}
   .lang button{border:none;background:transparent;cursor:pointer;font-family:var(--font);font-size:11.5px;font-weight:700;color:var(--ink-4);padding:6px 9px 4px;border-radius:999px;transition:.15s;line-height:1.15}
@@ -146,6 +148,7 @@
     <a class="k" href="kpop.html">K-POP</a>
     <a class="k" href="kdrama.html">K-Drama</a>
     <a class="k" href="kbeauty.html">K-Beauty</a>
+    <a class="nav-cta" href="#contact" data-i18n="kn_navcta">프랜차이즈 문의</a>
     <div class="lang" id="langSw">
       <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm7.9 9h-3.4a15.6 15.6 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11zM12 4.1c.9 1.2 1.9 3.4 2.4 6.9H9.6c.5-3.5 1.5-5.7 2.4-6.9zM4.1 13h3.4c.2 2 .6 3.9 1.2 5.5A8 8 0 0 1 4.1 13zm3.4-2H4.1a8 8 0 0 1 4.6-5.5A15.6 15.6 0 0 0 7.5 11zm4.5 8.9c-.9-1.2-1.9-3.4-2.4-6.9h4.8c-.5 3.5-1.5 5.7-2.4 6.9zm3.3-1.4c.6-1.6 1-3.5 1.2-5.5h3.4a8 8 0 0 1-4.6 5.5z"/></svg>
       <button data-lang="vi" type="button">VI</button><button data-lang="en" type="button">EN</button><button data-lang="ko" type="button" class="on">KO</button>
@@ -298,7 +301,7 @@ ko:{
   kn_h1:'노래가 모이는 공간,<br><span class="y">베트남 No.1 K-노래방</span>',
   kn_sub:'베트남 최초의 한국형 코인노래방 Rainbow Noraebang. 주요 쇼핑몰 안에서 매일 1,500명의 Gen Z가 노래하고, 찍고, 공유합니다 — 모든 K-컬처 사업이 시작되는 오프라인 거점입니다.',
   kn_m1:'🎤 베트남 최초 한국형 코인노래방', kn_m2:'🏬 직영 매장 6곳', kn_m3:'🧑‍🤝‍🧑 일 1,500 Gen Z', kn_m4:'✨ 클린 노래문화',
-  kn_btn1:'입점 · 라이센스 문의', kn_btn2:'공간 보기',
+  kn_navcta:'프랜차이즈 문의', kn_btn1:'입점 · 라이센스 문의', kn_btn2:'공간 보기',
   kn_st1:'직영 매장 (운영 중)', kn_st2:'일평균 Gen Z 방문 (명)', kn_st3:'여성 고객 비중', kn_st4:'진출 도시 (호치민·하노이·뀌년)',
   kn_ab_h2:'노래방을 운영하는 회사가 아닙니다', kn_ab_lead:'Rainbow의 핵심 자산은 매장이 아니라 매장을 찾는 고객입니다. 트렌디한 인테리어와 IT가 결합된 한국형 코인노래방으로, K-컬처 경험을 설계하고 고객을 콘텐츠·커머스로 연결합니다.',
   kn_f1t:'검증된 Gen Z 팬 베이스', kn_f1p:'콘텐츠를 소비하고 직접 생산하는 실질적 팬덤 — 단순 이용객이 아닌 브랜드 확산의 주체입니다.',
@@ -325,7 +328,7 @@ en:{
   kn_h1:'Where music gathers,<br><span class="y">Vietnam\'s No.1 K-noraebang</span>',
   kn_sub:'Rainbow Noraebang — Vietnam\'s first Korean-style coin karaoke. Every day, 1,500 Gen Z visitors sing, film and share inside major malls — the offline base where every K-culture business begins.',
   kn_m1:'🎤 Vietnam\'s first Korean coin karaoke', kn_m2:'🏬 6 direct stores', kn_m3:'🧑‍🤝‍🧑 1,500 Gen Z / day', kn_m4:'✨ Clean singing culture',
-  kn_btn1:'Leasing · license inquiry', kn_btn2:'See the spaces',
+  kn_navcta:'Franchise', kn_btn1:'Leasing · license inquiry', kn_btn2:'See the spaces',
   kn_st1:'Direct stores (operating)', kn_st2:'Daily Gen Z visitors', kn_st3:'Female customers', kn_st4:'Cities (HCMC · Hanoi · Quy Nhon)',
   kn_ab_h2:'We are not a karaoke operator', kn_ab_lead:'Rainbow\'s core asset is not the stores — it\'s the customers who fill them. A Korean-style coin karaoke blending trendy interiors with IT, designing K-culture experiences and connecting customers to content and commerce.',
   kn_f1t:'A proven Gen Z fan base', kn_f1p:'A real fandom that consumes and creates content — not just visitors, but the engine of brand growth.',
@@ -352,7 +355,7 @@ vi:{
   kn_h1:'Nơi âm nhạc hội tụ,<br><span class="y">karaoke kiểu Hàn số 1 Việt Nam</span>',
   kn_sub:'Rainbow Noraebang — karaoke xu kiểu Hàn đầu tiên tại Việt Nam. Mỗi ngày 1.500 bạn trẻ Gen Z hát, quay và chia sẻ trong các TTTM lớn — điểm tựa offline nơi mọi mảng K-culture bắt đầu.',
   kn_m1:'🎤 Karaoke xu kiểu Hàn đầu tiên tại VN', kn_m2:'🏬 6 cửa hàng trực tiếp', kn_m3:'🧑‍🤝‍🧑 1.500 Gen Z / ngày', kn_m4:'✨ Văn hóa hát lành mạnh',
-  kn_btn1:'Hợp tác · nhượng quyền', kn_btn2:'Xem không gian',
+  kn_navcta:'Nhượng quyền', kn_btn1:'Hợp tác · nhượng quyền', kn_btn2:'Xem không gian',
   kn_st1:'Cửa hàng trực tiếp (đang HĐ)', kn_st2:'Khách Gen Z mỗi ngày', kn_st3:'Tỷ lệ khách nữ', kn_st4:'Thành phố (TP.HCM · Hà Nội · Quy Nhơn)',
   kn_ab_h2:'Chúng tôi không chỉ là công ty karaoke', kn_ab_lead:'Tài sản cốt lõi của Rainbow không phải cửa hàng mà là khách hàng. Karaoke xu kiểu Hàn kết hợp nội thất thời thượng và công nghệ, kiến tạo trải nghiệm K-culture và kết nối khách hàng với nội dung và thương mại.',
   kn_f1t:'Cộng đồng fan Gen Z đã kiểm chứng', kn_f1p:'Một fandom thực thụ vừa tiêu thụ vừa sáng tạo nội dung — không chỉ là khách, mà là động lực lan tỏa thương hiệu.',
