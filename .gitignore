@@ -1,0 +1,6 @@
+# 대외비 — 절대 커밋 금지 (재무·마진 포함 사업기획서)
+KPOP_CAMP_WEB_AND_BUSINESS_PLAN.pdf
+*.pdf
+
+# 내부 참고용 (구글맵 스크린샷 등)
+assets/ref-*
